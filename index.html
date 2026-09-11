@@ -1,250 +1,232 @@
-  <!DOCTYPE html>
+<!doctype html>
 <html lang="hi">
 <head>
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
-<title>MSc Botany Notes</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>M.Sc. Botany Portal — Notes, Papers & Payments</title>
   <meta name="google-site-verification" content="b9g3WWq9P8PKHTaEzwB4mxvSCBPBRYDpuNdmCMq0AaE" />
 <meta name="description" content="MSc Botany के सभी विषय, नोट्स और पुस्तकें डाउनलोड करें।">
 <meta name="keywords" content="MSc Botany, Botany Notes, Botany Books Download, MSc Botany Syllabus, Study Material">
 <meta name="robots" content="index, follow">
 
 <meta property="og:title" content="MSc Botany Notes">
-<meta property="og:description" content="MSc Botany के सभी विषय, नोट्स और पुस्तकें डाउनलोड करें।">
-<meta property="og:url" content="https://sites.google.com/view/msc-botany-student/home">
-<meta property="og:type" content="website">
-<a href="payment1.html">📚 एक सेमेस्टर के एक सब्जेक्ट के पासवर्ड के लिए </a>
-<a href="payment2.html">📚  एक सेमेस्टर के सभी सब्जेक्ट के पासवर्ड लिए </a>
-<a href="ai agent.html">📚 सभी नोट्स से संबंधित सवाल जवाब कर सकते हैं</a>
-<a href="password.html">📚 Admin</a>
+<!-- Font Awesome & Google Fonts -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
 <style>
-  :root{
-    --card-bg:#fff;
-    --accent:#00796b;
-    --danger:#c62828;
-    --glass: rgba(255,255,255,0.85);
-    --maxw: 980px;
+  :root {
+    --card-bg: #ffffff;
+    --accent: #00796b;
+    --danger: #c62828;
+    --glass: rgba(255, 255, 255, 0.9);
+    --maxw: 1000px;
   }
-  *{box-sizing:border-box}
-  body{
-    margin:0;
-    font-family:Inter, Arial, sans-serif;
-    background: linear-gradient(135deg,#eef2ff,#fff8f0);
-    color:#0b2545;
-    -webkit-font-smoothing:antialiased;
-    -moz-osx-font-smoothing:grayscale;
-    padding-bottom:40px;
+  
+  * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Poppins', Arial, sans-serif; }
+  
+  body {
+    background: linear-gradient(135deg, #eef2ff 0%, #fff8f0 100%);
+    color: #0b2545;
+    padding-bottom: 40px;
+    transition: background 0.6s ease;
   }
 
-  /* Header / nav */
+  /* 1. BANNER & HERO */
+  .scroll-text {
+    background: #000;
+    color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 10px 0;
+  }
+  .scroll-text span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scroll 25s linear infinite;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+  }
+
+  .hero-wrapper {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    padding: 30px 20px;
+    color: white;
+    text-align: center;
+  }
+  .hero-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    padding: 24px;
+    border-radius: 16px;
+    max-width: 500px;
+    margin: 0 auto;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .hero-logo { font-size: 40px; color: #4ade80; margin-bottom: 10px; }
+
+  /* 2. NAVIGATION */
   .top {
-    width:100%;
-    background:var(--glass);
+    background: var(--glass);
     backdrop-filter: blur(6px);
-    position:sticky;
-    top:0;
-    z-index:1200;
-    border-bottom:1px solid rgba(0,0,0,0.06);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
   }
-  .container{
-    max-width:var(--maxw);
-    margin:0 auto;
-    padding:12px 16px;
-    display:flex;
-    gap:12px;
-    align-items:center;
-    justify-content:space-between;
+  .container {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 12px 16px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: space-between;
   }
-  .brand { font-weight:800; color:#06314a; font-size:18px; display:flex; gap:10px; align-items:center; }
-  .brand .dot { width:10px;height:10px;background:var(--accent);border-radius:50%;display:inline-block; }
+  .brand { font-weight: 700; color: #06314a; font-size: 18px; }
 
-  .nav {
-    display:flex;
-    gap:6px;
-    align-items:center;
+  .nav { display: flex; gap: 6px; }
+  .nav button {
+    background: transparent; border: none; padding: 8px 12px; border-radius: 8px; cursor: pointer; font-weight: 600; color: #14425b;
   }
-  .nav button{
-    background:transparent;border:none;padding:8px 12px;border-radius:8px;cursor:pointer;font-weight:600;
-    color:#14425b;
-  }
-  .nav button.active{ background:var(--accent); color:#fff; box-shadow: 0 6px 14px rgba(0,0,0,0.08); }
+  .nav button.active { background: var(--accent); color: #fff; }
 
-  .search-wrap{
-    display:flex;gap:8px;align-items:center;width:360px;
-  }
-  .search-wrap input{
-    width:100%; padding:8px 12px;border-radius:10px;border:1px solid #d6dbea;
-    outline:none;font-size:14px;
-  }
-  .search-wrap button{
-    padding:8px 10px;border-radius:8px;border:none;background:var(--accent);color:#fff;cursor:pointer;
-  }
+  .search-wrap { display: flex; gap: 8px; width: 220px; }
+  .search-wrap input { width: 100%; padding: 8px 10px; border-radius: 8px; border: 1px solid #ccc; outline: none; font-size: 13px; }
 
-  /* main area */
-  main{ max-width:var(--maxw); margin:20px auto; padding:0 16px; }
+  /* 3. NOTES CARDS */
+  main { max-width: var(--maxw); margin: 20px auto; padding: 0 16px; }
+  .section-title { font-size: 20px; font-weight: 700; color: #083047; margin: 20px 0 10px; display: flex; align-items: center; gap: 10px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+  .subject-card { background: var(--card-bg); border-radius: 12px; padding: 14px; box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+  .subject-card h3 { font-size: 15px; color: #06414d; margin-bottom: 8px; }
+  .controls-box { display: flex; flex-direction: column; gap: 6px; }
+  .password-box { display: flex; gap: 6px; }
+  .password-box input { flex: 1; padding: 6px 8px; border-radius: 6px; border: 1px solid #ccc; font-size: 13px; }
+  .password-btn { padding: 6px 10px; border-radius: 6px; border: none; cursor: pointer; font-weight: 600; color: #fff; background: var(--accent); font-size: 12px; }
+  .password-btn.dl { background: #1457f0; }
+  .result { min-height: 18px; font-weight: 600; font-size: 12px; }
+  .result.success { color: green; }
+  .result.error { color: var(--danger); }
 
-  .semester-title{ font-size:20px; font-weight:700; color:#083047; margin:6px 0 14px; display:flex;align-items:center;gap:12px; }
-  .semester-title .tag{ background:#eef7f5;color:#0b6c56;padding:6px 10px;border-radius:999px;font-weight:700;font-size:13px;}
+  /* 4. PREVIOUS PAPERS SECTION */
+  .papers-wrap { background: rgba(0,0,0,0.25); backdrop-filter: blur(6px); border-radius: 16px; padding: 20px; margin: 30px 0; color: #fff; }
+  .papers-controls { display: flex; gap: 12px; justify-content: center; margin-bottom: 16px; flex-wrap: wrap; }
+  .papers-controls select { padding: 10px; border-radius: 8px; border: none; font-size: 14px; color: #1e293b; font-weight: 600; }
+  .paper-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }
+  .paper-card { background: rgba(255,255,255,0.15); padding: 14px; border-radius: 12px; display: flex; flex-direction: column; gap: 8px; }
+  .paper-card .title { font-weight: 600; font-size: 15px; }
+  .paper-actions { display: flex; gap: 8px; margin-top: auto; }
+  .btn-paper { padding: 8px 12px; border-radius: 6px; border: 0; cursor: pointer; font-size: 12px; font-weight: 600; color: #fff; text-decoration: none; text-align: center; }
+  .btn-paper.preview { background: #0ea5e9; }
+  .btn-paper.open { background: #a855f7; }
+  .viewer-wrap { width: 100%; margin-top: 20px; background: rgba(255,255,255,0.15); padding: 10px; border-radius: 12px; }
+  .viewer { width: 100%; height: 70vh; border: 0; border-radius: 8px; }
 
-  .grid{
-    display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
-    gap:16px;
-  }
+  /* 5. SEPARATE PAYMENT SYSTEMS */
+  .payment-dual-container { display: flex; gap: 20px; flex-wrap: wrap; margin: 30px 0; }
+  .pay-box { flex: 1; min-width: 300px; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); text-align: center; }
+  .pay-box h3 { color: #0b6c4a; margin-bottom: 10px; font-size: 18px; }
+  .upi-box { display: flex; gap: 6px; justify-content: center; margin: 10px 0; }
+  .upi-input { border: 1px solid #ccc; padding: 8px; border-radius: 6px; width: 70%; font-size: 14px; text-align: center; }
+  .copy-btn { padding: 8px 12px; border: none; border-radius: 6px; background: #10A37F; color: #fff; font-weight: 600; cursor: pointer; }
+  .app-list a { display: block; color: #fff; margin: 6px auto; padding: 8px 0; border-radius: 6px; font-weight: bold; width: 80%; text-decoration: none; font-size: 13px; }
+  #phonepe { background: #4CAF50; } #gpay { background: #4285F4; } #paytm { background: #002970; } #amazonpay { background: #FF9900; }
+  
+  .contact-btn { display: block; margin: 10px auto 0; background: #25D366; color: white; font-size: 14px; font-weight: 600; border: none; padding: 10px 16px; border-radius: 6px; cursor: pointer; }
 
-  .subject-card{
-    background:var(--card-bg);
-    border-radius:12px;
-    padding:14px;
-    box-shadow:0 6px 18px rgba(9,30,63,0.06);
-    border:1px solid rgba(9,30,63,0.04);
-  }
-  .subject-card h3{ margin:0 0 8px; font-size:16px; color:#06414d; }
-  .controls{ display:flex; flex-direction:column; gap:8px; }
-  .password-box{ display:flex; gap:8px; align-items:center; }
-  .password-box input{ flex:1; padding:8px 10px; border-radius:8px; border:1px solid #d6dbea; font-size:14px; }
-  .password-btn{ padding:9px 12px; border-radius:8px; border:none; cursor:pointer; font-weight:700; color:#fff; background:var(--accent); }
-  .password-btn.dl{ background:#1457f0; }
-  .result{ margin-top:8px; min-height:20px; font-weight:700; font-size:14px; }
-  .result.success{ color:green; }
-  .result.error{ color:var(--danger); }
+  /* 6. OVERLAYS & FORMS */
+  .overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); display: none; justify-content: center; align-items: flex-start; padding-top: 20px; z-index: 2000; }
+  .form-card { width: 90%; max-width: 400px; background: white; padding: 18px; border-radius: 10px; overflow-y: auto; max-height: 90vh; }
+  .close-btn { float: right; background: none; border: none; font-size: 16px; cursor: pointer; color: #666; }
+  label { display: block; font-size: 13px; margin: 8px 0 2px; font-weight: 600; text-align: left; }
+  input, select, textarea { width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 6px; font-size: 13px; }
+  .error-msg { color: red; font-size: 11px; margin-top: 2px; display: none; text-align: left; }
+  .btn-submit { width: 100%; padding: 10px; border-radius: 6px; border: none; background: #25D366; color: white; font-weight: 600; font-size: 14px; cursor: pointer; margin-top: 10px; }
 
-  .note{ margin-top:10px; font-size:13px; color:#4b5563; }
-  .small{ font-size:13px; color:#576b7a; }
+  /* 7. SEPARATE ADMIN SYSTEMS */
+  .admin-dual-container { display: flex; gap: 20px; flex-wrap: wrap; margin: 40px 0 20px; border-top: 2px dashed #bbb; padding-top: 20px; }
+  .admin-box { flex: 1; min-width: 280px; background: #f8fafc; border: 1px solid #cbd5e1; padding: 16px; border-radius: 12px; text-align: center; }
+  .big-open-btn { width: 100%; padding: 12px; background: #0ea5a4; color: #fff; font-size: 14px; font-weight: 700; border-radius: 8px; border: none; cursor: pointer; margin-top: 8px; }
 
-  /* overlay for full preview */
-  .preview-overlay{
-    position:fixed; inset:0; background:rgba(0,0,0,0.88); display:none; align-items:center; justify-content:center; z-index:2000;
-  }
-  .preview-frame{
-    width:100%; height:100%;
-    max-width:100vw; max-height:100vh;
-    position:relative;
-  }
-  .preview-frame iframe{ width:100%; height:100%; border:none; display:block; }
-  .preview-close{
-    position:absolute; left:12px; top:12px; z-index:2100;
-    background:var(--danger); color:#fff; border:none; padding:10px 12px; border-radius:8px; cursor:pointer; font-weight:700;
-  }
+  #loadingOverlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.6); color: #fff; font-size: 18px; font-weight: 700; z-index: 10000; justify-content: center; align-items: center; flex-direction: column; }
+  .loader { border: 4px solid #f3f3f3; border-top: 4px solid #0ea5a4; border-radius: 50%; width: 36px; height: 36px; animation: spin 1s linear infinite; }
+  @keyframes spin { 100% { transform: rotate(360deg); } }
 
-  /* footer */
-  footer{ max-width:var(--maxw); margin:30px auto; padding:12px 16px; color:#456076; font-size:13px; text-align:center; }
-
-  /* responsive tweaks */
-  @media (max-width:720px){
-    .container{ padding:10px; gap:8px; }
-    .search-wrap{ width:160px; }
-    .nav{ display:none; } /* keep it compact on small screens (semester via select) */
-  }
-  @media (min-width:721px){
-    .mobile-sem-select { display:none; }
-  }
-
-  /* locked style */
-  .locked-box{ opacity:0.5; pointer-events:none; }
+  footer { text-align: center; padding: 15px; font-size: 13px; opacity: 0.8; }
 </style>
 </head>
 <body>
 
-<!-- Top header -->
+<!-- BANNER -->
+<div class="scroll-text">
+  <span>🎓 WELCOME TO MSC BOTANY STORE — 1st to 4th Semester Notes, Full Semester Packages & Previous Papers Available! 📚</span>
+</div>
+
+<!-- HERO -->
+<div class="hero-wrapper">
+  <div class="hero-container">
+    <div class="hero-logo"><i class="fas fa-leaf"></i></div>
+    <h2>MSc Botany Digital Portal</h2>
+    <p style="font-size:13px; opacity:0.9;">नोट्स डाउनलोड करें, एग्जाम पेपर देखें या सहायता फॉर्म भरें।</p>
+  </div>
+</div>
+
+<!-- TOP NAV -->
 <div class="top">
   <div class="container">
-    <div class="brand"><span class="dot"></span>MSc Botany Notes</div>
-
-    <div style="display:flex;gap:12px;align-items:center;">
-      <nav class="nav" id="semesterNav">
-        <button data-sem="sem1" class="active">Semester 1</button>
-        <button data-sem="sem2">Semester 2</button>
-        <button data-sem="sem3">Semester 3</button>
-        <button data-sem="sem4">Semester 4</button>
-      </nav>
-
-      <select id="mobileSem" class="mobile-sem-select" style="padding:8px;border-radius:8px;border:1px solid #d6dbea;">
-        <option value="sem1">Semester 1</option>
-        <option value="sem2">Semester 2</option>
-        <option value="sem3">Semester 3</option>
-        <option value="sem4">Semester 4</option>
-      </select>
-
-      <div class="search-wrap">
-        <input id="searchBox" placeholder="Search subject (e.g. Genetics)" />
-        <button id="clearSearch" title="Clear">X</button>
-      </div>
+    <div class="brand">MSc Botany</div>
+    <nav class="nav" id="semesterNav">
+      <button data-sem="sem1" class="active">Sem 1</button>
+      <button data-sem="sem2">Sem 2</button>
+      <button data-sem="sem3">Sem 3</button>
+      <button data-sem="sem4">Sem 4</button>
+    </nav>
+    <div class="search-wrap">
+      <input id="searchBox" placeholder="Search subject..." />
     </div>
   </div>
 </div>
 
 <main>
-  <div class="semester-title">
-    <span class="tag" id="semesterTag">Semester 1</span>
-    <div style="flex:1"></div>
-    <div class="small">Preview = view only • Download requires download password • 3 wrong tries → box locked 6 hours</div>
-  </div>
-
-  <!-- Sections for semesters: each section contains grid of subject-cards -->
+  <!-- SUBJECT CARDS -->
+  <div class="section-title">📘 Subject Notes</div>
+  
   <section id="sem1" class="sem-section">
-    <div class="grid" id="grid-sem1">
-      <!-- Cytology -->
-      <article class="subject-card" data-title="Cytology" id="cyto-card">
+    <div class="grid">
+      <article class="subject-card" data-title="Cytology">
         <h3>🔬 Cytology</h3>
-        <div class="controls">
-          <div class="password-box" id="cyto-preview-row">
-            <input id="cyto-preview" placeholder="Preview password (...)" type="password" />
-            <button class="password-btn" onclick="checkPassword('cyto','preview')">Unlock Preview</button>
-          </div>
-          <div class="password-box" id="cyto-download-row">
-            <input id="cyto-download" placeholder="Download password (...)" type="password" />
-            <button class="password-btn dl" onclick="checkPassword('cyto','download')">Download</button>
-          </div>
+        <div class="controls-box">
+          <div class="password-box"><input id="cyto-preview" placeholder="Preview pass" type="password" /><button class="password-btn" onclick="checkPassword('cyto','preview')">Preview</button></div>
+          <div class="password-box"><input id="cyto-download" placeholder="Download pass" type="password" /><button class="password-btn dl" onclick="checkPassword('cyto','download')">Download</button></div>
           <div id="cyto-result" class="result"></div>
-          <div class="note">Preview opens full-screen view. Download starts only if download password is correct.</div>
         </div>
       </article>
-
-      <!-- Genetics -->
-      <article class="subject-card" data-title="Genetics" id="gen-card">
+      <article class="subject-card" data-title="Genetics">
         <h3>🧬 Genetics</h3>
-        <div class="controls">
-          <div class="password-box" id="gen-preview-row">
-            <input id="gen-preview" placeholder="Preview password (...)" type="password" />
-            <button class="password-btn" onclick="checkPassword('gen','preview')">Unlock Preview</button>
-          </div>
-          <div class="password-box" id="gen-download-row">
-            <input id="gen-download" placeholder="Download password (...)" type="password" />
-            <button class="password-btn dl" onclick="checkPassword('gen','download')">Download</button>
-          </div>
+        <div class="controls-box">
+          <div class="password-box"><input id="gen-preview" placeholder="Preview pass" type="password" /><button class="password-btn" onclick="checkPassword('gen','preview')">Preview</button></div>
+          <div class="password-box"><input id="gen-download" placeholder="Download pass" type="password" /><button class="password-btn dl" onclick="checkPassword('gen','download')">Download</button></div>
           <div id="gen-result" class="result"></div>
         </div>
       </article>
-
-      <!-- Mycology, Microbiology & Phycology -->
-      <article class="subject-card" data-title="Mycology Microbiology Phycology" id="myco-card">
-        <h3>🍄 Mycology, Microbiology & Phycology</h3>
-        <div class="controls">
-          <div class="password-box" id="myco-preview-row">
-            <input id="myco-preview" placeholder="Preview password (...)" type="password" />
-            <button class="password-btn" onclick="checkPassword('myco','preview')">Unlock Preview</button>
-          </div>
-          <div class="password-box" id="myco-download-row">
-            <input id="myco-download" placeholder="Download password (...)" type="password" />
-            <button class="password-btn dl" onclick="checkPassword('myco','download')">Download</button>
-          </div>
+      <article class="subject-card" data-title="Mycology">
+        <h3>🍄 Mycology</h3>
+        <div class="controls-box">
+          <div class="password-box"><input id="myco-preview" placeholder="Preview pass" type="password" /><button class="password-btn" onclick="checkPassword('myco','preview')">Preview</button></div>
+          <div class="password-box"><input id="myco-download" placeholder="Download pass" type="password" /><button class="password-btn dl" onclick="checkPassword('myco','download')">Download</button></div>
           <div id="myco-result" class="result"></div>
         </div>
       </article>
-
-      <!-- Bryophyta, Gymnosperms & Pteridophyta -->
-      <article class="subject-card" data-title="Bryophyta Gymnosperms Pteridophyta" id="bryo-card">
-        <h3>🌿 Bryophyta, Gymnosperms & Pteridophyta</h3>
-        <div class="controls">
-          <div class="password-box" id="bryo-preview-row">
-            <input id="bryo-preview" placeholder="Preview password (...)" type="password" />
-            <button class="password-btn" onclick="checkPassword('bryo','preview')">Unlock Preview</button>
-          </div>
-          <div class="password-box" id="bryo-download-row">
-            <input id="bryo-download" placeholder="Download password (...)" type="password" />
-            <button class="password-btn dl" onclick="checkPassword('bryo','download')">Download</button>
-          </div>
+      <article class="subject-card" data-title="Bryophyta">
+        <h3>🌿 Bryophyta</h3>
+        <div class="controls-box">
+          <div class="password-box"><input id="bryo-preview" placeholder="Preview pass" type="password" /><button class="password-btn" onclick="checkPassword('bryo','preview')">Preview</button></div>
+          <div class="password-box"><input id="bryo-download" placeholder="Download pass" type="password" /><button class="password-btn dl" onclick="checkPassword('bryo','download')">Download</button></div>
           <div id="bryo-result" class="result"></div>
         </div>
       </article>
@@ -252,67 +234,36 @@
   </section>
 
   <section id="sem2" class="sem-section" style="display:none">
-    <div class="grid" id="grid-sem2">
-      <!-- Taxonomy -->
-      <article class="subject-card" data-title="Taxonomy" id="taxo-card">
-        <h3>🌿 Taxonomy & Diversity of Plants</h3>
-        <div class="controls">
-          <div class="password-box" id="taxo-preview-row">
-            <input id="taxo-preview" placeholder="Preview password (...)" type="password" />
-            <button class="password-btn" onclick="checkPassword('taxo','preview')">Unlock Preview</button>
-          </div>
-          <div class="password-box" id="taxo-download-row">
-            <input id="taxo-download" placeholder="Download password (...)" type="password" />
-            <button class="password-btn dl" onclick="checkPassword('taxo','download')">Download</button>
-          </div>
+    <div class="grid">
+      <article class="subject-card" data-title="Taxonomy and diversity of plant">
+        <h3>🌿 Taxonomy and diversity of plant</h3>
+        <div class="controls-box">
+          <div class="password-box"><input id="taxo-preview" placeholder="Preview pass" type="password" /><button class="password-btn" onclick="checkPassword('taxo','preview')">Preview</button></div>
+          <div class="password-box"><input id="taxo-download" placeholder="Download pass" type="password" /><button class="password-btn dl" onclick="checkPassword('taxo','download')">Download</button></div>
           <div id="taxo-result" class="result"></div>
         </div>
       </article>
-
-      <!-- Molecular Biology -->
-      <article class="subject-card" data-title="Molecular Biology" id="mol-card">
-        <h3>🧬 Molecular Biology</h3>
-        <div class="controls">
-          <div class="password-box" id="mol-preview-row">
-            <input id="mol-preview" placeholder="Preview password (...)" type="password" />
-            <button class="password-btn" onclick="checkPassword('mol','preview')">Unlock Preview</button>
-          </div>
-          <div class="password-box" id="mol-download-row">
-            <input id="mol-download" placeholder="Download password (...)" type="password" />
-            <button class="password-btn dl" onclick="checkPassword('mol','download')">Download</button>
-          </div>
+      <article class="subject-card" data-title="Molecular biology">
+        <h3>🧬 Molecular biology</h3>
+        <div class="controls-box">
+          <div class="password-box"><input id="mol-preview" placeholder="Preview pass" type="password" /><button class="password-btn" onclick="checkPassword('mol','preview')">Preview</button></div>
+          <div class="password-box"><input id="mol-download" placeholder="Download pass" type="password" /><button class="password-btn dl" onclick="checkPassword('mol','download')">Download</button></div>
           <div id="mol-result" class="result"></div>
         </div>
       </article>
-
-      <!-- Plant Physiology -->
-      <article class="subject-card" data-title="Plant Physiology" id="phys-card">
-        <h3>🌱 Plant Physiology</h3>
-        <div class="controls">
-          <div class="password-box" id="phys-preview-row">
-            <input id="phys-preview" placeholder="Preview password (...)" type="password" />
-            <button class="password-btn" onclick="checkPassword('phys','preview')">Unlock Preview</button>
-          </div>
-          <div class="password-box" id="phys-download-row">
-            <input id="phys-download" placeholder="Download password (...)" type="password" />
-            <button class="password-btn dl" onclick="checkPassword('phys','download')">Download</button>
-          </div>
+      <article class="subject-card" data-title="Plant physiology">
+        <h3>🌱 Plant physiology</h3>
+        <div class="controls-box">
+          <div class="password-box"><input id="phys-preview" placeholder="Preview pass" type="password" /><button class="password-btn" onclick="checkPassword('phys','preview')">Preview</button></div>
+          <div class="password-box"><input id="phys-download" placeholder="Download pass" type="password" /><button class="password-btn dl" onclick="checkPassword('phys','download')">Download</button></div>
           <div id="phys-result" class="result"></div>
         </div>
       </article>
-
-      <!-- Plant Metabolism -->
-      <article class="subject-card" data-title="Plant Metabolism" id="metab-card">
-        <h3>🌿 Plant Metabolism</h3>
-        <div class="controls">
-          <div class="password-box" id="metab-preview-row">
-            <input id="metab-preview" placeholder="Preview password (...)" type="password" />
-            <button class="password-btn" onclick="checkPassword('metab','preview')">Unlock Preview</button>
-          </div>
-          <div class="password-box" id="metab-download-row">
-            <input id="metab-download" placeholder="Download password (...)" type="password" />
-            <button class="password-btn dl" onclick="checkPassword('metab','download')">Download</button>
-          </div>
+      <article class="subject-card" data-title="Plant metabolism">
+        <h3>🌿 Plant metabolism</h3>
+        <div class="controls-box">
+          <div class="password-box"><input id="metab-preview" placeholder="Preview pass" type="password" /><button class="password-btn" onclick="checkPassword('metab','preview')">Preview</button></div>
+          <div class="password-box"><input id="metab-download" placeholder="Download pass" type="password" /><button class="password-btn dl" onclick="checkPassword('metab','download')">Download</button></div>
           <div id="metab-result" class="result"></div>
         </div>
       </article>
@@ -320,67 +271,36 @@
   </section>
 
   <section id="sem3" class="sem-section" style="display:none">
-    <div class="grid" id="grid-sem3">
-      <!-- Dev -->
-      <article class="subject-card" data-title="Plant Development" id="dev-card">
-        <h3>🌿 Plant Development & Resources</h3>
-        <div class="controls">
-          <div class="password-box" id="dev-preview-row">
-            <input id="dev-preview" placeholder="Preview password (...)" type="password" />
-            <button class="password-btn" onclick="checkPassword('dev','preview')">Unlock Preview</button>
-          </div>
-          <div class="password-box" id="dev-download-row">
-            <input id="dev-download" placeholder="Download password (...)" type="password" />
-            <button class="password-btn dl" onclick="checkPassword('dev','download')">Download</button>
-          </div>
+    <div class="grid">
+      <article class="subject-card" data-title="Plant development and resources">
+        <h3>🌿 Plant development and resources</h3>
+        <div class="controls-box">
+          <div class="password-box"><input id="dev-preview" placeholder="Preview pass" type="password" /><button class="password-btn" onclick="checkPassword('dev','preview')">Preview</button></div>
+          <div class="password-box"><input id="dev-download" placeholder="Download pass" type="password" /><button class="password-btn dl" onclick="checkPassword('dev','download')">Download</button></div>
           <div id="dev-result" class="result"></div>
         </div>
       </article>
-
-      <!-- Eco -->
-      <article class="subject-card" data-title="Ecosystem" id="eco-card">
-        <h3>🌱 Ecosystem & Vegetation Ecology</h3>
-        <div class="controls">
-          <div class="password-box" id="eco-preview-row">
-            <input id="eco-preview" placeholder="Preview password (...)" type="password" />
-            <button class="password-btn" onclick="checkPassword('eco','preview')">Unlock Preview</button>
-          </div>
-          <div class="password-box" id="eco-download-row">
-            <input id="eco-download" placeholder="Download password (...)" type="password" />
-            <button class="password-btn dl" onclick="checkPassword('eco','download')">Download</button>
-          </div>
+      <article class="subject-card" data-title="Ecosystem and vegetation ecology">
+        <h3>🌱 Ecosystem and vegetation ecology</h3>
+        <div class="controls-box">
+          <div class="password-box"><input id="eco-preview" placeholder="Preview pass" type="password" /><button class="password-btn" onclick="checkPassword('eco','preview')">Preview</button></div>
+          <div class="password-box"><input id="eco-download" placeholder="Download pass" type="password" /><button class="password-btn dl" onclick="checkPassword('eco','download')">Download</button></div>
           <div id="eco-result" class="result"></div>
         </div>
       </article>
-
-      <!-- Bio -->
-      <article class="subject-card" data-title="Biotechnology" id="bio-card">
-        <h3>🧬 Biotechnology & Genetic Engineering</h3>
-        <div class="controls">
-          <div class="password-box" id="bio-preview-row">
-            <input id="bio-preview" placeholder="Preview password (...)" type="password" />
-            <button class="password-btn" onclick="checkPassword('bio','preview')">Unlock Preview</button>
-          </div>
-          <div class="password-box" id="bio-download-row">
-            <input id="bio-download" placeholder="Download password (...)" type="password" />
-            <button class="password-btn dl" onclick="checkPassword('bio','download')">Download</button>
-          </div>
+      <article class="subject-card" data-title="Biotechnology genetics engineering of plant and microbes">
+        <h3>🧬 Biotechnology genetics engineering</h3>
+        <div class="controls-box">
+          <div class="password-box"><input id="bio-preview" placeholder="Preview pass" type="password" /><button class="password-btn" onclick="checkPassword('bio','preview')">Preview</button></div>
+          <div class="password-box"><input id="bio-download" placeholder="Download pass" type="password" /><button class="password-btn dl" onclick="checkPassword('bio','download')">Download</button></div>
           <div id="bio-result" class="result"></div>
         </div>
       </article>
-
-      <!-- Path (3rd) -->
-      <article class="subject-card" data-title="Plant Pathology" id="path-card">
-        <h3>🌿 Plant Pathology</h3>
-        <div class="controls">
-          <div class="password-box" id="path-preview-row">
-            <input id="path-preview" placeholder="Preview password (...)" type="password" />
-            <button class="password-btn" onclick="checkPassword('path','preview')">Unlock Preview</button>
-          </div>
-          <div class="password-box" id="path-download-row">
-            <input id="path-download" placeholder="Download password (...)" type="password" />
-            <button class="password-btn dl" onclick="checkPassword('path','download')">Download</button>
-          </div>
+      <article class="subject-card" data-title="Plant pathology">
+        <h3>🌿 Plant pathology</h3>
+        <div class="controls-box">
+          <div class="password-box"><input id="path-preview" placeholder="Preview pass" type="password" /><button class="password-btn" onclick="checkPassword('path','preview')">Preview</button></div>
+          <div class="password-box"><input id="path-download" placeholder="Download pass" type="password" /><button class="password-btn dl" onclick="checkPassword('path','download')">Download</button></div>
           <div id="path-result" class="result"></div>
         </div>
       </article>
@@ -388,383 +308,483 @@
   </section>
 
   <section id="sem4" class="sem-section" style="display:none">
-    <div class="grid" id="grid-sem4">
-      <!-- Repro -->
-      <article class="subject-card" data-title="Plant Reproduction" id="repro-card">
-        <h3>🌿 Plant Reproduction & Utilisation of Resources</h3>
-        <div class="controls">
-          <div class="password-box" id="repro-preview-row">
-            <input id="repro-preview" placeholder="Preview password (...)" type="password" />
-            <button class="password-btn" onclick="checkPassword('repro','preview')">Unlock Preview</button>
-          </div>
-          <div class="password-box" id="repro-download-row">
-            <input id="repro-download" placeholder="Download password (...)" type="password" />
-            <button class="password-btn dl" onclick="checkPassword('repro','download')">Download</button>
-          </div>
+    <div class="grid">
+      <article class="subject-card" data-title="Plant Reproduction & Resources">
+        <h3>🌿 Plant Reproduction & Resources</h3>
+        <div class="controls-box">
+          <div class="password-box"><input id="repro-preview" placeholder="Preview pass" type="password" /><button class="password-btn" onclick="checkPassword('repro','preview')">Preview</button></div>
+          <div class="password-box"><input id="repro-download" placeholder="Download pass" type="password" /><button class="password-btn dl" onclick="checkPassword('repro','download')">Download</button></div>
           <div id="repro-result" class="result"></div>
         </div>
       </article>
-
-      <!-- Eco 4th -->
-      <article class="subject-card" data-title="Plant Ecology Pollution Biodiversity" id="eco4-card">
-        <h3>🌱 Plant Ecology, Pollution & Biodiversity Conservation</h3>
-        <div class="controls">
-          <div class="password-box" id="eco4-preview-row">
-            <input id="eco4-preview" placeholder="Preview password (...)" type="password" />
-            <button class="password-btn" onclick="checkPassword('eco4','preview')">Unlock Preview</button>
-          </div>
-          <div class="password-box" id="eco4-download-row">
-            <input id="eco4-download" placeholder="Download password (...)" type="password" />
-            <button class="password-btn dl" onclick="checkPassword('eco4','download')">Download</button>
-          </div>
+      <article class="subject-card" data-title="Plant Ecology Pollution & Biodiversity Conservation">
+        <h3>🌱 Plant Ecology & Biodiversity</h3>
+        <div class="controls-box">
+          <div class="password-box"><input id="eco4-preview" placeholder="Preview pass" type="password" /><button class="password-btn" onclick="checkPassword('eco4','preview')">Preview</button></div>
+          <div class="password-box"><input id="eco4-download" placeholder="Download pass" type="password" /><button class="password-btn dl" onclick="checkPassword('eco4','download')">Download</button></div>
           <div id="eco4-result" class="result"></div>
         </div>
       </article>
-
-      <!-- Cell culture -->
-      <article class="subject-card" data-title="Plant Cell Tissue Organ Culture" id="cell-card">
-        <h3>🧬 Plant Cell, Tissue & Organ Culture</h3>
-        <div class="controls">
-          <div class="password-box" id="cell-preview-row">
-            <input id="cell-preview" placeholder="Preview password (..)" type="password" />
-            <button class="password-btn" onclick="checkPassword('cell','preview')">Unlock Preview</button>
-          </div>
-          <div class="password-box" id="cell-download-row">
-            <input id="cell-download" placeholder="Download password (...)" type="password" />
-            <button class="password-btn dl" onclick="checkPassword('cell','download')">Download</button>
-          </div>
+      <article class="subject-card" data-title="Plant Cell Tissue & Organ Culture">
+        <h3>🧬 Plant Cell Tissue Culture</h3>
+        <div class="controls-box">
+          <div class="password-box"><input id="cell-preview" placeholder="Preview pass" type="password" /><button class="password-btn" onclick="checkPassword('cell','preview')">Preview</button></div>
+          <div class="password-box"><input id="cell-download" placeholder="Download pass" type="password" /><button class="password-btn dl" onclick="checkPassword('cell','download')">Download</button></div>
           <div id="cell-result" class="result"></div>
         </div>
       </article>
-
-      <!-- Molecular Plant Pathology 4th -->  <!-- Molecular Plant Pathology 4th -->
-      <article class="subject-card" data-title="Molecular Plant Pathology" id="path4-card">
+      <article class="subject-card" data-title="Molecular Plant Pathology">
         <h3>🌿 Molecular Plant Pathology</h3>
-        <div class="controls">
-          <div class="password-box" id="path4-preview-row">
-            <input id="path4-preview" placeholder="Preview password (..)" type="password" />
-            <button class="password-btn" onclick="checkPassword('path4','preview')">Unlock Preview</button>
-          </div>
-          <div class="password-box" id="path4-download-row">
-            <input id="path4-download" placeholder="Download password (...)" type="password" />
-            <button class="password-btn dl" onclick="checkPassword('path4','download')">Download</button>
-          </div>
+        <div class="controls-box">
+          <div class="password-box"><input id="path4-preview" placeholder="Preview pass" type="password" /><button class="password-btn" onclick="checkPassword('path4','preview')">Preview</button></div>
+          <div class="password-box"><input id="path4-download" placeholder="Download pass" type="password" /><button class="password-btn dl" onclick="checkPassword('path4','download')">Download</button></div>
           <div id="path4-result" class="result"></div>
-        </div>
-      </article>
+        </article>
     </div>
   </section>
+
+  <!-- PREVIOUS EXAM PAPERS SECTION -->
+  <div class="papers-wrap">
+    <h2 style="text-align:center;margin-bottom:12px;">📑 Previous Exam Papers</h2>
+    <div class="papers-controls">
+      <select id="paperSemester">
+        <option value="">-- Select Semester --</option>
+        <option value="1">1st Semester</option>
+        <option value="2">2nd Semester</option>
+        <option value="3">3rd Semester</option>
+        <option value="4">4th Semester</option>
+      </select>
+      <button id="clearPaper" class="btn-paper" style="background:#1e293b;">Clear</button>
+    </div>
+
+    <div id="paperList" class="paper-cards" style="display:none"></div>
+
+    <div class="viewer-wrap" id="paperViewerWrap" style="display:none">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+        <strong id="paperViewerTitle">Preview</strong>
+        <div>
+          <a id="paperOpenNew" class="btn-paper open" target="_blank" rel="noopener">Open in Drive</a>
+          <button id="closePaperViewer" class="btn-paper" style="background:#1e293b">Close</button>
+        </div>
+      </div>
+      <iframe id="paperViewer" class="viewer" sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
+    </div>
+
+    <div id="noPapers" style="text-align:center;padding:10px;opacity:0.8;">कृपया पेपर देखने के लिए Semester चुनें।</div>
+  </div>
+
+  <!-- DUAL PAYMENT SYSTEMS (SEPARATE) -->
+  <div class="section-title">💰 Payment & Help Systems</div>
+  <div class="payment-dual-container">
+    
+    <!-- 1. Single Subject Payment System -->
+    <div class="pay-box">
+      <h3>📌 Single Subject Payment</h3>
+      <p style="font-size:12px;color:#555;">(25₹ Preview / 59₹-70₹ Download)</p>
+      <div class="upi-box">
+        <input id="upi1" class="upi-input" value="msccreate7@okhdfcbank" readonly>
+        <button class="copy-btn" onclick="copyUPI('upi1', this)">Copy</button>
+      </div>
+      <div class="app-list">
+        <a href="#" class="p-app" data-pkg="com.phonepe.app" id="phonepe">📱 PhonePe</a>
+        <a href="#" class="p-app" data-pkg="com.google.android.apps.nbu.paisa.user" id="gpay">💸 Google Pay</a>
+        <a href="#" class="p-app" data-pkg="net.one97.paytm" id="paytm">💰 Paytm</a>
+      </div>
+      <button class="contact-btn" onclick="openForm('single')">📞 Contact / Single Password Form</button>
+    </div>
+
+    <!-- 2. All Semester Package Payment System -->
+    <div class="pay-box" style="border: 2px solid #00796b;">
+      <h3>📦 All Semester Package Payment</h3>
+      <p style="font-size:12px;color:#555;">(पूरे सेमेस्टर का कम्प्लीट नोट्स पैकेज)</p>
+      <div class="upi-box">
+        <input id="upi2" class="upi-input" value="msccreate7@okhdfcbank" readonly>
+        <button class="copy-btn" onclick="copyUPI('upi2', this)">Copy</button>
+      </div>
+      <div class="app-list">
+        <a href="#" class="p-app" data-pkg="com.phonepe.app" style="background:#00796b;">📱 PhonePe (Full Package)</a>
+        <a href="#" class="p-app" data-pkg="com.google.android.apps.nbu.paisa.user" style="background:#0284c7;">💸 GPay (Full Package)</a>
+        <a href="#" class="p-app" data-pkg="net.one97.paytm" style="background:#0f172a;">💰 Paytm (Full Package)</a>
+      </div>
+      <button class="contact-btn" style="background:#00796b;" onclick="openForm('full')">📞 Full Semester Package Form</button>
+    </div>
+
+  </div>
+
+  <!-- DUAL ADMIN SYSTEMS (SEPARATE) -->
+  <div class="section-title">🔐 Admin Control Panel</div>
+  <div class="admin-dual-container">
+    
+    <!-- 1. Single Subject Admin Dispatcher -->
+    <div class="admin-box">
+      <h4>🔑 Single Password Dispatcher</h4>
+      <input type="password" id="adminPassSingle" placeholder="Admin Password" style="margin-top:8px;">
+      <button class="big-open-btn" onclick="openAdminModal('single')">📩 Dispatch Single Password</button>
+    </div>
+
+    <!-- 2. Full Semester Admin Dispatcher -->
+    <div class="admin-box" style="border-color:#00796b; background:#f0fdf4;">
+      <h4 style="color:#00796b;">📦 Full Semester Password Dispatcher</h4>
+      <input type="password" id="adminPassFull" placeholder="Admin Password" style="margin-top:8px;">
+      <button class="big-open-btn" style="background:#00796b;" onclick="openAdminModal('full')">📩 Dispatch Full Package Passwords</button>
+    </div>
+
+  </div>
 </main>
 
-<!-- full-screen preview overlay -->
-<div id="previewOverlay" class="preview-overlay" aria-hidden="true">
-  <div class="preview-frame">
-    <button class="preview-close" onclick="closePreview()">⬅ Close</button>
-    <iframe id="previewIframe" src="" allowfullscreen sandbox="allow-scripts allow-same-origin"></iframe>
+<!-- USER HELP FORM MODAL -->
+<div class="overlay" id="userFormOverlay">
+  <div class="form-card">
+    <button class="close-btn" onclick="closeModal('userFormOverlay')">✖</button>
+    <h3 id="userFormTitle">📝 सहायता / पासवर्ड फॉर्म</h3>
+    <form id="helpForm">
+      <input type="hidden" id="formMode" value="single">
+      
+      <label>नाम *</label>
+      <input id="userName" type="text" placeholder="अपना नाम लिखें">
+
+      <label>ईमेल *</label>
+      <input id="userEmail" type="email" placeholder="ईमेल लिखें">
+
+      <label>मोबाइल नंबर *</label>
+      <input id="userMobile" type="text" placeholder="10 अंकों का मोबाइल नंबर">
+
+      <label>Semester *</label>
+      <select id="userSemester">
+        <option value="">-- चुनें --</option>
+        <option value="1st semester">1st Semester</option>
+        <option value="2nd semester">2nd Semester</option>
+        <option value="3rd semester">3rd Semester</option>
+        <option value="4th semester">4th Semester</option>
+      </select>
+
+      <div id="subjectSelectBlock">
+        <label>विषय *</label>
+        <select id="userSubject">
+          <option value="">-- पहले Semester चुनें --</option>
+        </select>
+      </div>
+
+      <label>Payment Type *</label>
+      <select id="userPaymentType">
+        <option value="">-- चुनें --</option>
+        <option value="Single Subject Preview (25₹)">25₹ - Preview Notes</option>
+        <option value="Single Subject Download (59₹/70₹)">59₹/70₹ - Download Notes</option>
+        <option value="Full Semester Package">Full Semester All Subjects Package</option>
+      </select>
+
+      <label>Message Type *</label>
+      <select id="userMessageType">
+        <option value="">-- चुनें --</option>
+        <option value="Password Send Me">Password Send Me</option>
+        <option value="समस्या लिखें">समस्या लिखें</option>
+      </select>
+
+      <div id="userMessageBox" style="display:none;">
+        <label>अपनी समस्या *</label>
+        <textarea id="userMessage" placeholder="अपनी समस्या लिखें..."></textarea>
+      </div>
+
+      <label>Payment Screenshot *</label>
+      <input id="userPaymentFile" type="file" accept="image/*">
+
+      <button id="userSendBtn" type="button" class="btn-submit">📤 Send via WhatsApp</button>
+    </form>
   </div>
 </div>
 
-<footer>Made for MSc Botany notes — preview = view-only (embedded). Replace DRIVE IDs in LINKS object with your file IDs.</footer>
+<!-- ADMIN MODAL -->
+<div class="overlay" id="adminFormOverlay">
+  <div class="form-card">
+    <button class="close-btn" onclick="closeModal('adminFormOverlay')">✖</button>
+    <h3 id="adminFormTitle">🔑 Admin Password Sender</h3>
+    <form id="adminForm" style="margin-top:10px;">
+      <input type="hidden" id="adminMode" value="single">
+
+      <label>Student Mobile (WhatsApp) *</label>
+      <input id="adminMobile" type="tel" placeholder="XXXXXXXXXX" required>
+
+      <label>Semester *</label>
+      <select id="adminSemester" required>
+        <option value="">-- चुनें --</option>
+        <option value="1st semester">1st Semester</option>
+        <option value="2nd semester">2nd Semester</option>
+        <option value="3rd semester">3rd Semester</option>
+        <option value="4th semester">4th Semester</option>
+      </select>
+
+      <div id="adminSubjectBlock">
+        <label>Subject *</label>
+        <select id="adminSubject">
+          <option value="">-- पहले Semester चुनें --</option>
+        </select>
+      </div>
+
+      <label>Payment / Access Type *</label>
+      <select id="adminPaymentType" required>
+        <option value="preview">25₹ Preview Notes</option>
+        <option value="download">59₹/70₹ Download Notes</option>
+        <option value="full_package">Full Semester All Notes</option>
+      </select>
+
+      <button class="btn-submit" type="submit" style="background:#0ea5a4;margin-top:12px;">📩 Send Password on WhatsApp</button>
+    </form>
+  </div>
+</div>
+
+<!-- LOADING OVERLAY -->
+<div id="loadingOverlay">
+  <div class="loader"></div>
+  <span style="margin-top:10px;">⏳ Connecting to WhatsApp...</span>
+</div>
+
+<footer>MSc Botany Complete Education & Resource Portal</footer>
 
 <script>
-/* -------------------------
-   LINKS and PASSWORDS
-   Replace preview/download URLs (XXXX etc) with your real Google Drive links.
-   NOTE: For preview use a view/embed link (drive preview) so browser shows view not direct download.
-   ------------------------- */
-const LINKS = {
-  /* Semester 1 */
-  cyto: { preview:"https://drive.google.com/file/d/11eW71nBv0q1rVhHTc1wl_HshAljPuWkh/preview", download:"https://drive.google.com/uc?export=download&id=11eW71nBv0q1rVhHTc1wl_HshAljPuWkh" },
-  gen:  { preview:"https://drive.google.com/file/d/1-bBpdwqYRcxriQg-zzGhLXCcdVmcsAOL/preview", download:"https://drive.google.com/uc?export=download&id=1-bBpdwqYRcxriQg-zzGhLXCcdVmcsAOL" },
-  myco: { preview:"https://drive.google.com/file/d/1pQacmr2BJ9OME8FKmSFxrvbfWNWSwEaY/preview", download:"https://drive.google.com/uc?export=download&id=1pQacmr2BJ9OME8FKmSFxrvbfWNWSwEaY" },
-  bryo: { preview:"https://drive.google.com/file/d/1dfcNuUIr4FfxC2uPaQQhiVh8ozv80Nj0/preview", download:"https://drive.google.com/uc?export=download&id=1dfcNuUIr4FfxC2uPaQQhiVh8ozv80Nj0" },
-
-  /* Semester 2 */
-  taxo: { preview:"https://drive.google.com/file/d/1brGlGdActnAyAptkS6rEkENlVz03hvUS/preview", download:"https://drive.google.com/uc?export=download&id=1brGlGdActnAyAptkS6rEkENlVz03hvUS" },
-  mol:  { preview:"https://drive.google.com/file/d/1VSgLLD3flD_cibfUkZIOe7tQCq7YcZ8c/preview", download:"https://drive.google.com/uc?export=download&id=1VSgLLD3flD_cibfUkZIOe7tQCq7YcZ8c" },
-  phys: { preview:"https://drive.google.com/file/d/1_sL3K0A_jfCEu4ShHFFsVIn90Ms8WzGx/preview", download:"https://drive.google.com/uc?export=download&id=1_sL3K0A_jfCEu4ShHFFsVIn90Ms8WzGx" },
-  metab:{ preview:"https://drive.google.com/file/d/1_E4Hp2DtdnIhb6S8x_CSc5rA3AHVwgvt/preview", download:"https://drive.google.com/uc?export=download&id=1_E4Hp2DtdnIhb6S8x_CSc5rA3AHVwgvt" },
-
-  /* Semester 3 */
-  dev: { preview:"https://drive.google.com/file/d/1SZoOhHU1JZQUSLWORd8boGoSC4TO7-v5/preview", download:"https://drive.google.com/uc?export=download&id=1SZoOhHU1JZQUSLWORd8boGoSC4TO7-v5" },
-  eco: { preview:"https://drive.google.com/file/d/1B-U6UUvQAPTh4EJYIjcndWMcJHlqST4E/preview", download:"https://drive.google.com/uc?export=download&id=1B-U6UUvQAPTh4EJYIjcndWMcJHlqST4E" },
-  bio: { preview:"https://drive.google.com/file/d/1fQ9cHL4ZoZvyEBrKORb0TRUEi6z_JVai/preview", download:"https://drive.google.com/uc?export=download&id=1fQ9cHL4ZoZvyEBrKORb0TRUEi6z_JVai" },
-  path:{ preview:"https://drive.google.com/file/d/1vLuGfa_g0FwDyJXXwETwbeYjQAztZf4t/preview", download:"https://drive.google.com/uc?export=download&id=1vLuGfa_g0FwDyJXXwETwbeYjQAztZf4t" },
-
-  /* Semester 4 */
-  repro:{ preview:"https://drive.google.com/file/d/JJJJ/preview", download:"https://drive.google.com/uc?export=download&id=JJJJ" },
-  eco4:{ preview:"https://drive.google.com/file/d/KKKK/preview", download:"https://drive.google.com/uc?export=download&id=KKKK" },
-  cell:{ preview:"https://drive.google.com/file/d/LLLL/preview", download:"https://drive.google.com/uc?export=download&id=LLLL" },
-  path4:{ preview:"https://drive.google.com/file/d/10HSb53usq2v7bNB_DEz5XqLbnmRQuuo5/preview", download:"https://drive.google.com/uc?export=download&id=10HSb53usq2v7bNB_DEz5XqLbnmRQuuo5" }
-};
-
-/* PASSWORDS: per your requested pattern earlier */
+/* -------------------------------------------------------------
+   1. DATA STRUCTURES & KEYS
+---------------------------------------------------------------- */
 const PASSWORDS = {
-  /* Semester 1 (simple numeric codes as earlier) */
-  cyto: { preview:"cyto1011", download:"cyto2034" },
-  gen:  { preview:"gene1099", download:"gene2097" },
-  myco: { preview:"myco1000", download:"myco2026" },
-  bryo: { preview:"bryo1077", download:"bryo2070" },
-
-  /* Semester 2 */
-  taxo: { preview:"taxo20111", download:"taxo3022" },
-  mol:  { preview:"mol20777", download:"mol3000" },
-  phys: { preview:"phys20666", download:"phys3009" },
-  metab:{ preview:"metab20555", download:"metab30046" },
-
-  /* Semester 3 */
-  dev: { preview:"dev3014", download:"dev40109" },
-  eco: { preview:"eco3035", download:"eco40208" },
-  bio: { preview:"bio3053", download:"bio40207" },
-  path:{ preview:"path3072", download:"path4070" },
-
-  /* Semester 4 */
+  cyto: { preview:"cyto1013", download:"cyto2034" },
+  gen:  { preview:"gene1032", download:"gene2057" },
+  myco: { preview:"myco1058", download:"myco2036" },
+  bryo: { preview:"bryo1079", download:"bryo2070" },
+  taxo: { preview:"taxo20111", download:"taxo30022" },
+  mol:  { preview:"mol20777", download:"mol30066" },
+  phys: { preview:"phys20666", download:"phys30099" },
+  metab:{ preview:"metab20555", download:"metab30066" },
+  dev:  { preview:"dev3014", download:"dev4020" },
+  eco:  { preview:"eco3035", download:"eco4021" },
+  bio:  { preview:"bio3053", download:"bio4025" },
+  path: { preview:"path3072", download:"path4076" },
   repro:{ preview:"repro401", download:"repro501" },
   eco4: { preview:"eco403", download:"eco503" },
   cell: { preview:"cell405", download:"cell505" },
   path4:{ preview:"path407", download:"path507" }
 };
 
-/* Lock duration: 6 hours */
-const LOCK_DURATION = 6 * 60 * 60 * 1000;
+const adminData = {
+ "1st semester":{ "Cytology": PASSWORDS.cyto, "Genetics": PASSWORDS.gen, "Mycology": PASSWORDS.myco, "Bryophyta": PASSWORDS.bryo },
+ "2nd semester":{ "Taxonomy and diversity of plant": PASSWORDS.taxo, "Molecular biology": PASSWORDS.mol, "Plant physiology": PASSWORDS.phys, "Plant metabolism": PASSWORDS.metab },
+ "3rd semester":{ "Plant development and resources": PASSWORDS.dev, "Ecosystem and vegetation ecology": PASSWORDS.eco, "Biotechnology genetics engineering": PASSWORDS.bio, "Plant pathology": PASSWORDS.path },
+ "4th semester":{ "Plant Reproduction & Resources": PASSWORDS.repro, "Plant Ecology & Biodiversity": PASSWORDS.eco4, "Plant Cell Tissue Culture": PASSWORDS.cell, "Molecular Plant Pathology": PASSWORDS.path4 }
+};
 
-/* Helper: returns storage keys */
-function attemptsKey(subject, type){ return `${subject}-${type}-fails`; }
-function lockKey(subject, type){ return `${subject}-${type}-lock`; }
-
-/* Check if a specific box is locked */
-function isLocked(subject, type){
-  const data = JSON.parse(localStorage.getItem(lockKey(subject,type)) || 'null');
-  return data && Date.now() < data.until;
-}
-
-/* Lock a specific box */
-function lockBox(subject, type){
-  const until = Date.now() + LOCK_DURATION;
-  localStorage.setItem(lockKey(subject,type), JSON.stringify({until}));
-  // update UI
-  const res = document.getElementById(`${subject}-result`);
-  if(res){ res.textContent = `⛔ Too many attempts! Locked for 6 hours.`; res.className='result error'; }
-  // disable inputs/buttons
+/* -------------------------------------------------------------
+   2. NOTES PASSWORD VERIFICATION
+---------------------------------------------------------------- */
+function checkPassword(subject, type){
   const input = document.getElementById(`${subject}-${type}`);
-  if(input) input.disabled = true;
-  // disable the specific button (find by onclick containing type)
-  const card = document.getElementById(`${subject}-card`);
-  if(card){
-    const btn = card.querySelector(`button[onclick*="${type}"]`);
-    if(btn) btn.disabled = true;
+  const res = document.getElementById(`${subject}-result`);
+  if(!input || !res) return;
+
+  if(PASSWORDS[subject] && input.value.trim() === PASSWORDS[subject][type]){
+    res.textContent = "✅ Correct Password!";
+    res.className = "result success";
+    alert("✅ Correct Password! Accessing file...");
+  } else {
+    res.textContent = "❌ Incorrect Password!";
+    res.className = "result error";
   }
 }
 
-/* On successful attempt: clear fails & lock */
-function clearAttempts(subject,type){
-  localStorage.removeItem(attemptsKey(subject,type));
-  localStorage.removeItem(lockKey(subject,type));
-  const input = document.getElementById(`${subject}-${type}`);
-  if(input) input.value = '';
+/* -------------------------------------------------------------
+   3. PREVIOUS EXAM PAPERS SYSTEM (DYNAMIC COLORS)
+---------------------------------------------------------------- */
+const papers=[
+  {id:'1J32oJCPUbTRRgHx5EGRLko_7kLVknVNN',title:'Previous Exam Paper - 1st Semester',semester:1},
+  {id:'1GkgNlFd7Is18P0O-R88xtY8hu3F-478k',title:'Previous Exam Paper - 2nd Semester (A)',semester:2},
+  {id:'1KYg5uPQ3e-NQCXu1tN-0aNor3RonEoeo',title:'Previous Exam Paper - 2nd Semester (B)',semester:2},
+  {id:'193SzP__RtQbfcDOlfjo8T8BaMx0f73Zx',title:'Previous Exam Paper - 3rd Semester (A)',semester:3},
+  {id:'12-dmyfHudfOJQYR8g75FpeBjEMxlsdR3',title:'Previous Exam Paper - 3rd Semester (B)',semester:3},
+  {id:'1Oz3X5e3Ja6maTdLac5fB5ZoBj8ZrG89j',title:'Previous Exam Paper - 3rd Semester (C)',semester:3},
+  {id:'1jjLX-0-Lxr5gk7XlU4nqGNQH5fYCXqs6',title:'Previous Exam Paper - 4th Semester',semester:4}
+];
+
+const gradients = {
+  1: 'linear-gradient(135deg, #f97316 0%, #facc15 100%)',
+  2: 'linear-gradient(135deg, #10b981 0%, #34d399 100%)',
+  3: 'linear-gradient(135deg, #a855f7 0%, #ec4899 100%)',
+  4: 'linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%)'
+};
+
+const paperSemEl = document.getElementById('paperSemester');
+const paperListEl = document.getElementById('paperList');
+const noPapersEl = document.getElementById('noPapers');
+const paperViewerWrap = document.getElementById('paperViewerWrap');
+const paperViewer = document.getElementById('paperViewer');
+const paperViewerTitle = document.getElementById('paperViewerTitle');
+const paperOpenNew = document.getElementById('paperOpenNew');
+
+function renderPapers(list){
+  paperListEl.innerHTML = '';
+  if(!list.length){ noPapersEl.style.display = 'block'; paperListEl.style.display = 'none'; return; }
+  noPapersEl.style.display = 'none'; paperListEl.style.display = 'grid';
+
+  list.forEach(p=>{
+    const card = document.createElement('div'); card.className = 'paper-card';
+    card.innerHTML = `<div class="title">${p.title}</div>
+      <div class="paper-actions">
+        <button class='btn-paper preview' onclick="previewPaper('${p.id}', '${p.title}')">Preview</button>
+        <a class='btn-paper open' href='https://drive.google.com/file/d/${p.id}/view' target='_blank'>Drive</a>
+      </div>`;
+    paperListEl.appendChild(card);
+  });
 }
 
-/* Core password check function */
-function checkPassword(subject, type){
-  const inputEl = document.getElementById(`${subject}-${type}`);
-  const resultEl = document.getElementById(`${subject}-result`);
-  if(!inputEl || !resultEl) return;
+function previewPaper(id, title){
+  paperViewer.src = `https://drive.google.com/file/d/${id}/preview`;
+  paperViewerTitle.textContent = title;
+  paperOpenNew.href = `https://drive.google.com/file/d/${id}/view`;
+  paperViewerWrap.style.display = 'block';
+}
 
-  // If locked, show remaining minutes
-  if(isLocked(subject,type)){
-    const data = JSON.parse(localStorage.getItem(lockKey(subject,type)));
-    const leftMs = data.until - Date.now();
-    const leftMin = Math.ceil(leftMs/60000);
-    resultEl.textContent = `⛔ Locked! Try again after ${leftMin} min`;
-    resultEl.className = 'result error';
-    inputEl.disabled = true;
-    const btn = document.getElementById(`${subject}-card`)?.querySelector(`button[onclick*="${type}"]`);
-    if(btn) btn.disabled = true;
+paperSemEl.addEventListener('change', ()=>{
+  const sem = paperSemEl.value;
+  if(!sem){
+    paperListEl.style.display = 'none';
+    noPapersEl.style.display = 'block';
+    document.body.style.background = 'linear-gradient(135deg, #eef2ff 0%, #fff8f0 100%)';
     return;
   }
+  document.body.style.background = gradients[sem] || 'linear-gradient(135deg, #eef2ff 0%, #fff8f0 100%)';
+  renderPapers(papers.filter(p=> String(p.semester) === sem));
+});
 
-  const val = inputEl.value.trim();
+document.getElementById('clearPaper').onclick = ()=>{
+  paperSemEl.value = ''; paperListEl.style.display = 'none'; noPapersEl.style.display = 'block';
+  paperViewerWrap.style.display = 'none'; paperViewer.src = '';
+  document.body.style.background = 'linear-gradient(135deg, #eef2ff 0%, #fff8f0 100%)';
+};
+document.getElementById('closePaperViewer').onclick = ()=>{ paperViewerWrap.style.display = 'none'; paperViewer.src = ''; };
 
-  if(PASSWORDS[subject] && val === PASSWORDS[subject][type]){
-    // success
-    resultEl.textContent = '✅ Correct Password!';
-    resultEl.className = 'result success';
-    clearAttempts(subject,type);
+/* -------------------------------------------------------------
+   4. NAVIGATION & UTILS
+---------------------------------------------------------------- */
+const navBtns = document.querySelectorAll('#semesterNav button');
+const semSections = document.querySelectorAll('.sem-section');
 
-    if(type === 'preview'){
-      // open preview full-screen overlay
-      const link = LINKS[subject] && LINKS[subject].preview ? LINKS[subject].preview : '';
-      if(link){
-        openPreview(link);
-      } else {
-        resultEl.textContent = '⚠️ Preview link not set';
-        resultEl.className = 'result error';
-      }
-    } else {
-      // download
-      const link = LINKS[subject] && LINKS[subject].download ? LINKS[subject].download : '';
-      if(link){
-        // start download by opening link
-        const a = document.createElement('a');
-        a.href = link;
-        a.download = '';
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-        resultEl.textContent += ' ⬇ Download Started!';
-      } else {
-        resultEl.textContent = '⚠️ Download link not set';
-        resultEl.className = 'result error';
-      }
-    }
+navBtns.forEach(btn=>{
+  btn.onclick = ()=>{
+    navBtns.forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    const sem = btn.dataset.sem;
+    semSections.forEach(s=> s.style.display = s.id === sem ? 'block' : 'none');
+  }
+});
+
+function copyUPI(id, btn){
+  navigator.clipboard.writeText(document.getElementById(id).value);
+  btn.textContent = "Copied!"; setTimeout(()=> btn.textContent = "Copy", 1500);
+}
+
+document.querySelectorAll('.p-app').forEach(a=>{
+  a.onclick = (e)=>{ e.preventDefault(); window.location=`intent://#Intent;package=${a.dataset.pkg};end`; };
+});
+
+function closeModal(id){ document.getElementById(id).style.display = 'none'; }
+
+/* -------------------------------------------------------------
+   5. FORM DISPATCHING & WHATSAPP REDIRECTS
+---------------------------------------------------------------- */
+const WHATSAPP_NUMBER = "916267637741";
+
+function openForm(mode){
+  document.getElementById('formMode').value = mode;
+  document.getElementById('userFormTitle').textContent = mode === 'single' ? "📝 Single Subject Help / Password Form" : "📦 Full Semester Package Form";
+  document.getElementById('subjectSelectBlock').style.display = mode === 'single' ? "block" : "none";
+  document.getElementById('userFormOverlay').style.display = "flex";
+}
+
+document.getElementById("userSemester").onchange = function(){
+  const sem = this.value;
+  const subSel = document.getElementById("userSubject");
+  subSel.innerHTML = '<option value="">-- चुनें --</option>';
+  if(adminData[sem]){
+    Object.keys(adminData[sem]).forEach(s=>{
+      let opt = document.createElement("option"); opt.value = s; opt.textContent = s; subSel.appendChild(opt);
+    });
+  }
+};
+
+document.getElementById("userMessageType").onchange = function(){
+  document.getElementById("userMessageBox").style.display = this.value === "समस्या लिखें" ? "block" : "none";
+};
+
+document.getElementById("userSendBtn").onclick = ()=>{
+  const mode = document.getElementById('formMode').value;
+  const name = document.getElementById('userName').value.trim();
+  const mobile = document.getElementById('userMobile').value.trim();
+  const sem = document.getElementById('userSemester').value;
+  const sub = document.getElementById('userSubject').value;
+
+  if(!name || !mobile || !sem || (mode === 'single' && !sub)){
+    alert("❌ कृपया आवश्यक जानकारी भरें।"); return;
+  }
+
+  let text = `💬 *MSc Botany Portal Form (${mode.toUpperCase()})*\n\n👤 *नाम:* ${name}\n📱 *मोबाइल:* ${mobile}\n🎓 *Semester:* ${sem}\n`;
+  if(mode === 'single') text += `📘 *Subject:* ${sub}\n`;
+  text += `💰 *Type:* ${document.getElementById('userPaymentType').value}\n\n📎 Payment Screenshot WhatsApp में attach करें।`;
+
+  window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`, '_blank');
+  closeModal('userFormOverlay');
+};
+
+/* -------------------------------------------------------------
+   6. SEPARATE ADMIN MODAL LOGIC
+---------------------------------------------------------------- */
+function openAdminModal(mode){
+  const pass = mode === 'single' ? document.getElementById('adminPassSingle').value : document.getElementById('adminPassFull').value;
+  if(pass !== "0009veer"){ alert("❌ Wrong Admin Password"); return; }
+
+  document.getElementById('adminMode').value = mode;
+  document.getElementById('adminFormTitle').textContent = mode === 'single' ? "🔑 Single Password Dispatcher" : "📦 Full Semester Password Dispatcher";
+  document.getElementById('adminSubjectBlock').style.display = mode === 'single' ? "block" : "none";
+  document.getElementById('adminFormOverlay').style.display = "flex";
+}
+
+document.getElementById("adminSemester").onchange = function(){
+  const sem = this.value;
+  const subSel = document.getElementById("adminSubject");
+  subSel.innerHTML = '<option value="">-- चुनें --</option>';
+  if(adminData[sem]){
+    Object.keys(adminData[sem]).forEach(s=>{
+      let opt = document.createElement("option"); opt.value = s; opt.textContent = s; subSel.appendChild(opt);
+    });
+  }
+};
+
+document.getElementById("adminForm").onsubmit = function(e){
+  e.preventDefault();
+  const mode = document.getElementById('adminMode').value;
+  const mobile = document.getElementById('adminMobile').value.trim();
+  const sem = document.getElementById('adminSemester').value;
+  const sub = document.getElementById('adminSubject').value;
+  const pay = document.getElementById('adminPaymentType').value;
+
+  let msg = "";
+  if(mode === 'single'){
+    const pass = (adminData[sem] && adminData[sem][sub]) ? adminData[sem][sub][pay === 'preview' ? 'preview' : 'download'] : null;
+    if(!pass){ alert("❌ पासवर्ड उपलब्ध नहीं है।"); return; }
+    msg = `🔑 *Password Access*\nSemester: ${sem}\nSubject: ${sub}\nPassword: ${pass}`;
   } else {
-    // wrong
-    resultEl.textContent = '❌ Incorrect Password!';
-    resultEl.className = 'result error';
-    // clear the input for security
-    inputEl.value = '';
-    // increment attempts
-    let fails = parseInt(localStorage.getItem(attemptsKey(subject,type)) || '0', 10) + 1;
-    localStorage.setItem(attemptsKey(subject,type), String(fails));
-    if(fails >= 3){
-      lockBox(subject,type);
-    } else {
-      // show remaining attempts info (optional)
-      const remaining = 3 - fails;
-      resultEl.textContent = `❌ Incorrect Password! ${remaining} attempt(s) left before lock.`;
+    msg = `📦 *Full Semester Password Package*\nSemester: ${sem}\n\n`;
+    if(adminData[sem]){
+      Object.keys(adminData[sem]).forEach(s=>{
+        msg += `📘 ${s}: ${adminData[sem][s].download}\n`;
+      });
     }
   }
-}
 
-/* Preview overlay controls */
-function openPreview(url){
-  const overlay = document.getElementById('previewOverlay');
-  const iframe = document.getElementById('previewIframe');
-  iframe.src = url;
-  overlay.style.display = 'flex';
-  overlay.setAttribute('aria-hidden','false');
-  // Prevent body scroll
-  document.body.style.overflow = 'hidden';
-}
-function closePreview(){
-  const overlay = document.getElementById('previewOverlay');
-  const iframe = document.getElementById('previewIframe');
-  iframe.src = '';
-  overlay.style.display = 'none';
-  overlay.setAttribute('aria-hidden','true');
-  document.body.style.overflow = '';
-}
-
-/* On load: restore lock states (disable inputs/buttons if locked) */
-function restoreLocks(){
-  const subjects = [
-    /* sem1 */ 'cyto','gen','myco','bryo',
-    /* sem2 */ 'taxo','mol','phys','metab',
-    /* sem3 */ 'dev','eco','bio','path',
-    /* sem4 */ 'repro','eco4','cell','path4'
-  ];
-  subjects.forEach(sub=>{
-    ['preview','download'].forEach(type=>{
-      if(isLocked(sub,type)){
-        const res = document.getElementById(`${sub}-result`);
-        if(res){
-          const data = JSON.parse(localStorage.getItem(lockKey(sub,type)));
-          const leftMin = Math.ceil((data.until - Date.now())/60000);
-          res.textContent = `⛔ Locked! Try again after ${leftMin} min`;
-          res.className = 'result error';
-        }
-        const input = document.getElementById(`${sub}-${type}`);
-        if(input) input.disabled = true;
-        const card = document.getElementById(`${sub}-card`);
-        if(card){
-          const btn = card.querySelector(`button[onclick*="${type}"]`);
-          if(btn) btn.disabled = true;
-        }
-      }
-    });
-  });
-}
-
-/* Semester nav + search behavior */
-const semesterButtons = document.querySelectorAll('#semesterNav button');
-const mobileSem = document.getElementById('mobileSem');
-const semSections = document.querySelectorAll('.sem-section');
-const semesterTag = document.getElementById('semesterTag');
-
-function showSemester(id){
-  semSections.forEach(s=> s.style.display = s.id===id ? 'block' : 'none');
-  semesterButtons.forEach(b=> b.classList.toggle('active', b.dataset.sem===id));
-  semesterTag.textContent = id === 'sem1' ? 'Semester 1' : id==='sem2' ? 'Semester 2' : id==='sem3' ? 'Semester 3' : 'Semester 4';
-  // clear search when switching
-  document.getElementById('searchBox').value = '';
-  filterSubjects('');
-}
-
-/* attach click */
-semesterButtons.forEach(btn=>{
-  btn.addEventListener('click', ()=> showSemester(btn.dataset.sem));
-});
-mobileSem.addEventListener('change', ()=>{
-  showSemester(mobileSem.value);
-  // also make desktop nav reflect
-  semesterButtons.forEach(b=> b.classList.toggle('active', b.dataset.sem===mobileSem.value));
-});
-
-/* search: filter subject cards by data-title (case-insensitive) */
-const searchBox = document.getElementById('searchBox');
-const clearSearch = document.getElementById('clearSearch');
-function filterSubjects(query){
-  const q = (query||'').trim().toLowerCase();
-  // only filter visible semester
-  const visibleSem = Array.from(semSections).find(s => s.style.display !== 'none');
-  if(!visibleSem) return;
-  const cards = visibleSem.querySelectorAll('.subject-card');
-  cards.forEach(card=>{
-    const title = (card.dataset.title || '').toLowerCase();
-    if(!q || title.includes(q)){
-      card.style.display = '';
-    } else {
-      card.style.display = 'none';
-    }
-  });
-}
-searchBox.addEventListener('input', (e)=> filterSubjects(e.target.value));
-clearSearch.addEventListener('click', ()=> { searchBox.value = ''; filterSubjects(''); });
-
-/* initialize */
-showSemester('sem1');
-restoreLocks();
-
-/* Periodic cleanup: unlock boxes whose lock expired (so UI updates) */
-setInterval(()=>{
-  // check all lock keys; if expired remove lock and enable inputs/buttons
-  const subjects = [
-    'cyto','gen','myco','bryo',
-    'taxo','mol','phys','metab',
-    'dev','eco','bio','path',
-    'repro','eco4','cell','path4'
-  ];
-  subjects.forEach(sub=>{
-    ['preview','download'].forEach(type=>{
-      const key = lockKey(sub,type);
-      const data = JSON.parse(localStorage.getItem(key) || 'null');
-      if(data && Date.now() >= data.until){
-        localStorage.removeItem(key);
-        localStorage.removeItem(attemptsKey(sub,type));
-        const res = document.getElementById(`${sub}-result`);
-        if(res){ res.textContent = ''; res.className = 'result'; }
-        const input = document.getElementById(`${sub}-${type}`);
-        if(input) input.disabled = false;
-        const card = document.getElementById(`${sub}-card`);
-        if(card){
-          const btn = card.querySelector(`button[onclick*="${type}"]`);
-          if(btn) btn.disabled = false;
-        }
-      }
-    });
-  });
-}, 60*1000); // every minute
-
+  const overlay = document.getElementById("loadingOverlay");
+  overlay.style.display = "flex";
+  setTimeout(()=>{
+    window.open(`https://wa.me/${mobile}?text=${encodeURIComponent(msg)}`, "_blank");
+    overlay.style.display = "none";
+    closeModal('adminFormOverlay');
+  }, 1000);
+};
 </script>
+
 </body>
 </html>
