@@ -1,0 +1,161 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MSc Botany - Previous Exam Papers (Dynamic Colors)</title>
+  <style>
+    :root {
+      --bg-gradient: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+    }
+    * {box-sizing: border-box;font-family: 'Poppins', system-ui, sans-serif;}
+    html, body {
+      margin: 0;
+      height: 100%;
+      background: var(--bg-gradient);
+      color: #fff;
+      transition: background 0.6s ease;
+    }header {
+  text-align: center;
+  padding: 24px 16px;
+  background: rgba(0,0,0,0.25);
+  backdrop-filter: blur(6px);
+  border-bottom: 2px solid rgba(255,255,255,0.2);
+}
+h1 {margin: 0;font-size: 26px;}
+p.lead {margin: 6px 0 0;opacity: 0.9;}
+
+main {flex: 1;display: flex;flex-direction: column;align-items: center;padding: 24px;min-height: calc(100vh - 120px);}
+
+.controls {display: flex;gap: 12px;flex-wrap: wrap;justify-content: center;margin-bottom: 24px;}
+select {
+  padding: 12px 14px;border-radius: 12px;border: none;font-size: 16px;color: #1e293b;background: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);cursor: pointer;transition: transform 0.2s;
+}
+select:hover {transform: scale(1.03);}
+.btn {
+  padding: 10px 14px;border-radius: 10px;border: 0;cursor: pointer;font-size: 15px;background: #1e293b;color: #fff;transition: 0.2s;
+}
+.btn:hover {background: #334155;}
+
+.cards {width: 100%;max-width: 1000px;display: grid;grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));gap: 16px;}
+
+.card {
+  background: rgba(255,255,255,0.15);
+  padding: 18px;border-radius: 14px;box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+  display: flex;flex-direction: column;gap: 10px;transition: transform 0.25s, background 0.25s;
+}
+.card:hover {transform: scale(1.03);background: rgba(255,255,255,0.25);}
+
+.title {font-weight: 600;font-size: 17px;}
+.meta {font-size: 14px;opacity: 0.9;}
+
+.actions {display: flex;gap: 8px;margin-top: auto;}
+.btn.preview {background: #0ea5e9;}
+.btn.open {background: #a855f7;}
+
+.viewer-wrap {width: 100%;max-width: 1000px;margin-top: 28px;background: rgba(255,255,255,0.15);padding: 10px;border-radius: 14px;box-shadow: 0 6px 16px rgba(0,0,0,0.3);}
+.viewer {width: 100%;height: 80vh;border: 0;border-radius: 10px;}
+.no-results {padding: 20px;opacity: 0.8;}
+
+footer {background: rgba(0,0,0,0.25);padding: 12px;text-align: center;font-size: 14px;color: rgba(255,255,255,0.9);border-top: 2px solid rgba(255,255,255,0.2);}
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>MSc Botany — Previous Exam Papers</h1>
+    <p class="lead">Choose semester to view available papers</p>
+  </header>  <main>
+    <div class="controls">
+      <select id="semester">
+        <option value="">-- Select Semester --</option>
+        <option value="1">1st Semester</option>
+        <option value="2">2nd Semester</option>
+        <option value="3">3rd Semester</option>
+        <option value="4">4th Semester</option>
+      </select>
+      <button id="clear" class="btn">Clear</button>
+    </div><div id="list" class="cards" style="display:none"></div>
+
+<div class="viewer-wrap" id="viewerWrap" style="display:none">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+    <strong id="viewerTitle">Preview</strong>
+    <div>
+      <a id="openNew" class="btn open" target="_blank" rel="noopener">Open in Drive</a>
+      <button id="closeViewer" class="btn" style="background:#1e293b">Close</button>
+    </div>
+  </div>
+  <iframe id="viewer" class="viewer" sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
+</div>
+
+<div id="noResults" class="no-results" style="display:none">No results found — please select a semester.</div>
+
+  </main>  <footer>
+    Click “Preview” to view inside page or “Open in Drive” to open Google Drive file.
+  </footer>  <script>
+    const papers=[
+      {id:'1J32oJCPUbTRRgHx5EGRLko_7kLVknVNN',title:'Previous Exam Paper - 1st Semester',semester:1},
+      {id:'1GkgNlFd7Is18P0O-R88xtY8hu3F-478k',title:'Previous Exam Paper - 2nd Semester (A)',semester:2},
+      {id:'1KYg5uPQ3e-NQCXu1tN-0aNor3RonEoeo',title:'Previous Exam Paper - 2nd Semester (B)',semester:2},
+      {id:'193SzP__RtQbfcDOlfjo8T8BaMx0f73Zx',title:'Previous Exam Paper - 3rd Semester (A)',semester:3},
+      {id:'12-dmyfHudfOJQYR8g75FpeBjEMxlsdR3',title:'Previous Exam Paper - 3rd Semester (B)',semester:3},
+      {id:'1Oz3X5e3Ja6maTdLac5fB5ZoBj8ZrG89j',title:'Previous Exam Paper - 3rd Semester (C)',semester:3},
+      {id:'1jjLX-0-Lxr5gk7XlU4nqGNQH5fYCXqs6',title:'Previous Exam Paper - 4th Semester',semester:4}
+    ];
+
+    const gradients = {
+      1: 'linear-gradient(135deg, #f97316 0%, #facc15 100%)', // orange-yellow
+      2: 'linear-gradient(135deg, #10b981 0%, #34d399 100%)', // green
+      3: 'linear-gradient(135deg, #a855f7 0%, #ec4899 100%)', // purple-pink
+      4: 'linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%)'  // blue-cyan
+    };
+
+    const listEl=document.getElementById('list');
+    const semEl=document.getElementById('semester');
+    const noEl=document.getElementById('noResults');
+    const viewerWrap=document.getElementById('viewerWrap');
+    const viewer=document.getElementById('viewer');
+    const viewerTitle=document.getElementById('viewerTitle');
+    const openNew=document.getElementById('openNew');
+    const closeViewer=document.getElementById('closeViewer');
+    const clearBtn=document.getElementById('clear');
+
+    function drivePreviewUrl(id){return `https://drive.google.com/file/d/${id}/preview`;}
+    function driveOpenUrl(id){return `https://drive.google.com/file/d/${id}/view`;}
+
+    function render(list){
+      listEl.innerHTML='';
+      if(!list.length){noEl.style.display='block';listEl.style.display='none';return;}else{noEl.style.display='none';listEl.style.display='grid';}
+      list.forEach(p=>{
+        const card=document.createElement('div');card.className='card';
+        card.innerHTML=`<div class="title">${p.title}</div><div class="meta">Semester: ${p.semester}</div><div class="actions"><button class='btn preview' data-id='${p.id}'>Preview</button><a class='btn open' href='${driveOpenUrl(p.id)}' target='_blank'>Open in Drive</a></div>`;
+        listEl.appendChild(card);
+      });
+
+      document.querySelectorAll('.preview').forEach(btn=>{
+        btn.addEventListener('click',()=>{
+          const id=btn.getAttribute('data-id');
+          viewer.src=drivePreviewUrl(id);
+          viewerTitle.textContent=btn.closest('.card').querySelector('.title').textContent;
+          openNew.href=driveOpenUrl(id);
+          viewerWrap.style.display='block';
+          window.scrollTo({top:viewerWrap.offsetTop-12,behavior:'smooth'});
+        });
+      });
+    }
+
+    function filterAndRender(){
+      const sem=semEl.value;
+      if(!sem){listEl.style.display='none';noEl.style.display='block';document.body.style.background='linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%)';return;}
+      document.body.style.background=gradients[sem] || 'linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%)';
+      const out=papers.filter(p=>String(p.semester)===sem);
+      render(out);
+    }
+
+    semEl.addEventListener('change',filterAndRender);
+    clearBtn.addEventListener('click',()=>{semEl.value='';listEl.style.display='none';noEl.style.display='block';viewerWrap.style.display='none';viewer.src='';document.body.style.background='linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%)';});
+    closeViewer.addEventListener('click',()=>{viewerWrap.style.display='none';viewer.src='';});
+  </script></body>
+</html>
