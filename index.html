@@ -1,1056 +1,1711 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-<title>M.Sc. Botany Notes Store & Help Center</title>
-  <style>
-.demo-links {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  margin-top: 18px;
-}
-
-.demo-links a {
-  color: #ffffff;
-  font-size: 16px;
-  font-weight: 700;
-  text-decoration: none;
-  padding: 10px 18px;
-  border: 1px solid rgba(255,255,255,0.25);
-  border-radius: 10px;
-  background: rgba(255,255,255,0.08);
-  transition: all 0.3s ease;
-}
-
-.demo-links a:hover {
-  background: rgba(255,255,255,0.18);
-  transform: translateY(-2px);
-  text-decoration: none;
-}
-</style>
-
-<div class="demo-links">
-  <a href="demonotes.html">📚📚📚यहाँ डेमो नोट्स देखने के लिए click now </a>
-
-  <a href="oldexampaper.html">📚 यहाँ पिछला Exam Paper देखने के लिए click now </a>
-<a href="https://t.me/MScbotanynote"
-   target="_blank"
-   rel="noopener noreferrer">
-   👉 Telegram Channel में Join होने के लिए Click करें
-</a>
-</div>
-<!-- FontAwesome Icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SRINGAR — Dropshipping Store</title>
 
 <style>
-  :root {
-    --card-bg: #fff;
-    --accent: #00796b;
-    --danger: #c62828;
-    --glass: rgba(255,255,255,0.85);
-    --maxw: 980px;
-  }
-  
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
-    color: #0b2545;
-    -webkit-font-smoothing: antialiased;
-    padding-bottom: 40px;
-  }
+*{box-sizing:border-box}
+:root{
+ --primary:#111827;
+ --accent:#e11d48;
+ --green:#16a34a;
+ --orange:#f59e0b;
+ --red:#dc2626;
+ --bg:#f5f7fb;
+ --card:#fff;
+ --border:#e5e7eb;
+ --muted:#667085;
+}
+body{
+ margin:0;
+ font-family:Inter,Arial,sans-serif;
+ background:var(--bg);
+ color:#111827
+}
+button,input,select,textarea{font:inherit}
+button{cursor:pointer}
+.top{
+ background:#111827;color:white;text-align:center;
+ padding:8px;font-size:13px
+}
+header{
+ position:sticky;top:0;z-index:20;background:white;
+ border-bottom:1px solid var(--border);
+ padding:14px max(16px,calc((100% - 1150px)/2));
+ display:flex;align-items:center;justify-content:space-between
+}
+.logo{font-size:23px;font-weight:900}
+.logo span{color:var(--accent)}
+nav{display:flex;gap:8px}
+nav button,.cartBtn{
+ border:0;background:#f3f4f6;padding:10px 14px;
+ border-radius:10px
+}
+.cartBtn{position:relative}
+.badge{
+ position:absolute;right:-6px;top:-7px;
+ background:var(--accent);color:white;
+ width:20px;height:20px;border-radius:50%;
+ font-size:11px;display:grid;place-items:center
+}
+.container{
+ max-width:1150px;margin:auto;padding:22px 16px
+}
+.hero{
+ background:linear-gradient(135deg,#111827,#374151);
+ color:white;border-radius:24px;padding:38px;
+ display:grid;grid-template-columns:1fr 1fr;gap:25px;
+ align-items:center
+}
+.hero h1{font-size:clamp(35px,6vw,65px);line-height:1;margin:12px 0}
+.hero p{color:#d1d5db;line-height:1.7}
+.hero button{
+ background:white;color:#111827;border:0;
+ padding:14px 20px;border-radius:12px;font-weight:800
+}
+.hero-img{
+ min-height:320px;border-radius:20px;
+ background:linear-gradient(145deg,#fce7f3,#fbcfe8);
+ display:grid;place-items:center;font-size:90px;color:#9d174d
+}
+.title{
+ display:flex;justify-content:space-between;
+ align-items:center;margin:30px 0 15px
+}
+.product{
+ background:white;border:1px solid var(--border);
+ border-radius:22px;padding:20px;
+ display:grid;grid-template-columns:1fr 1fr;gap:30px
+}
+.product-image{
+ min-height:450px;border-radius:18px;
+ background:#f3f4f6;display:grid;place-items:center;
+ overflow:hidden
+}
+.product-image img{
+ width:100%;height:100%;object-fit:cover
+}
+.product-image .placeholder{font-size:100px}
+.price{font-size:32px;font-weight:900}
+.old{text-decoration:line-through;color:#98a2b3;margin-left:10px}
+.discount{
+ display:inline-block;background:#dcfce7;color:#15803d;
+ padding:6px 9px;border-radius:7px;font-size:12px;font-weight:800
+}
+.features{
+ display:grid;grid-template-columns:repeat(3,1fr);
+ gap:10px;margin:18px 0
+}
+.feature{
+ background:#f9fafb;padding:13px;border-radius:10px;
+ font-size:13px
+}
+.actions{display:flex;gap:10px}
+.primary{
+ flex:1;background:#111827;color:white;
+ border:0;padding:14px;border-radius:11px;font-weight:800
+}
+.secondary{
+ background:#f3f4f6;border:0;padding:14px;
+ border-radius:11px;font-weight:700
+}
+.trust{
+ display:grid;grid-template-columns:repeat(4,1fr);
+ gap:12px;margin-top:20px
+}
+.trust div{
+ background:white;border:1px solid var(--border);
+ padding:17px;border-radius:14px;text-align:center;font-size:13px
+}
 
-  /* 1. SCROLLING BANNER */
-  .scroll-text {
-    background: #000;
-    white-space: nowrap;
-    overflow: hidden;
-    box-sizing: border-box;
-    width: 100%;
-    padding: 6px 0;
-    border-bottom: 1px solid #333;
-  }
-  .scroll-text span {
-    display: inline-block;
-    padding-left: 100%;
-    animation: scroll 25s linear infinite;
-    font-size: 16px;
-    font-weight: bold;
-    color: white;
-  }
-  @keyframes scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
-  }
+/* MODALS */
+.modal{
+ display:none;position:fixed;inset:0;
+ background:rgba(0,0,0,.62);z-index:100;
+ padding:15px;overflow:auto
+}
+.modal.show{display:block}
+.box{
+ background:white;max-width:700px;margin:25px auto;
+ border-radius:20px;padding:22px;position:relative
+}
+.close{
+ position:absolute;right:14px;top:12px;
+ border:0;background:#f3f4f6;border-radius:50%;
+ width:34px;height:34px
+}
+.grid{
+ display:grid;grid-template-columns:1fr 1fr;gap:12px
+}
+.field{margin:8px 0}
+.field label{
+ display:block;font-size:13px;font-weight:700;margin-bottom:5px
+}
+.field input,.field select,.field textarea{
+ width:100%;padding:12px;
+ border:1px solid #d0d5dd;border-radius:9px;
+ outline:none
+}
+.field textarea{min-height:85px}
+.full{grid-column:1/-1}
+.summary{
+ background:#f9fafb;padding:14px;border-radius:11px;margin:14px 0
+}
+.payment{
+ display:grid;grid-template-columns:1fr 1fr;gap:10px
+}
+.payment label{
+ border:1px solid var(--border);
+ padding:14px;border-radius:10px
+}
+.cart-item{
+ display:flex;justify-content:space-between;
+ padding:13px 0;border-bottom:1px solid var(--border)
+}
+.qty{display:flex;align-items:center;gap:7px}
+.qty button{
+ border:0;background:#eee;width:28px;height:28px;border-radius:7px
+}
 
-  /* 2. HERO / HELP BOX SECTION */
-  .hero-container {
-    max-width: 500px;
-    width: 90%;
-    margin: 30px auto;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: white;
-    text-align: center;
-  }
-  .hero-container .logo { font-size: 50px; color: #4ade80; margin-bottom: 15px; }
-  .hero-container h1 { font-size: 26px; margin-bottom: 10px; letter-spacing: 1px; }
-  .hero-container p { font-size: 15px; color: #cbd5e1; line-height: 1.6; margin-bottom: 15px; }
-  .hero-container .footer-note { margin-top: 15px; font-size: 12px; color: #94a3b8; }
+/* TRACKING */
+.timeline{
+ display:flex;gap:5px;margin:25px 0
+}
+.step{
+ flex:1;text-align:center;font-size:11px;color:#98a2b3
+}
+.dot{
+ width:30px;height:30px;border-radius:50%;
+ background:#e5e7eb;margin:auto auto 6px;
+ display:grid;place-items:center
+}
+.step.active{color:#15803d;font-weight:bold}
+.step.active .dot{background:#16a34a;color:white}
 
-  /* 3. NAVIGATION & HEADER */
-  .top {
-    width: 100%;
-    background: var(--glass);
-    backdrop-filter: blur(6px);
-    position: sticky;
-    top: 0;
-    z-index: 1200;
-    border-bottom: 1px solid rgba(0,0,0,0.06);
-  }
-  .top .container {
-    max-width: var(--maxw);
-    margin: 0 auto;
-    padding: 12px 16px;
-    display: flex;
-    gap: 12px;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .brand { font-weight: 800; color: #06314a; font-size: 18px; display: flex; gap: 10px; align-items: center; }
-  .brand .dot { width: 10px; height: 10px; background: var(--accent); border-radius: 50%; display: inline-block; }
-  .nav { display: flex; gap: 6px; align-items: center; }
-  .nav button {
-    background: transparent; border: none; padding: 8px 12px; border-radius: 8px; cursor: pointer; font-weight: 600; color: #14425b;
-  }
-  .nav button.active { background: var(--accent); color: #fff; box-shadow: 0 6px 14px rgba(0,0,0,0.08); }
-  .search-wrap { display: flex; gap: 8px; align-items: center; width: 360px; }
-  .search-wrap input { width: 100%; padding: 8px 12px; border-radius: 10px; border: 1px solid #d6dbea; outline: none; font-size: 14px; }
-  .search-wrap button { padding: 8px 10px; border-radius: 8px; border: none; background: var(--accent); color: #fff; cursor: pointer; }
+/* ADMIN */
+.admin{
+ display:none;position:fixed;inset:0;
+ background:#f5f7fb;z-index:200;overflow:auto
+}
+.admin.show{display:block}
+.adminHead{
+ background:#111827;color:white;padding:16px;
+ display:flex;justify-content:space-between
+}
+.adminWrap{
+ max-width:1200px;margin:auto;padding:20px
+}
+.stats{
+ display:grid;grid-template-columns:repeat(4,1fr);gap:12px
+}
+.stat{
+ background:white;border-radius:15px;
+ padding:18px;border:1px solid var(--border)
+}
+.stat b{font-size:25px}
+.adminGrid{
+ display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px
+}
+.panel{
+ background:white;padding:18px;
+ border-radius:16px;border:1px solid var(--border)
+}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{
+ text-align:left;padding:10px;
+ border-bottom:1px solid var(--border)
+}
+.status{
+ padding:5px 8px;border-radius:7px;
+ background:#dcfce7;color:#15803d;font-size:11px
+}
+.adminNav{
+ display:flex;gap:7px;overflow:auto;margin:15px 0
+}
+.adminNav button{
+ border:0;background:white;padding:10px 14px;
+ border-radius:9px
+}
+.danger{background:#fee2e2!important;color:#b91c1c}
+.success{background:#dcfce7!important;color:#15803d}
 
-  /* MAIN CONTENT & CARDS */
-  main { max-width: var(--maxw); margin: 20px auto; padding: 0 16px; background: #eef2ff; border-radius: 12px; padding: 20px; }
-  .demo-note { text-align: center; background: #e8eaf6; padding: 10px; font-size: 15px; font-weight: 600; border-bottom: 2px solid #c5cae9; margin-bottom: 15px; border-radius: 8px; }
-  .semester-title { font-size: 20px; font-weight: 700; color: #083047; margin: 15px 0 14px; display: flex; align-items: center; gap: 12px; }
-  .semester-title .tag { background: #eef7f5; color: #0b6c56; padding: 6px 10px; border-radius: 999px; font-weight: 700; font-size: 13px; }
-  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
-  
-  .subject-card {
-    background: var(--card-bg); border-radius: 12px; padding: 14px;
-    box-shadow: 0 6px 18px rgba(9,30,63,0.06); border: 1px solid rgba(9,30,63,0.04);
-  }
-  .subject-card h3 { margin: 0 0 8px; font-size: 16px; color: #06414d; }
-  .controls { display: flex; flex-direction: column; gap: 8px; }
-  .password-box { display: flex; gap: 8px; align-items: center; }
-  .password-box input { flex: 1; padding: 8px 10px; border-radius: 8px; border: 1px solid #d6dbea; font-size: 14px; }
-  .password-btn { padding: 9px 12px; border-radius: 8px; border: none; cursor: pointer; font-weight: 700; color: #fff; background: var(--accent); }
-  .password-btn.dl { background: #1457f0; }
-  .result { margin-top: 8px; min-height: 20px; font-weight: 700; font-size: 14px; }
-  .result.success { color: green; }
-  .result.error { color: var(--danger); }
-  .note { margin-top: 10px; font-size: 13px; color: #4b5563; }
-  .small { font-size: 13px; color: #576b7a; }
+/* TOAST */
+.toast{
+ position:fixed;bottom:20px;left:50%;
+ transform:translate(-50%,120px);
+ background:#111827;color:white;
+ padding:13px 18px;border-radius:10px;
+ transition:.3s;z-index:500
+}
+.toast.show{transform:translate(-50%,0)}
 
-  /* OVERLAY FOR PDF PREVIEW */
-  .preview-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.88); display: none; align-items: center; justify-content: center; z-index: 2000; }
-  .preview-frame { width: 100%; height: 100%; max-width: 100vw; max-height: 100vh; position: relative; }
-  .preview-frame iframe { width: 100%; height: 100%; border: none; display: block; }
-  .preview-close { position: absolute; left: 12px; top: 12px; z-index: 2100; background: var(--danger); color: #fff; border: none; padding: 10px 12px; border-radius: 8px; cursor: pointer; font-weight: 700; }
+footer{
+ margin-top:40px;background:#111827;
+ color:#d1d5db;text-align:center;padding:35px
+}
 
-  /* 4. PAYMENT SECTION */
-  .payment-card {
-    background: #fff; padding: 20px; text-align: center; margin: 30px auto;
-    max-width: 480px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  }
-  .payment-card h2 { color: #0b6c4a; margin-bottom: 10px; }
-  ol.instructions { text-align: left; color: #333; font-size: 15px; line-height: 1.6; padding-left: 20px; }
-  .upi-box { display: flex; gap: 8px; justify-content: center; align-items: center; margin: 10px 0; }
-  .upi-input { border: 1px solid #ccc; padding: 8px; border-radius: 6px; width: 70%; font-size: 16px; text-align: center; }
-  .copy-btn { padding: 8px 14px; border: none; border-radius: 6px; background: #10A37F; color: #fff; font-weight: 600; cursor: pointer; }
-  .app-list a { display: block; color: #fff; margin: 5px auto; padding: 8px 0; border-radius: 6px; font-weight: bold; width: 70%; text-decoration: none; }
-  #phonepe { background: #4CAF50; }
-  #gpay { background: #4285F4; }
-  #paytm { background: #002970; }
-  #amazonpay { background: #FF9900; }
-  .hint { font-size: 12px; color: #666; margin-top: 4px; }
-  
-  h1.form-heading { background: #d1ecf1; border: 1px solid #bee5eb; padding: 0.5em 1em; border-radius: 6px; margin: 1em auto; text-align: center; font-size: 1rem; max-width: 480px; }
-  .contact-btn { display: block; margin: 0 auto 1em; background: #25D366; color: white; font-size: 1rem; font-weight: 600; border: none; padding: 10px 16px; border-radius: 6px; cursor: pointer; box-shadow: 0 4px 12px rgba(37,211,102,0.25); }
-
-  /* OVERLAY HELP FORM */
-  .overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.4); display: none; justify-content: center; align-items: flex-start; padding-top: 20px; z-index: 1500; }
-  .form-card { width: 90%; max-width: 380px; background: white; padding: 1em; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); animation: slideDown 0.3s ease; overflow-y: auto; max-height: 90vh; }
-  @keyframes slideDown { from { transform: translateY(-20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
-  .form-card label { display: block; font-size: 0.9rem; margin: 0.4em 0 0.2em; font-weight: bold; }
-  .form-card input, .form-card select, .form-card textarea { width: 100%; padding: 0.5em; border: 1px solid #ccc; border-radius: 6px; font-size: 0.9rem; margin-bottom: 0.4em; }
-  .error-msg { color: red; font-size: 0.75rem; margin: 0.2em 0; display: none; }
-  .btn-submit { width: 100%; padding: 0.6em; border-radius: 6px; border: none; background: #25D366; color: white; font-weight: 600; font-size: 1rem; cursor: pointer; margin-top: 0.4em; }
-  .btn-submit:hover { background: #1ebe5d; }
-  .close-btn { float: right; background: none; border: none; font-size: 1rem; cursor: pointer; color: #666; margin-bottom: 0.5em; }
-  #messageBox { display: none; }
-  #loadingBox { display: none; text-align: center; color: #25D366; font-weight: 600; font-size: 0.9rem; margin-top: 0.5em; }
-
-  /* 5. ADMIN PANEL SECTION */
-  .admin-panel { max-width: 420px; margin: 30px auto; text-align: center; background: #fff; padding: 15px; border-radius: 10px; }
-  .big-open-btn { width: 100%; max-width: 420px; margin: 12px auto; display: block; padding: 14px 16px; background: #0ea5a4; color: #fff; font-size: 16px; font-weight: 700; border-radius: 10px; border: none; cursor: pointer; box-shadow: 0 6px 18px rgba(14,165,164,0.18); text-align: center; transition: .2s; }
-  .big-open-btn:hover { transform: translateY(-2px); }
-
-  .admin-modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.35); justify-content: center; align-items: flex-start; padding: 20px; z-index: 9999; overflow-y: auto; }
-  .admin-modal.open { display: flex; }
-  .admin-modal .card { width: 100%; max-width: 520px; background: #fff; padding: 18px; border-radius: 10px; box-shadow: 0 8px 30px rgba(2,6,23,0.12); max-height: 90vh; overflow-y: auto; }
-  
-  #loadingOverlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.55); color: #fff; font-size: 20px; font-weight: 700; z-index: 10000; justify-content: center; align-items: center; flex-direction: column; }
-  #loadingOverlay span { margin-top: 12px; font-size: 16px; color: #ddd; }
-  .loader { border: 4px solid #f3f3f3; border-top: 4px solid #0ea5a4; border-radius: 50%; width: 40px; height: 40px; animation: spin 1s linear infinite; }
-  @keyframes spin { 100% { transform: rotate(360deg); } }
-
-  footer { max-width: var(--maxw); margin: 30px auto; padding: 12px 16px; color: #cbd5e1; font-size: 13px; text-align: center; }
-
-  @media (max-width:720px) {
-    .top .container { padding: 10px; gap: 8px; }
-    .search-wrap { width: 160px; }
-    .nav { display: none; }
-  }
-  @media (min-width:721px) {
-    .mobile-sem-select { display: none; }
-  }
+@media(max-width:750px){
+ .hero,.product{grid-template-columns:1fr}
+ .hero{padding:25px}
+ .hero-img{min-height:220px}
+ .product-image{min-height:300px}
+ .features,.trust,.stats{grid-template-columns:1fr 1fr}
+ .grid,.adminGrid{grid-template-columns:1fr}
+ .full{grid-column:auto}
+ .payment{grid-template-columns:1fr}
+ nav button:not(.cartBtn){display:none}
+ table{font-size:11px}
+}
 </style>
 </head>
+
 <body>
 
-<!-- 1. BANNER -->
-<div class="scroll-text">
-  <span>
-    🎓 WELCOME TO OUR MSC BOTANY NOTES AND BOOKS STORE 📚 
-    क्या आप M.Sc. Botany की तैयारी कर रहे हैं? अब आपकी पढ़ाई होगी और भी आसान! 👉 यहाँ आपको 1st Semester से 4th Semester तक के सभी Notes PDF मात्र ₹35/- में मिलेंगे। 
-    साथ ही, आपको पिछले साल के एग्ज़ाम पेपर्स भी मिलेंगे।  
-    📝 ये नोट्स मास्टर स्टूडेंट्स द्वारा तैयार किए गए हैं, जो आपकी परीक्षा तैयारी में बहुत मददगार साबित होंगे।  
-    🔗 अभी ऑर्डर करें और तुरंत Notes + Exam Papers पाएँ!
-  </span>
-</div>
-
-<!-- 2. HERO / HELP BOX -->
-<div class="hero-container">
-    <div class="logo">
-        <i class="fas fa-seedling"></i>
-    </div>
-    <h1>Welcome to Help Box</h1>
-    <p>यहाँ आपको M.Sc. Botany के सभी सेमेस्टर के प्रीमियम नोट्स और पिछले साल के पेपर मिलेंगे।</p>
-    <p style="font-style: italic; font-size: 14px;">"मदद के लिए नीचे दिए गए चैट बटन का उपयोग करें!"</p>
-    <div class="footer-note">Powered by Tidio AI Support</div>
-</div>
-
-<!-- 3. NOTES STORE MAIN NAVIGATION & CARD SYSTEM -->
 <div class="top">
-  <div class="container">
-    <div class="brand"><span class="dot"></span>MSc Botany Notes</div>
-
-    <div style="display:flex;gap:12px;align-items:center;">
-      <nav class="nav" id="semesterNav">
-        <button data-sem="sem1" class="active">Semester 1</button>
-        <button data-sem="sem2">Semester 2</button>
-        <button data-sem="sem3">Semester 3</button>
-        <button data-sem="sem4">Semester 4</button>
-      </nav>
-
-      <select id="mobileSem" class="mobile-sem-select" style="padding:8px;border-radius:8px;border:1px solid #d6dbea;">
-        <option value="sem1">Semester 1</option>
-        <option value="sem2">Semester 2</option>
-        <option value="sem3">Semester 3</option>
-        <option value="sem4">Semester 4</option>
-      </select>
-
-      <div class="search-wrap">
-        <input id="searchBox" placeholder="Search subject (e.g. Genetics)" />
-        <button id="clearSearch" title="Clear">X</button>
-      </div>
-    </div>
-  </div>
+🚚 FREE SHIPPING • 💵 COD AVAILABLE • 🔐 SECURE CHECKOUT
 </div>
 
-<main>
-  <div class="demo-note">
-    ✅ यह नीचे Msc botany Notes का Preview और download नोट्स है।<br>
-    📥 Full Notes / Download के लिए नीचे MSc botany all semester पर क्लिक करें। नीचे सब्जेक्ट बॉक्स में पासवर्ड डाले और नोट्स प्राप्त करे । पासवर्ड प्राप्त करने के लिए नीचे payment वाले section में जाएं पेमेंट करें और पासवर्ड form fill करे password आपके WhatsApp number में आ जाएगा 
+<header>
+ <div class="logo">SRINGAR<span>.</span></div>
+
+ <nav>
+  <button onclick="openTrack()">Track Order</button>
+  <button onclick="openAdminLogin()">Admin</button>
+  <button class="cartBtn" onclick="openCart()">
+   🛒 Cart <span id="cartCount" class="badge">0</span>
+  </button>
+ </nav>
+</header>
+
+<main class="container">
+
+<!-- HOME -->
+<section class="hero">
+ <div>
+  <small>NEW COLLECTION</small>
+  <h1>Style that<br>feels special.</h1>
+  <p>
+   Premium products with secure checkout,
+   COD और fast delivery.
+  </p>
+  <button onclick="scrollProduct()">Shop Now →</button>
+ </div>
+
+ <div class="hero-img">🛍️</div>
+</section>
+
+<!-- PRODUCT -->
+<div class="title">
+ <h2>Featured Product</h2>
+ <span>● In Stock</span>
+</div>
+
+<section class="product" id="product">
+
+ <div class="product-image">
+  <!-- अपना Instagram/product image URL यहाँ लगाएँ -->
+  <img id="productImage"
+       src="https://via.placeholder.com/700x700.png?text=YOUR+PRODUCT"
+       alt="Product">
+ </div>
+
+ <div>
+  <span class="discount">LIMITED OFFER</span>
+
+  <h1 id="productName">
+   Premium Fashion Product
+  </h1>
+
+  <p style="color:#667085;line-height:1.6">
+   Premium quality product. यहाँ अपने product की
+   description डाल सकते हैं।
+  </p>
+
+  <div>
+   <span class="price" id="productPrice">₹499</span>
+   <span class="old">₹999</span>
   </div>
 
-  <div class="semester-title">
-    <span class="tag" id="semesterTag">Semester 1</span>
-    <div style="flex:1"></div>
-    <div class="small">Preview = view only • Download requires download password • 3 wrong tries → box locked 6 hours</div>
+  <div class="features">
+   <div class="feature">✓ COD</div>
+   <div class="feature">✓ Secure</div>
+   <div class="feature">✓ Tracking</div>
   </div>
 
-  <!-- Semester 1 -->
-  <section id="sem1" class="sem-section">
-    <div class="grid" id="grid-sem1">
-      <article class="subject-card" data-title="Cytology" id="cyto-card">
-        <h3>🔬 Cytology</h3>
-        <div class="controls">
-          <div class="password-box">
-            <input id="cyto-preview" placeholder="Preview password (...)" type="password" />
-            <button class="password-btn" onclick="checkPassword('cyto','preview')">Unlock Preview</button>
-          </div>
-          <div class="password-box">
-            <input id="cyto-download" placeholder="Download password (...)" type="password" />
-            <button class="password-btn dl" onclick="checkPassword('cyto','download')">Download</button>
-          </div>
-          <div id="cyto-result" class="result"></div>
-        </div>
-      </article>
+  <div class="actions">
+   <button class="secondary" onclick="addToCart()">
+    🛒 Add to Cart
+   </button>
 
-      <article class="subject-card" data-title="Genetics" id="gen-card">
-        <h3>🧬 Genetics</h3>
-        <div class="controls">
-          <div class="password-box">
-            <input id="gen-preview" placeholder="Preview password (...)" type="password" />
-            <button class="password-btn" onclick="checkPassword('gen','preview')">Unlock Preview</button>
-          </div>
-          <div class="password-box">
-            <input id="gen-download" placeholder="Download password (...)" type="password" />
-            <button class="password-btn dl" onclick="checkPassword('gen','download')">Download</button>
-          </div>
-          <div id="gen-result" class="result"></div>
-        </div>
-      </article>
+   <button class="primary" onclick="buyNow()">
+    Buy Now
+   </button>
+  </div>
+ </div>
+</section>
 
-      <article class="subject-card" data-title="Mycology Microbiology Phycology" id="myco-card">
-        <h3>🍄 Mycology, Microbiology & Phycology</h3>
-        <div class="controls">
-          <div class="password-box">
-            <input id="myco-preview" placeholder="Preview password (...)" type="password" />
-            <button class="password-btn" onclick="checkPassword('myco','preview')">Unlock Preview</button>
-          </div>
-          <div class="password-box">
-            <input id="myco-download" placeholder="Download password (...)" type="password" />
-            <button class="password-btn dl" onclick="checkPassword('myco','download')">Download</button>
-          </div>
-          <div id="myco-result" class="result"></div>
-        </div>
-      </article>
+<div class="trust">
+ <div>🔒 Secure Checkout</div>
+ <div>📦 Live Tracking</div>
+ <div>💵 Cash on Delivery</div>
+ <div>💬 WhatsApp Support</div>
+</div>
 
-      <article class="subject-card" data-title="Bryophyta Gymnosperms Pteridophyta" id="bryo-card">
-        <h3>🌿 Bryophyta, Gymnosperms & Pteridophyta</h3>
-        <div class="controls">
-          <div class="password-box">
-            <input id="bryo-preview" placeholder="Preview password (...)" type="password" />
-            <button class="password-btn" onclick="checkPassword('bryo','preview')">Unlock Preview</button>
-          </div>
-          <div class="password-box">
-            <input id="bryo-download" placeholder="Download password (...)" type="password" />
-            <button class="password-btn dl" onclick="checkPassword('bryo','download')">Download</button>
-          </div>
-          <div id="bryo-result" class="result"></div>
-        </div>
-      </article>
-    </div>
-  </section>
+<!-- TRACK -->
+<section id="trackingSection" style="display:none">
+ <div class="title">
+  <h2>Track Your Order</h2>
+ </div>
 
-  <!-- Semester 2 -->
-  <section id="sem2" class="sem-section" style="display:none">
-    <div class="grid" id="grid-sem2">
-      <article class="subject-card" data-title="Taxonomy" id="taxo-card">
-        <h3>🌿 Taxonomy & Diversity of Plants</h3>
-        <div class="controls">
-          <div class="password-box">
-            <input id="taxo-preview" placeholder="Preview password (...)" type="password" />
-            <button class="password-btn" onclick="checkPassword('taxo','preview')">Unlock Preview</button>
-          </div>
-          <div class="password-box">
-            <input id="taxo-download" placeholder="Download password (...)" type="password" />
-            <button class="password-btn dl" onclick="checkPassword('taxo','download')">Download</button>
-          </div>
-          <div id="taxo-result" class="result"></div>
-        </div>
-      </article>
+ <div class="box" style="max-width:none;margin:0">
+  <div class="field">
+   <label>Order ID</label>
+   <input id="trackingId" placeholder="SRG12345678">
+  </div>
 
-      <article class="subject-card" data-title="Molecular Biology" id="mol-card">
-        <h3>🧬 Molecular Biology</h3>
-        <div class="controls">
-          <div class="password-box">
-            <input id="mol-preview" placeholder="Preview password (...)" type="password" />
-            <button class="password-btn" onclick="checkPassword('mol','preview')">Unlock Preview</button>
-          </div>
-          <div class="password-box">
-            <input id="mol-download" placeholder="Download password (...)" type="password" />
-            <button class="password-btn dl" onclick="checkPassword('mol','download')">Download</button>
-          </div>
-          <div id="mol-result" class="result"></div>
-        </div>
-      </article>
+  <button class="primary" onclick="trackOrder()">
+   Track Order
+  </button>
 
-      <article class="subject-card" data-title="Plant Physiology" id="phys-card">
-        <h3>🌱 Plant Physiology</h3>
-        <div class="controls">
-          <div class="password-box">
-            <input id="phys-preview" placeholder="Preview password (...)" type="password" />
-            <button class="password-btn" onclick="checkPassword('phys','preview')">Unlock Preview</button>
-          </div>
-          <div class="password-box">
-            <input id="phys-download" placeholder="Download password (...)" type="password" />
-            <button class="password-btn dl" onclick="checkPassword('phys','download')">Download</button>
-          </div>
-          <div id="phys-result" class="result"></div>
-        </div>
-      </article>
+  <div id="trackingResult"></div>
+ </div>
+</section>
 
-      <article class="subject-card" data-title="Plant Metabolism" id="metab-card">
-        <h3>🌿 Plant Metabolism</h3>
-        <div class="controls">
-          <div class="password-box">
-            <input id="metab-preview" placeholder="Preview password (...)" type="password" />
-            <button class="password-btn" onclick="checkPassword('metab','preview')">Unlock Preview</button>
-          </div>
-          <div class="password-box">
-            <input id="metab-download" placeholder="Download password (...)" type="password" />
-            <button class="password-btn dl" onclick="checkPassword('metab','download')">Download</button>
-          </div>
-          <div id="metab-result" class="result"></div>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <!-- Semester 3 -->
-  <section id="sem3" class="sem-section" style="display:none">
-    <div class="grid" id="grid-sem3">
-      <article class="subject-card" data-title="Plant Development" id="dev-card">
-        <h3>🌿 Plant Development & Resources</h3>
-        <div class="controls">
-          <div class="password-box">
-            <input id="dev-preview" placeholder="Preview password (...)" type="password" />
-            <button class="password-btn" onclick="checkPassword('dev','preview')">Unlock Preview</button>
-          </div>
-          <div class="password-box">
-            <input id="dev-download" placeholder="Download password (...)" type="password" />
-            <button class="password-btn dl" onclick="checkPassword('dev','download')">Download</button>
-          </div>
-          <div id="dev-result" class="result"></div>
-        </div>
-      </article>
-
-      <article class="subject-card" data-title="Ecosystem" id="eco-card">
-        <h3>🌱 Ecosystem & Vegetation Ecology</h3>
-        <div class="controls">
-          <div class="password-box">
-            <input id="eco-preview" placeholder="Preview password (...)" type="password" />
-            <button class="password-btn" onclick="checkPassword('eco','preview')">Unlock Preview</button>
-          </div>
-          <div class="password-box">
-            <input id="eco-download" placeholder="Download password (...)" type="password" />
-            <button class="password-btn dl" onclick="checkPassword('eco','download')">Download</button>
-          </div>
-          <div id="eco-result" class="result"></div>
-        </div>
-      </article>
-
-      <article class="subject-card" data-title="Biotechnology" id="bio-card">
-        <h3>🧬 Biotechnology & Genetic Engineering</h3>
-        <div class="controls">
-          <div class="password-box">
-            <input id="bio-preview" placeholder="Preview password (...)" type="password" />
-            <button class="password-btn" onclick="checkPassword('bio','preview')">Unlock Preview</button>
-          </div>
-          <div class="password-box">
-            <input id="bio-download" placeholder="Download password (...)" type="password" />
-            <button class="password-btn dl" onclick="checkPassword('bio','download')">Download</button>
-          </div>
-          <div id="bio-result" class="result"></div>
-        </div>
-      </article>
-
-      <article class="subject-card" data-title="Plant Pathology" id="path-card">
-        <h3>🌿 Plant Pathology</h3>
-        <div class="controls">
-          <div class="password-box">
-            <input id="path-preview" placeholder="Preview password (...)" type="password" />
-            <button class="password-btn" onclick="checkPassword('path','preview')">Unlock Preview</button>
-          </div>
-          <div class="password-box">
-            <input id="path-download" placeholder="Download password (...)" type="password" />
-            <button class="password-btn dl" onclick="checkPassword('path','download')">Download</button>
-          </div>
-          <div id="path-result" class="result"></div>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <!-- Semester 4 -->
-  <section id="sem4" class="sem-section" style="display:none">
-    <div class="grid" id="grid-sem4">
-      <article class="subject-card" data-title="Plant Reproduction" id="repro-card">
-        <h3>🌿 Plant Reproduction & Utilisation of Resources</h3>
-        <div class="controls">
-          <div class="password-box">
-            <input id="repro-preview" placeholder="Preview password (...)" type="password" />
-            <button class="password-btn" onclick="checkPassword('repro','preview')">Unlock Preview</button>
-          </div>
-          <div class="password-box">
-            <input id="repro-download" placeholder="Download password (...)" type="password" />
-            <button class="password-btn dl" onclick="checkPassword('repro','download')">Download</button>
-          </div>
-          <div id="repro-result" class="result"></div>
-        </div>
-      </article>
-
-      <article class="subject-card" data-title="Plant Ecology Pollution Biodiversity" id="eco4-card">
-        <h3>🌱 Plant Ecology, Pollution & Biodiversity Conservation</h3>
-        <div class="controls">
-          <div class="password-box">
-            <input id="eco4-preview" placeholder="Preview password (...)" type="password" />
-            <button class="password-btn" onclick="checkPassword('eco4','preview')">Unlock Preview</button>
-          </div>
-          <div class="password-box">
-            <input id="eco4-download" placeholder="Download password (...)" type="password" />
-            <button class="password-btn dl" onclick="checkPassword('eco4','download')">Download</button>
-          </div>
-          <div id="eco4-result" class="result"></div>
-        </div>
-      </article>
-
-      <article class="subject-card" data-title="Plant Cell Tissue Organ Culture" id="cell-card">
-        <h3>🧬 Plant Cell, Tissue & Organ Culture</h3>
-        <div class="controls">
-          <div class="password-box">
-            <input id="cell-preview" placeholder="Preview password (..)" type="password" />
-            <button class="password-btn" onclick="checkPassword('cell','preview')">Unlock Preview</button>
-          </div>
-          <div class="password-box">
-            <input id="cell-download" placeholder="Download password (...)" type="password" />
-            <button class="password-btn dl" onclick="checkPassword('cell','download')">Download</button>
-          </div>
-          <div id="cell-result" class="result"></div>
-        </div>
-      </article>
-
-      <article class="subject-card" data-title="Molecular Plant Pathology" id="path4-card">
-        <h3>🌿 Molecular Plant Pathology</h3>
-        <div class="controls">
-          <div class="password-box">
-            <input id="path4-preview" placeholder="Preview password (..)" type="password" />
-            <button class="password-btn" onclick="checkPassword('path4','preview')">Unlock Preview</button>
-          </div>
-          <div class="password-box">
-            <input id="path4-download" placeholder="Download password (...)" type="password" />
-            <button class="password-btn dl" onclick="checkPassword('path4','download')">Download</button>
-          </div>
-          <div id="path4-result" class="result"></div>
-        </div>
-      </article>
-    </div>
-  </section>
 </main>
 
-<!-- Full-screen preview overlay -->
-<div id="previewOverlay" class="preview-overlay" aria-hidden="true">
-  <div class="preview-frame">
-    <button class="preview-close" onclick="closePreview()">⬅ Close</button>
-    <iframe id="previewIframe" src="" allowfullscreen sandbox="allow-scripts allow-same-origin"></iframe>
-  </div>
+<footer>
+ © 2026 SRINGAR • All Rights Reserved<br>
+ Privacy • Terms • Return Policy • Customer Support
+</footer>
+
+
+<!-- ================= CHECKOUT ================= -->
+
+<div class="modal" id="checkoutModal">
+<div class="box">
+
+<button class="close" onclick="closeModal('checkoutModal')">×</button>
+
+<h2>Complete Your Order</h2>
+
+<div class="summary" id="checkoutSummary"></div>
+
+<form onsubmit="placeOrder(event)">
+
+<div class="grid">
+
+<div class="field">
+<label>Full Name *</label>
+<input id="customerName" required>
 </div>
 
-<!-- 4. PAYMENT & HELP SECTION -->
-<div class="payment-card">
-  <h2>💰 PAYMENT निर्देश</h2>
-  <ol class="instructions">
-    <li>नीचे वाले बॉक्स से UPI कॉपी करें।</li>
-    <li>अपने Payment App (PhonePe, GPay, Paytm) खोलें।</li>
-    <li>UPI डालें और Amount भरकर भेजें। (25₹ Preview / 70₹ Download)</li>
-  </ol>
-
-  <div class="upi-box">
-    <input id="upi1" class="upi-input" value="msccreate7@okhdfcbank" readonly>
-    <button class="copy-btn" onclick="copyUPI('upi1', this)">Copy</button>
-  </div>
-
-  <div class="app-list">
-    <a href="#" id="phonepe">📱 PhonePe</a>
-    <a href="#" id="gpay">💸 Google Pay</a>
-    <a href="#" id="paytm">💰 Paytm</a>
-    <a href="#" id="amazonpay">🛒 Amazon Pay</a>
-  </div>
-
-  <div class="hint">👉 App open only, Play Store नहीं खुलेगा।</div>
+<div class="field">
+<label>Mobile *</label>
+<input id="customerPhone"
+       type="tel"
+       maxlength="10"
+       pattern="[0-9]{10}"
+       required>
 </div>
 
-<h1 class="form-heading">📩 Payment के बाद password या समस्या के लिए नीचे फॉर्म भरें</h1>
-<button class="contact-btn" id="openForm">📞 Contact / Help</button>
-
-<!-- Overlay Help Form -->
-<div class="overlay" id="formOverlay">
-  <div class="form-card">
-    <button class="close-btn" id="closeForm">✖</button>
-    <h2 style="text-align: center; color: #0b6c4a; margin-bottom: 10px;">📝 सहायता / पासवर्ड फॉर्म</h2>
-    <form id="helpForm">
-      <label>नाम *</label>
-      <input id="name" type="text" placeholder="अपना नाम लिखें">
-      <div id="error-name" class="error-msg">❌ नाम सही भरें</div>
-
-      <label>ईमेल *</label>
-      <input id="email" type="email" placeholder="ईमेल लिखें">
-      <div id="error-email" class="error-msg">❌ सही ईमेल भरें</div>
-
-      <label>मोबाइल नंबर *</label>
-      <input id="mobile" type="text" placeholder="10 अंकों का मोबाइल नंबर">
-      <div id="error-mobile" class="error-msg">❌ मोबाइल नंबर गलत है</div>
-
-      <label>Semester *</label>
-      <select id="semester">
-        <option value="">-- चुनें --</option>
-        <option>1st Semester</option>
-        <option>2nd Semester</option>
-        <option>3rd Semester</option>
-        <option>4th Semester</option>
-      </select>
-      <div id="error-semester" class="error-msg">❌ Semester चुनें</div>
-
-      <label>विषय *</label>
-      <select id="subject">
-        <option value="">-- पहले Semester चुनें --</option>
-      </select>
-      <div id="error-subject" class="error-msg">❌ विषय चुनें</div>
-
-      <label>Payment Type *</label>
-      <select id="paymentType">
-        <option value="">-- चुनें --</option>
-        <option>25₹ - Preview Notes</option>
-        <option>70₹ - Download Notes</option>
-      </select>
-      <div id="error-paymentType" class="error-msg">❌ Payment Type चुनें</div>
-
-      <label>Message Type *</label>
-      <select id="messageType">
-        <option value="">-- चुनें --</option>
-        <option>Password Send Me</option>
-        <option>समस्या लिखें</option>
-      </select>
-      <div id="error-messageType" class="error-msg">❌ एक विकल्प चुनें</div>
-
-      <div id="messageBox">
-        <label>अपनी समस्या *</label>
-        <textarea id="message" placeholder="अपनी समस्या यहाँ लिखें..."></textarea>
-        <div id="error-message" class="error-msg">❌ संदेश जरूरी है</div>
-      </div>
-
-      <label>Payment Screenshot *</label>
-      <input id="payment" type="file" accept="image/*">
-      <div id="error-payment" class="error-msg">❌ Screenshot अपलोड करें</div>
-
-      <button id="sendBtn" type="button" class="btn-submit">📤 Send via WhatsApp</button>
-      <div id="loadingBox">⏳ कृपया प्रतीक्षा करें...</div>
-    </form>
-  </div>
+<div class="field full">
+<label>Address *</label>
+<textarea id="customerAddress"
+          placeholder="House, Street, Area"
+          required></textarea>
 </div>
 
-<!-- 5. ADMIN PANEL SECTION -->
-<div class="admin-panel">
-  <label style="font-weight:700; display: block; margin-bottom: 5px;">🔐 Admin Access</label>
-  <input type="password" id="adminPass" placeholder="Enter Admin Password" style="padding:8px; width:80%; border:1px solid #ccc; border-radius:6px;">
-  <button class="big-open-btn" id="openFormBtn">🔑 Send Student Password</button>
+<div class="field">
+<label>City *</label>
+<input id="customerCity" required>
 </div>
 
-<!-- Admin Password Sender Modal -->
-<div id="pwModal" class="admin-modal" aria-hidden="true">
-  <div class="card" role="dialog" aria-modal="true">
-    <div style="display:flex; justify-style:space-between; align-items:center; margin-bottom: 10px;">
-      <h2 style="margin:0; font-size: 18px;">🔑 Send Student Password Panel</h2>
-      <button class="close-btn" id="closeFormBtn" style="float:none;">Close</button>
-    </div>
-
-    <form id="passForm">
-      <label style="font-size:14px; margin-top:10px; display:block;">Student Mobile (WhatsApp) *</label>
-      <input id="admin_mobile" type="tel" placeholder="XXXXXXXXXX" required style="width:100%; padding:8px; margin-top:4px;">
-
-      <label style="font-size:14px; margin-top:10px; display:block;">Semester *</label>
-      <select id="admin_semester" required style="width:100%; padding:8px; margin-top:4px;">
-        <option value="">-- चुनें --</option>
-        <option value="1st semester">1st Semester</option>
-        <option value="2nd semester">2nd Semester</option>
-        <option value="3rd semester">3rd Semester</option>
-        <option value="4th semester">4th Semester</option>
-      </select>
-
-      <label style="font-size:14px; margin-top:10px; display:block;">Subject *</label>
-      <select id="admin_subject" required style="width:100%; padding:8px; margin-top:4px;">
-        <option value="">-- पहले Semester चुनें --</option>
-      </select>
-
-      <label style="font-size:14px; margin-top:10px; display:block;">Payment Type *</label>
-      <select id="admin_paymentType" required style="width:100%; padding:8px; margin-top:4px;">
-        <option value="">-- चुनें --</option>
-        <option value="preview">25₹ Preview Notes</option>
-        <option value="download">70₹ Download Notes</option>
-      </select>
-
-      <button class="btn-submit" type="submit" style="margin-top:15px; background: #0ea5a4;">📩 Send Password on WhatsApp</button>
-      <div class="small" style="margin-top:8px;">Form will clear automatically after sending.</div>
-    </form>
-  </div>
+<div class="field">
+<label>State *</label>
+<input id="customerState" required>
 </div>
 
-<!-- Admin Loader Overlay -->
-<div id="loadingOverlay">
-  <div class="loader"></div>
-  <span>⏳ Connecting to WhatsApp...</span>
+<div class="field">
+<label>PIN *</label>
+<input id="customerPin"
+       maxlength="6"
+       pattern="[0-9]{6}"
+       required>
 </div>
 
-<footer>Made for MSc Botany notes — preview = view-only (embedded).</footer>
+<div class="field">
+<label>Location</label>
+<button type="button"
+ class="secondary"
+ style="width:100%"
+ onclick="getCustomerLocation()">
+ 📍 Use My Location
+</button>
+</div>
 
-<!-- TIDIO CHAT SCRIPT -->
-<script src="//code.tidio.co/6ilyp3oo2inncrlzpqojqtvdplftiazz.js" async></script>
+<div class="field full">
+<label>Coupon</label>
 
-<!-- JAVASCRIPT LOGIC -->
+<div style="display:flex;gap:8px">
+
+<input id="coupon"
+ placeholder="WELCOME10">
+
+<button type="button"
+ class="secondary"
+ onclick="applyCoupon()">
+ Apply
+</button>
+
+</div>
+
+<small id="couponMsg"></small>
+</div>
+
+<div class="field full">
+
+<label>Payment Method</label>
+
+<div class="payment">
+
+<label>
+<input type="radio"
+ name="payment"
+ value="COD"
+ checked>
+ 💵 Cash on Delivery
+</label>
+
+<label>
+<input type="radio"
+ name="payment"
+ value="ONLINE">
+ 💳 Online Payment
+</label>
+
+</div>
+
+</div>
+
+</div>
+
+<button class="primary"
+ type="submit"
+ style="width:100%">
+ Place Order
+</button>
+
+</form>
+
+</div>
+</div>
+
+
+<!-- ================= CART ================= -->
+
+<div class="modal" id="cartModal">
+
+<div class="box">
+
+<button class="close"
+onclick="closeModal('cartModal')">×</button>
+
+<h2>Your Cart</h2>
+
+<div id="cartItems"></div>
+
+<div class="summary">
+ <b>Total: <span id="cartTotal">₹0</span></b>
+</div>
+
+<button class="primary"
+onclick="checkoutCart()">
+ Checkout
+</button>
+
+</div>
+</div>
+
+
+<!-- ================= SUCCESS ================= -->
+
+<div class="modal" id="successModal">
+
+<div class="box" style="text-align:center">
+
+<h2>🎉 Order Placed!</h2>
+
+<p>Your order has been created successfully.</p>
+
+<div class="summary">
+ Order ID
+ <br>
+ <b id="newOrderId"
+ style="font-size:28px"></b>
+</div>
+
+<button class="primary"
+onclick="openCreatedOrder()">
+ Track Order
+</button>
+
+</div>
+</div>
+
+
+<!-- ================= ADMIN LOGIN ================= -->
+
+<div class="modal" id="adminLogin">
+
+<div class="box">
+
+<button class="close"
+onclick="closeModal('adminLogin')">×</button>
+
+<h2>🔐 Admin Login</h2>
+
+<div class="field">
+<label>Username</label>
+<input id="adminUser">
+</div>
+
+<div class="field">
+<label>Password</label>
+<input id="adminPass" type="password">
+</div>
+
+<button class="primary"
+onclick="adminLogin()">
+Login
+</button>
+
+<p style="font-size:12px;color:#667085">
+Demo login: admin / admin123
+</p>
+
+</div>
+</div>
+
+
+<!-- ================= ADMIN DASHBOARD ================= -->
+
+<div class="admin" id="adminPanel">
+
+<div class="adminHead">
+
+<b>SRINGAR ADMIN</b>
+
+<button
+style="background:#374151;color:white;border:0;padding:8px 12px;border-radius:8px"
+onclick="closeAdmin()">
+Close
+</button>
+
+</div>
+
+<div class="adminWrap">
+
+<div class="stats">
+
+<div class="stat">
+Orders<br>
+<b id="statOrders">0</b>
+</div>
+
+<div class="stat">
+Sales<br>
+<b id="statSales">₹0</b>
+</div>
+
+<div class="stat">
+Products<br>
+<b id="statProducts">1</b>
+</div>
+
+<div class="stat">
+Pending<br>
+<b id="statPending">0</b>
+</div>
+
+</div>
+
+<div class="adminNav">
+<button onclick="showAdminTab('orders')">Orders</button>
+<button onclick="showAdminTab('products')">Products</button>
+<button onclick="showAdminTab('suppliers')">Supplier</button>
+<button onclick="showAdminTab('coupons')">Coupons</button>
+</div>
+
+<!-- ORDERS -->
+
+<div id="adminOrders" class="panel">
+
+<h3>Orders</h3>
+
+<div style="overflow:auto">
+
+<table>
+
+<thead>
+<tr>
+<th>ID</th>
+<th>Customer</th>
+<th>Total</th>
+<th>Status</th>
+<th>Action</th>
+</tr>
+</thead>
+
+<tbody id="ordersTable"></tbody>
+
+</table>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCTS -->
+
+<div id="adminProducts"
+class="panel"
+style="display:none">
+
+<h3>Product Management</h3>
+
+<div class="grid">
+
+<div class="field">
+<label>Product Name</label>
+<input id="adminProductName"
+value="Premium Fashion Product">
+</div>
+
+<div class="field">
+<label>Price</label>
+<input id="adminProductPrice"
+value="499"
+type="number">
+</div>
+
+<div class="field">
+<label>Stock</label>
+<input id="adminStock"
+value="100"
+type="number">
+</div>
+
+<div class="field">
+<label>Product Image URL</label>
+<input id="adminImage">
+</div>
+
+</div>
+
+<button class="primary"
+onclick="saveProduct()">
+Save Product
+</button>
+
+</div>
+
+
+<!-- SUPPLIER -->
+
+<div id="adminSuppliers"
+class="panel"
+style="display:none">
+
+<h3>🚚 Dropshipping Supplier Workflow</h3>
+
+<p>
+New orders को supplier को भेजने के लिए
+नीचे order select करें।
+</p>
+
+<select id="supplierOrder"
+style="width:100%;padding:12px"></select>
+
+<br><br>
+
+<button class="primary"
+onclick="sendSupplierOrder()">
+Send Order to Supplier
+</button>
+
+<div id="supplierResult"></div>
+
+</div>
+
+
+<!-- COUPONS -->
+
+<div id="adminCoupons"
+class="panel"
+style="display:none">
+
+<h3>🏷 Coupon Management</h3>
+
+<div class="field">
+<label>Coupon Code</label>
+<input id="newCoupon"
+value="WELCOME10">
+</div>
+
+<div class="field">
+<label>Discount %</label>
+<input id="discountPercent"
+type="number"
+value="10">
+</div>
+
+<button class="primary"
+onclick="saveCoupon()">
+Save Coupon
+</button>
+
+<p id="couponAdminResult"></p>
+
+</div>
+
+</div>
+</div>
+
+
+<div class="toast" id="toast"></div>
+
+
 <script>
-/* --- LINKS AND PASSWORDS DATA --- */
-const LINKS = {
-  cyto: { preview:"https://drive.google.com/file/d/11eW71nBv0q1rVhHTc1wl_HshAljPuWkh/preview", download:"https://drive.google.com/uc?export=download&id=11eW71nBv0q1rVhHTc1wl_HshAljPuWkh" },
-  gen:  { preview:"https://drive.google.com/file/d/1-bBpdwqYRcxriQg-zzGhLXCcdVmcsAOL/preview", download:"https://drive.google.com/uc?export=download&id=1-bBpdwqYRcxriQg-zzGhLXCcdVmcsAOL" },
-  myco: { preview:"https://drive.google.com/file/d/1pQacmr2BJ9OME8FKmSFxrvbfWNWSwEaY/preview", download:"https://drive.google.com/uc?export=download&id=1pQacmr2BJ9OME8FKmSFxrvbfWNWSwEaY" },
-  bryo: { preview:"https://drive.google.com/file/d/1dfcNuUIr4FfxC2uPaQQhiVh8ozv80Nj0/preview", download:"https://drive.google.com/uc?export=download&id=1dfcNuUIr4FfxC2uPaQQhiVh8ozv80Nj0" },
-  taxo: { preview:"https://drive.google.com/file/d/1brGlGdActnAyAptkS6rEkENlVz03hvUS/preview", download:"https://drive.google.com/uc?export=download&id=1brGlGdActnAyAptkS6rEkENlVz03hvUS" },
-  mol:  { preview:"https://drive.google.com/file/d/1VSgLLD3flD_cibfUkZIOe7tQCq7YcZ8c/preview", download:"https://drive.google.com/uc?export=download&id=1VSgLLD3flD_cibfUkZIOe7tQCq7YcZ8c" },
-  phys: { preview:"https://drive.google.com/file/d/1_sL3K0A_jfCEu4ShHFFsVIn90Ms8WzGx/preview", download:"https://drive.google.com/uc?export=download&id=1_sL3K0A_jfCEu4ShHFFsVIn90Ms8WzGx" },
-  metab:{ preview:"https://drive.google.com/file/d/1_E4Hp2DtdnIhb6S8x_CSc5rA3AHVwgvt/preview", download:"https://drive.google.com/uc?export=download&id=1_E4Hp2DtdnIhb6S8x_CSc5rA3AHVwgvt" },
-  dev:  { preview:"https://drive.google.com/file/d/1SZoOhHU1JZQUSLWORd8boGoSC4TO7-v5/preview", download:"https://drive.google.com/uc?export=download&id=1SZoOhHU1JZQUSLWORd8boGoSC4TO7-v5" },
-  eco:  { preview:"https://drive.google.com/file/d/1B-U6UUvQAPTh4EJYIjcndWMcJHlqST4E/preview", download:"https://drive.google.com/uc?export=download&id=1B-U6UUvQAPTh4EJYIjcndWMcJHlqST4E" },
-  bio:  { preview:"https://drive.google.com/file/d/1fQ9cHL4ZoZvyEBrKORb0TRUEi6z_JVai/preview", download:"https://drive.google.com/uc?export=download&id=1fQ9cHL4ZoZvyEBrKORb0TRUEi6z_JVai" },
-  path: { preview:"https://drive.google.com/file/d/1vLuGfa_g0FwDyJXXwETwbeYjQAztZf4t/preview", download:"https://drive.google.com/uc?export=download&id=1vLuGfa_g0FwDyJXXwETwbeYjQAztZf4t" },
-  repro:{ preview:"https://drive.google.com/file/d/JJJJ/preview", download:"https://drive.google.com/uc?export=download&id=JJJJ" },
-  eco4: { preview:"https://drive.google.com/file/d/KKKK/preview", download:"https://drive.google.com/uc?export=download&id=KKKK" },
-  cell: { preview:"https://drive.google.com/file/d/LLLL/preview", download:"https://drive.google.com/uc?export=download&id=LLLL" },
-  path4:{ preview:"https://drive.google.com/file/d/10HSb53usq2v7bNB_DEz5XqLbnmRQuuo5/preview", download:"https://drive.google.com/uc?export=download&id=10HSb53usq2v7bNB_DEz5XqLbnmRQuuo5" }
+
+/* =====================================================
+   STORE DATA
+===================================================== */
+
+let product={
+ name:"Premium Fashion Product",
+ price:499,
+ stock:100,
+ image:"https://via.placeholder.com/700x700.png?text=YOUR+PRODUCT"
 };
 
-const PASSWORDS = {
-  cyto: { preview:"cyto1011", download:"cyto2034" },
-  gen:  { preview:"gene1099", download:"gene2097" },
-  myco: { preview:"myco1000", download:"myco2026" },
-  bryo: { preview:"bryo1077", download:"bryo2070" },
-  taxo: { preview:"taxo20111", download:"taxo3022" },
-  mol:  { preview:"mol20777", download:"mol3000" },
-  phys: { preview:"phys20666", download:"phys3009" },
-  metab:{ preview:"metab20555", download:"metab30046" },
-  dev:  { preview:"dev3014", download:"dev40109" },
-  eco:  { preview:"eco3035", download:"eco40208" },
-  bio:  { preview:"bio3053", download:"bio40207" },
-  path: { preview:"path3072", download:"path4070" },
-  repro:{ preview:"repro401", download:"repro501" },
-  eco4: { preview:"eco403", download:"eco503" },
-  cell: { preview:"cell405", download:"cell505" },
-  path4:{ preview:"path407", download:"path507" }
-};
+let cart=
+JSON.parse(localStorage.getItem("sringar_cart")||"[]");
 
-/* Lock Duration (6 hours) */
-const LOCK_DURATION = 6 * 60 * 60 * 1000;
-function attemptsKey(subject, type){ return `${subject}-${type}-fails`; }
-function lockKey(subject, type){ return `${subject}-${type}-lock`; }
+let orders=
+JSON.parse(localStorage.getItem("sringar_orders")||"[]");
 
-function isLocked(subject, type){
-  const data = JSON.parse(localStorage.getItem(lockKey(subject,type)) || 'null');
-  return data && Date.now() < data.until;
+let couponData=
+JSON.parse(localStorage.getItem("sringar_coupon")||'{"code":"WELCOME10","discount":10}');
+
+let currentDiscount=0;
+
+
+/* =====================================================
+   BASIC FUNCTIONS
+===================================================== */
+
+function money(n){
+ return "₹"+Number(n).toLocaleString("en-IN");
 }
 
-function lockBox(subject, type){
-  const until = Date.now() + LOCK_DURATION;
-  localStorage.setItem(lockKey(subject,type), JSON.stringify({until}));
-  const res = document.getElementById(`${subject}-result`);
-  if(res){ res.textContent = `⛔ Too many attempts! Locked for 6 hours.`; res.className='result error'; }
-  const input = document.getElementById(`${subject}-${type}`);
-  if(input) input.disabled = true;
+function saveData(){
+ localStorage.setItem("sringar_cart",JSON.stringify(cart));
+ localStorage.setItem("sringar_orders",JSON.stringify(orders));
+ updateCart();
 }
 
-function clearAttempts(subject,type){
-  localStorage.removeItem(attemptsKey(subject,type));
-  localStorage.removeItem(lockKey(subject,type));
-  const input = document.getElementById(`${subject}-${type}`);
-  if(input) input.value = '';
+function toast(msg){
+ const t=document.getElementById("toast");
+ t.textContent=msg;
+ t.classList.add("show");
+
+ setTimeout(()=>{
+  t.classList.remove("show");
+ },2500);
 }
 
-function checkPassword(subject, type){
-  const inputEl = document.getElementById(`${subject}-${type}`);
-  const resultEl = document.getElementById(`${subject}-result`);
-  if(!inputEl || !resultEl) return;
-
-  if(isLocked(subject,type)){
-    const data = JSON.parse(localStorage.getItem(lockKey(subject,type)));
-    const leftMin = Math.ceil((data.until - Date.now())/60000);
-    resultEl.textContent = `⛔ Locked! Try again after ${leftMin} min`;
-    resultEl.className = 'result error';
-    inputEl.disabled = true;
-    return;
-  }
-
-  const val = inputEl.value.trim();
-
-  if(PASSWORDS[subject] && val === PASSWORDS[subject][type]){
-    resultEl.textContent = '✅ Correct Password!';
-    resultEl.className = 'result success';
-    clearAttempts(subject,type);
-
-    if(type === 'preview'){
-      const link = LINKS[subject] ? LINKS[subject].preview : '';
-      if(link) openPreview(link);
-      else { resultEl.textContent = '⚠️ Preview link not set'; resultEl.className = 'result error'; }
-    } else {
-      const link = LINKS[subject] ? LINKS[subject].download : '';
-      if(link){
-        const a = document.createElement('a');
-        a.href = link;
-        a.download = '';
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-        resultEl.textContent += ' ⬇ Download Started!';
-      } else { resultEl.textContent = '⚠️ Download link not set'; resultEl.className = 'result error'; }
-    }
-  } else {
-    resultEl.textContent = '❌ Incorrect Password!';
-    resultEl.className = 'result error';
-    inputEl.value = '';
-    let fails = parseInt(localStorage.getItem(attemptsKey(subject,type)) || '0', 10) + 1;
-    localStorage.setItem(attemptsKey(subject,type), String(fails));
-    if(fails >= 3){
-      lockBox(subject,type);
-    } else {
-      const remaining = 3 - fails;
-      resultEl.textContent = `❌ Incorrect Password! ${remaining} attempt(s) left before lock.`;
-    }
-  }
+function updateCart(){
+ document.getElementById("cartCount").textContent=
+ cart.reduce((a,b)=>a+b.qty,0);
 }
 
-function openPreview(url){
-  const overlay = document.getElementById('previewOverlay');
-  const iframe = document.getElementById('previewIframe');
-  iframe.src = url;
-  overlay.style.display = 'flex';
-  overlay.setAttribute('aria-hidden','false');
-  document.body.style.overflow = 'hidden';
-}
-function closePreview(){
-  const overlay = document.getElementById('previewOverlay');
-  const iframe = document.getElementById('previewIframe');
-  iframe.src = '';
-  overlay.style.display = 'none';
-  overlay.setAttribute('aria-hidden','true');
-  document.body.style.overflow = '';
-}
 
-/* Tab Navigation & Search */
-const semesterButtons = document.querySelectorAll('#semesterNav button');
-const mobileSem = document.getElementById('mobileSem');
-const semSections = document.querySelectorAll('.sem-section');
-const semesterTag = document.getElementById('semesterTag');
+/* =====================================================
+   PRODUCT
+===================================================== */
 
-function showSemester(id){
-  semSections.forEach(s=> s.style.display = s.id===id ? 'block' : 'none');
-  semesterButtons.forEach(b=> b.classList.toggle('active', b.dataset.sem===id));
-  semesterTag.textContent = id === 'sem1' ? 'Semester 1' : id==='sem2' ? 'Semester 2' : id==='sem3' ? 'Semester 3' : 'Semester 4';
-  document.getElementById('searchBox').value = '';
-  filterSubjects('');
+function loadProduct(){
+
+ document.getElementById("productName").textContent=
+ product.name;
+
+ document.getElementById("productPrice").textContent=
+ money(product.price);
+
+ document.getElementById("productImage").src=
+ product.image;
 }
 
-semesterButtons.forEach(btn=>{ btn.addEventListener('click', ()=> showSemester(btn.dataset.sem)); });
-mobileSem.addEventListener('change', ()=>{
-  showSemester(mobileSem.value);
-  semesterButtons.forEach(b=> b.classList.toggle('active', b.dataset.sem===mobileSem.value));
-});
+function scrollProduct(){
+ document.getElementById("product")
+ .scrollIntoView({behavior:"smooth"});
+}
 
-const searchBox = document.getElementById('searchBox');
-const clearSearch = document.getElementById('clearSearch');
-function filterSubjects(query){
-  const q = (query||'').trim().toLowerCase();
-  const visibleSem = Array.from(semSections).find(s => s.style.display !== 'none');
-  if(!visibleSem) return;
-  const cards = visibleSem.querySelectorAll('.subject-card');
-  cards.forEach(card=>{
-    const title = (card.dataset.title || '').toLowerCase();
-    card.style.display = (!q || title.includes(q)) ? '' : 'none';
+
+/* =====================================================
+   CART
+===================================================== */
+
+function addToCart(){
+
+ let item=cart.find(x=>x.name===product.name);
+
+ if(item){
+  item.qty++;
+ }else{
+  cart.push({
+   name:product.name,
+   price:product.price,
+   qty:1
   });
-}
-searchBox.addEventListener('input', (e)=> filterSubjects(e.target.value));
-clearSearch.addEventListener('click', ()=> { searchBox.value = ''; filterSubjects(''); });
-
-showSemester('sem1');
-
-/* --- PAYMENT & HELP FORM LOGIC --- */
-function openApp(pkg){ window.location=`intent://#Intent;package=${pkg};end`; }
-document.getElementById('phonepe').onclick=e=>{e.preventDefault();openApp('com.phonepe.app');}
-document.getElementById('gpay').onclick=e=>{e.preventDefault();openApp('com.google.android.apps.nbu.paisa.user');}
-document.getElementById('paytm').onclick=e=>{e.preventDefault();openApp('net.one97.paytm');}
-document.getElementById('amazonpay').onclick=e=>{e.preventDefault();openApp('in.amazon.mShop.android.shopping');}
-
-async function copyUPI(id,btn){
-  try{
-    await navigator.clipboard.writeText(document.getElementById(id).value);
-    btn.textContent="Copied!";setTimeout(()=>btn.textContent="Copy",1500);
-  }catch{alert("Copy manually.");}
-}
-
-const WHATSAPP_NUMBER="916267637741";
-const subjects={
-  "1st Semester":["Cytology","Genetics","Mycology","Bryophyta"],
-  "2nd Semester":["Taxonomy & Diversity","Molecular Biology","Plant Physiology","Plant Metabolism"],
-  "3rd Semester":["Plant Development","Ecosystem & Ecology","Biotech & Genetics","Plant Pathology"],
-  "4th Semester":["Plant Reproduction","Plant Ecology","Tissue Culture","Molecular Pathology"]
-};
-
-document.getElementById("openForm").onclick=()=>document.getElementById("formOverlay").style.display="flex";
-document.getElementById("closeForm").onclick=()=>document.getElementById("formOverlay").style.display="none";
-
-document.getElementById("semester").onchange=function(){
-  let s=this.value,sub=document.getElementById("subject");
-  sub.innerHTML='<option value="">-- चुनें --</option>';
-  if(subjects[s]) subjects[s].forEach(v=>{
-    let opt=document.createElement("option");
-    opt.value=v;opt.textContent=v;sub.appendChild(opt);
-  });
-};
-
-document.getElementById("messageType").onchange=function(){
-  document.getElementById("messageBox").style.display=this.value==="समस्या लिखें"?"block":"none";
-};
-
-function validateField(id,type="text"){
-  let el=document.getElementById(id),val=el?.value?.trim()||"",ok=false;
-  if(type==="file") ok=el.files.length>0;
-  else if(type==="email") ok=/^[^ ]+@[^ ]+\.[a-z]{2,}$/.test(val);
-  else if(type==="name") ok=/^[A-Za-z\s]+$/.test(val);
-  else if(type==="mobile") ok=/^[6-9]\d{9}$/.test(val);
-  else ok=val!=="";
-  document.getElementById("error-"+id).style.display=ok?"none":"block";
-  return ok;
-}
-
-document.getElementById("sendBtn").onclick=()=>{
-  let valid=["name","email","mobile","semester","subject","paymentType","messageType","payment"]
-    .every(id=>{
-      let type=id==="email"?"email":id==="name"?"name":id==="mobile"?"mobile":id==="payment"?"file":"text";
-      return validateField(id,type);
-    });
-
-  let msgType=document.getElementById("messageType").value;
-  if(msgType==="समस्या लिखें"){ if(!validateField("message")) valid=false; }
-  if(!valid){ alert("❌ कृपया सभी जानकारी सही भरें।"); return; }
-
-  let now=new Date();
-  let date=now.toLocaleDateString("hi-IN");
-  let time=now.toLocaleTimeString("hi-IN",{hour:"2-digit",minute:"2-digit"});
-
-  let text="💬 *Full Fit - User Help Form*\n\n"+
-    "👤 *नाम:* "+document.getElementById("name").value+"\n"+
-    "📧 *ईमेल:* "+document.getElementById("email").value+"\n"+
-    "📱 *मोबाइल:* "+document.getElementById("mobile").value+"\n"+
-    "🎓 *Semester:* "+document.getElementById("semester").value+"\n"+
-    "📘 *Subject:* "+document.getElementById("subject").value+"\n"+
-    "💰 *Payment Type:* "+document.getElementById("paymentType").value+"\n"+
-    "💬 *Message Type:* "+msgType+"\n\n";
-
-  if(msgType==="समस्या लिखें"){
-    text+="📝 *समस्या:* "+document.getElementById("message").value+" 😔\n\n";
-  } else {
-    text+="🔐 *Password Request:* कृपया पासवर्ड भेजें 🔑\n\n";
-  }
-
-  text+="📅 *Date:* "+date+"\n⏰ *Time:* "+time+"\n\n"+
-       "📎 *Payment Screenshot WhatsApp में attach करें* 📷";
-
-  document.getElementById("loadingBox").style.display="block";
-  setTimeout(()=>{
-    let url="https://wa.me/"+WHATSAPP_NUMBER+"?text="+encodeURIComponent(text);
-    window.open(url,"_blank");
-    document.getElementById("helpForm").reset();
-    document.getElementById("loadingBox").style.display="none";
-    document.getElementById("formOverlay").style.display="none";
-  },1500);
-};
-
-/* --- ADMIN PANEL LOGIC --- */
-const adminData={
- "1st semester":{
-   "Cytology":{preview:"cyto1013",download:"cyto2034"},
-   "Genetics":{preview:"gene1032",download:"gene2057"},
-   "Mycology":{preview:"myco1058",download:"myco2036"},
-   "Bryophyta":{preview:"bryo1079",download:"bryo2070"}
- },
- "2nd semester":{
-   "Taxonomy and diversity of plant":{preview:"taxo20111",download:"taxo30022"},
-   "Molecular biology":{preview:"mol20777",download:"mol30066"},
-   "Plant physiology":{preview:"phys20666",download:"phys30099"},
-   "Plant metabolism":{preview:"metab20555",download:"metab30066"}
- },
- "3rd semester":{
-   "Plant development and resources":{preview:"dev3014",download:"dev4020"},
-   "Ecosystem and vegetation ecology":{preview:"eco3035",download:"eco4021"},
-   "Biotechnology genetics engineering of plant and microbes":{preview:"bio3053",download:"bio4025"},
-   "Plant pathology":{preview:"path3072",download:"path4076"}
- },
- "4th semester":{
-   "Plant Reproduction & Resources":{preview:"repro401",download:"repro501"},
-   "Plant Ecology Pollution & Biodiversity Conservation":{preview:"eco403",download:"eco503"},
-   "Plant Cell Tissue & Organ Culture":{preview:"cell405",download:"cell505"},
-   "Molecular Plant Pathology":{preview:"path407",download:"path507"}
  }
-};
 
-document.getElementById("admin_semester").addEventListener("change",function(){
-  const sem=this.value;
-  const subjSel=document.getElementById("admin_subject");
-  subjSel.innerHTML='<option value="">-- चुनें --</option>';
-  if(adminData[sem]){
-    Object.keys(adminData[sem]).forEach(s=>{
-      let opt=document.createElement("option");
-      opt.value=s; opt.textContent=s;
-      subjSel.appendChild(opt);
-    });
-  }
-});
+ saveData();
 
-const openBtn=document.getElementById('openFormBtn');
-const modal=document.getElementById('pwModal');
-const closeBtn=document.getElementById('closeFormBtn');
-openBtn.addEventListener('click', ()=>{
-  const pass=document.getElementById("adminPass").value.trim();
-  if(pass!=="0009veer"){ alert("❌ Wrong Admin Password"); return; }
-  modal.classList.add('open');
-  modal.setAttribute('aria-hidden','false');
-});
-closeBtn.addEventListener('click', ()=>{ modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); });
-modal.addEventListener('click', (e)=>{ if(e.target===modal){ modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); }});
+ toast("Product added to cart");
+}
 
-document.getElementById("passForm").addEventListener("submit",function(e){
-  e.preventDefault();
-  const mobile=document.getElementById("admin_mobile").value.trim();
-  const sem=document.getElementById("admin_semester").value;
-  const sub=document.getElementById("admin_subject").value;
-  const pay=document.getElementById("admin_paymentType").value;
+function buyNow(){
 
-  if(!mobile||!sem||!sub||!pay){ alert("❌ सभी फ़ील्ड भरें"); return; }
+ addToCart();
+ openCheckout();
+}
 
-  const pass=(adminData[sem] && adminData[sem][sub])? adminData[sem][sub][pay]:null;
-  if(!pass){ alert("❌ चुने हुए विकल्प के लिए पासवर्ड उपलब्ध नहीं है।"); return; }
+function openCart(){
 
-  const msg="🔑 Password Access\nSemester: "+sem+"\nSubject: "+sub+"\nType: "+(pay==="preview"?"25₹ Preview":"59₹ Download")+"\nPassword: "+pass;
-  const waUrl="https://wa.me/"+mobile+"?text="+encodeURIComponent(msg);
+ renderCart();
 
-  const overlay=document.getElementById("loadingOverlay");
-  overlay.style.display="flex";
+ document.getElementById("cartModal")
+ .classList.add("show");
+}
 
-  setTimeout(()=>{
-    window.open(waUrl,"_blank");
-    overlay.style.display="none";
-  },1200);
+function renderCart(){
 
-  this.reset();
-  setTimeout(()=>{ modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); }, 500);
-});
+ const box=document.getElementById("cartItems");
+
+ if(!cart.length){
+  box.innerHTML="<p>Your cart is empty.</p>";
+  document.getElementById("cartTotal").textContent="₹0";
+  return;
+ }
+
+ box.innerHTML=cart.map((x,i)=>`
+
+ <div class="cart-item">
+
+ <div>
+ <b>${x.name}</b><br>
+ ${money(x.price)} × ${x.qty}
+ </div>
+
+ <div class="qty">
+
+ <button onclick="changeQty(${i},-1)">−</button>
+
+ <b>${x.qty}</b>
+
+ <button onclick="changeQty(${i},1)">+</button>
+
+ </div>
+
+ </div>
+
+ `).join("");
+
+ let total=cart.reduce(
+  (a,b)=>a+b.price*b.qty,0
+ );
+
+ document.getElementById("cartTotal")
+ .textContent=money(total);
+}
+
+function changeQty(index,num){
+
+ cart[index].qty+=num;
+
+ if(cart[index].qty<=0){
+  cart.splice(index,1);
+ }
+
+ saveData();
+ renderCart();
+}
+
+function checkoutCart(){
+
+ if(!cart.length){
+  toast("Cart empty है");
+  return;
+ }
+
+ closeModal("cartModal");
+ openCheckout();
+}
+
+
+/* =====================================================
+   CHECKOUT
+===================================================== */
+
+function openCheckout(){
+
+ if(!cart.length){
+  toast("Cart empty है");
+  return;
+ }
+
+ let subtotal=
+ cart.reduce((a,b)=>a+b.price*b.qty,0);
+
+ let discount=
+ subtotal*(currentDiscount/100);
+
+ let total=subtotal-discount;
+
+ document.getElementById("checkoutSummary").innerHTML=`
+
+ <b>${product.name}</b><br>
+ Quantity:
+ ${cart.reduce((a,b)=>a+b.qty,0)}
+ <br>
+ Subtotal: ${money(subtotal)}
+ <br>
+ Discount: ${money(discount)}
+ <br>
+ <b>Total: ${money(total)}</b>
+
+ `;
+
+ document.getElementById("checkoutModal")
+ .classList.add("show");
+}
+
+
+/* =====================================================
+   COUPON
+===================================================== */
+
+function applyCoupon(){
+
+ let code=
+ document.getElementById("coupon")
+ .value.trim().toUpperCase();
+
+ if(code===couponData.code){
+
+  currentDiscount=couponData.discount;
+
+  document.getElementById("couponMsg").textContent=
+  "✓ "+currentDiscount+"% discount applied";
+
+  document.getElementById("couponMsg").style.color=
+  "#15803d";
+
+  openCheckout();
+
+ }else{
+
+  currentDiscount=0;
+
+  document.getElementById("couponMsg").textContent=
+  "Invalid coupon";
+
+  document.getElementById("couponMsg").style.color=
+  "#dc2626";
+ }
+}
+
+
+/* =====================================================
+   LOCATION
+===================================================== */
+
+function getCustomerLocation(){
+
+ if(!navigator.geolocation){
+  toast("Location supported नहीं है");
+  return;
+ }
+
+ navigator.geolocation.getCurrentPosition(
+
+ function(position){
+
+  let lat=
+  position.coords.latitude.toFixed(6);
+
+  let lng=
+  position.coords.longitude.toFixed(6);
+
+  document.getElementById("customerAddress")
+  .value+=
+  "\nLocation: "+lat+", "+lng;
+
+  toast("Location added");
+ },
+
+ function(){
+  toast("Location permission denied");
+ }
+
+ );
+
+}
+
+
+/* =====================================================
+   ORDER CREATE
+===================================================== */
+
+function placeOrder(e){
+
+ e.preventDefault();
+
+ let id=
+ "SRG"+
+ Date.now()
+ .toString()
+ .slice(-8);
+
+ let subtotal=
+ cart.reduce((a,b)=>a+b.price*b.qty,0);
+
+ let discount=
+ subtotal*(currentDiscount/100);
+
+ let total=
+ subtotal-discount;
+
+ let payment=
+ document.querySelector(
+ 'input[name="payment"]:checked'
+ ).value;
+
+ /*
+  ONLINE PAYMENT:
+  यहाँ Razorpay/Stripe/PayU आदि
+  backend API call लगाया जाएगा.
+ */
+
+ if(payment==="ONLINE"){
+
+  alert(
+   "Payment gateway integration point ready.\n"+
+   "Backend payment API यहाँ connect करें."
+  );
+
+ }
+
+ let order={
+
+  id:id,
+
+  name:
+  document.getElementById("customerName").value,
+
+  phone:
+  document.getElementById("customerPhone").value,
+
+  address:
+  document.getElementById("customerAddress").value,
+
+  city:
+  document.getElementById("customerCity").value,
+
+  state:
+  document.getElementById("customerState").value,
+
+  pin:
+  document.getElementById("customerPin").value,
+
+  payment:payment,
+
+  subtotal:subtotal,
+
+  discount:discount,
+
+  total:total,
+
+  tracking:"",
+
+  status:"Pending",
+
+  returnStatus:"",
+
+  supplierStatus:"Not Sent",
+
+  created:new Date().toISOString()
+
+ };
+
+ orders.unshift(order);
+
+ saveData();
+
+ cart=[];
+ currentDiscount=0;
+
+ saveData();
+
+ closeModal("checkoutModal");
+
+ document.getElementById("newOrderId")
+ .textContent=id;
+
+ document.getElementById("successModal")
+ .classList.add("show");
+
+ sendWhatsAppOrder(order);
+
+}
+
+
+/* =====================================================
+   WHATSAPP
+===================================================== */
+
+function sendWhatsAppOrder(order){
+
+ /*
+  Real WhatsApp Business API को backend से call करें.
+
+  Demo:
+ */
+
+ console.log(
+  "WhatsApp order notification:",
+  order
+ );
+
+}
+
+
+/* =====================================================
+   TRACKING
+===================================================== */
+
+function openTrack(){
+
+ const section=
+ document.getElementById("trackingSection");
+
+ section.style.display="block";
+
+ section.scrollIntoView({
+  behavior:"smooth"
+ });
+
+}
+
+function trackOrder(){
+
+ let id=
+ document.getElementById("trackingId")
+ .value
+ .trim()
+ .toUpperCase();
+
+ let order=
+ orders.find(x=>x.id===id);
+
+ let box=
+ document.getElementById("trackingResult");
+
+ if(!order){
+
+  box.innerHTML=
+  "<p style='color:#dc2626'>Order नहीं मिला.</p>";
+
+  return;
+ }
+
+ let statuses=[
+  "Pending",
+  "Confirmed",
+  "Packed",
+  "Shipped",
+  "Out for Delivery",
+  "Delivered"
+ ];
+
+ let current=
+ statuses.indexOf(order.status);
+
+ box.innerHTML=`
+
+ <div class="summary">
+
+ <b>${order.id}</b><br>
+
+ Customer:
+ ${order.name}<br>
+
+ Total:
+ ${money(order.total)}<br>
+
+ Payment:
+ ${order.payment}<br>
+
+ Status:
+ <b>${order.status}</b><br>
+
+ Tracking:
+ <b>${order.tracking||"Not assigned"}</b>
+
+ </div>
+
+ <div class="timeline">
+
+ ${statuses.map((s,i)=>`
+
+ <div class="step ${i<=current?"active":""}">
+
+ <div class="dot">
+ ${i<=current?"✓":i+1}
+ </div>
+
+ ${s}
+
+ </div>
+
+ `).join("")}
+
+ </div>
+
+ <button class="secondary"
+ onclick="downloadInvoice('${order.id}')">
+ 🧾 Invoice
+ </button>
+
+ `;
+}
+
+function openCreatedOrder(){
+
+ closeModal("successModal");
+
+ openTrack();
+
+ document.getElementById("trackingId")
+ .value=
+ document.getElementById("newOrderId")
+ .textContent;
+
+ trackOrder();
+}
+
+
+/* =====================================================
+   INVOICE
+===================================================== */
+
+function downloadInvoice(id){
+
+ let o=orders.find(x=>x.id===id);
+
+ if(!o)return;
+
+ let invoice=`
+
+ SRINGAR
+ ==============================
+
+ INVOICE
+
+ Order ID: ${o.id}
+ Date: ${new Date(o.created).toLocaleString()}
+
+ Customer:
+ ${o.name}
+
+ Phone:
+ ${o.phone}
+
+ Address:
+ ${o.address},
+ ${o.city},
+ ${o.state} - ${o.pin}
+
+ Payment:
+ ${o.payment}
+
+ ------------------------------
+
+ Subtotal: ${money(o.subtotal)}
+ Discount: ${money(o.discount)}
+ Total: ${money(o.total)}
+
+ Status:
+ ${o.status}
+
+ Tracking:
+ ${o.tracking||"Not assigned"}
+
+ ==============================
+ `;
+
+ let blob=
+ new Blob([invoice],{type:"text/plain"});
+
+ let url=
+ URL.createObjectURL(blob);
+
+ let a=
+ document.createElement("a");
+
+ a.href=url;
+ a.download=o.id+"_invoice.txt";
+ a.click();
+
+ URL.revokeObjectURL(url);
+}
+
+
+/* =====================================================
+   ADMIN LOGIN
+===================================================== */
+
+function openAdminLogin(){
+
+ document.getElementById("adminLogin")
+ .classList.add("show");
+
+}
+
+function adminLogin(){
+
+ let user=
+ document.getElementById("adminUser").value;
+
+ let pass=
+ document.getElementById("adminPass").value;
+
+ /*
+  DEMO ONLY.
+  Production में server-side authentication
+  + hashed passwords + sessions/JWT इस्तेमाल करें.
+ */
+
+ if(user==="admin" && pass==="admin123"){
+
+  closeModal("adminLogin");
+
+  document.getElementById("adminPanel")
+  .classList.add("show");
+
+  renderAdmin();
+
+ }else{
+
+  toast("Invalid admin login");
+
+ }
+
+}
+
+function closeAdmin(){
+
+ document.getElementById("adminPanel")
+ .classList.remove("show");
+
+}
+
+
+/* =====================================================
+   ADMIN DASHBOARD
+===================================================== */
+
+function renderAdmin(){
+
+ let sales=
+ orders.reduce((a,b)=>a+b.total,0);
+
+ let pending=
+ orders.filter(x=>x.status==="Pending").length;
+
+ document.getElementById("statOrders")
+ .textContent=orders.length;
+
+ document.getElementById("statSales")
+ .textContent=money(sales);
+
+ document.getElementById("statProducts")
+ .textContent="1";
+
+ document.getElementById("statPending")
+ .textContent=pending;
+
+ renderOrders();
+
+ renderSupplier();
+
+}
+
+function renderOrders(){
+
+ let table=
+ document.getElementById("ordersTable");
+
+ table.innerHTML=
+ orders.map(o=>`
+
+ <tr>
+
+ <td>${o.id}</td>
+
+ <td>
+ ${o.name}<br>
+ ${o.phone}
+ </td>
+
+ <td>${money(o.total)}</td>
+
+ <td>
+ <span class="status">${o.status}</span>
+ </td>
+
+ <td>
+
+ <select
+ onchange="updateOrderStatus('${o.id}',this.value)">
+
+ ${[
+ "Pending",
+ "Confirmed",
+ "Packed",
+ "Shipped",
+ "Out for Delivery",
+ "Delivered",
+ "Cancelled",
+ "Return Requested",
+ "Returned"
+ ].map(s=>
+ `<option ${s===o.status?"selected":""}>${s}</option>`
+ ).join("")}
+
+ </select>
+
+ <br><br>
+
+ <input
+ placeholder="Tracking No."
+ value="${o.tracking||""}"
+ onchange="setTracking('${o.id}',this.value)"
+ style="width:120px">
+
+ </td>
+
+ </tr>
+
+ `).join("");
+
+}
+
+function updateOrderStatus(id,status){
+
+ let o=orders.find(x=>x.id===id);
+
+ if(o){
+
+  o.status=status;
+
+  saveData();
+
+  renderAdmin();
+
+  toast("Order status updated");
+
+ }
+
+}
+
+function setTracking(id,value){
+
+ let o=orders.find(x=>x.id===id);
+
+ if(o){
+
+  o.tracking=value;
+
+  saveData();
+
+  toast("Tracking number saved");
+
+ }
+
+}
+
+
+/* =====================================================
+   PRODUCT MANAGEMENT
+===================================================== */
+
+function saveProduct(){
+
+ product.name=
+ document.getElementById("adminProductName").value;
+
+ product.price=
+ Number(document.getElementById("adminProductPrice").value);
+
+ product.stock=
+ Number(document.getElementById("adminStock").value);
+
+ product.image=
+ document.getElementById("adminImage").value ||
+ product.image;
+
+ localStorage.setItem(
+  "sringar_product",
+  JSON.stringify(product)
+ );
+
+ loadProduct();
+
+ toast("Product saved");
+
+}
+
+
+/* =====================================================
+   SUPPLIER WORKFLOW
+===================================================== */
+
+function renderSupplier(){
+
+ let select=
+ document.getElementById("supplierOrder");
+
+ select.innerHTML=
+ orders.map(o=>
+ `<option value="${o.id}">
+ ${o.id} — ${o.name}
+ </option>`
+ ).join("");
+
+}
+
+function sendSupplierOrder(){
+
+ let id=
+ document.getElementById("supplierOrder").value;
+
+ let o=
+ orders.find(x=>x.id===id);
+
+ if(!o)return;
+
+ o.supplierStatus="Sent to Supplier";
+
+ saveData();
+
+ document.getElementById("supplierResult")
+ .innerHTML=
+ `<p style="color:#15803d">
+ ✓ ${id} supplier को भेजने के लिए marked.
+ </p>`;
+
+}
+
+
+/* =====================================================
+   COUPON ADMIN
+===================================================== */
+
+function saveCoupon(){
+
+ let code=
+ document.getElementById("newCoupon")
+ .value
+ .trim()
+ .toUpperCase();
+
+ let discount=
+ Number(document.getElementById("discountPercent")
+ .value);
+
+ couponData={
+  code:code,
+  discount:discount
+ };
+
+ localStorage.setItem(
+  "sringar_coupon",
+  JSON.stringify(couponData)
+ );
+
+ document.getElementById("couponAdminResult")
+ .textContent=
+ "Coupon saved: "+code+
+ " ("+discount+"%)";
+
+}
+
+
+/* =====================================================
+   ADMIN TABS
+===================================================== */
+
+function showAdminTab(tab){
+
+ document.getElementById("adminOrders")
+ .style.display=tab==="orders"?"block":"none";
+
+ document.getElementById("adminProducts")
+ .style.display=tab==="products"?"block":"none";
+
+ document.getElementById("adminSuppliers")
+ .style.display=tab==="suppliers"?"block":"none";
+
+ document.getElementById("adminCoupons")
+ .style.display=tab==="coupons"?"block":"none";
+
+}
+
+
+/* =====================================================
+   MODAL
+===================================================== */
+
+function closeModal(id){
+
+ document.getElementById(id)
+ .classList.remove("show");
+
+}
+
+
+/* =====================================================
+   INIT
+===================================================== */
+
+let storedProduct=
+localStorage.getItem("sringar_product");
+
+if(storedProduct){
+
+ product=
+ JSON.parse(storedProduct);
+
+}
+
+loadProduct();
+updateCart();
+
 </script>
+
 </body>
 </html>
