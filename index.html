@@ -1,1 +1,1990 @@
-abcd
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+<title>MSc Botany Notes</title>
+
+<style>
+:root{
+  --green:#087f5b;
+  --green2:#0aa678;
+  --light:#eefaf5;
+  --dark:#12352d;
+  --text:#24332e;
+  --muted:#708078;
+  --white:#fff;
+  --danger:#c62828;
+  --blue:#2563eb;
+  --shadow:0 6px 20px rgba(0,80,55,.09);
+}
+
+*{
+  box-sizing:border-box;
+  -webkit-tap-highlight-color:transparent;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  font-family:Arial,Inter,sans-serif;
+  background:linear-gradient(135deg,#f1fbf7,#ffffff);
+  color:var(--text);
+  padding-bottom:40px;
+}
+
+/* ================= HEADER ================= */
+
+.header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(255,255,255,.94);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid #e5eee9;
+}
+
+.header-inner{
+  max-width:1000px;
+  margin:auto;
+  padding:13px 15px;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:19px;
+  font-weight:800;
+  color:var(--dark);
+}
+
+.logo{
+  width:38px;
+  height:38px;
+  border-radius:12px;
+  background:var(--green);
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:20px;
+  box-shadow:0 5px 12px rgba(8,127,91,.2);
+}
+
+.search{
+  margin-top:12px;
+  position:relative;
+}
+
+.search input{
+  width:100%;
+  padding:13px 45px 13px 15px;
+  border:1px solid #dce9e3;
+  border-radius:13px;
+  outline:none;
+  font-size:14px;
+  background:#f8fcfa;
+}
+
+.search input:focus{
+  border-color:var(--green2);
+  background:#fff;
+}
+
+.search-icon{
+  position:absolute;
+  right:14px;
+  top:50%;
+  transform:translateY(-50%);
+  font-size:18px;
+}
+
+/* ================= MAIN ================= */
+
+main{
+  max-width:1000px;
+  margin:auto;
+  padding:18px 15px;
+}
+
+.welcome{
+  background:linear-gradient(135deg,#087f5b,#0aa678);
+  color:white;
+  border-radius:18px;
+  padding:20px;
+  box-shadow:var(--shadow);
+  margin-bottom:18px;
+}
+
+.welcome h1{
+  font-size:21px;
+  margin:0 0 6px;
+}
+
+.welcome p{
+  margin:0;
+  font-size:13px;
+  opacity:.92;
+}
+
+/* ================= QUICK CARDS ================= */
+
+.quick-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+  margin-bottom:22px;
+}
+
+.quick-card{
+  text-decoration:none;
+  color:var(--dark);
+  background:white;
+  border-radius:16px;
+  padding:17px 14px;
+  box-shadow:var(--shadow);
+  border:1px solid #e4eee9;
+  transition:.2s;
+}
+
+.quick-card:active{
+  transform:scale(.97);
+}
+
+.quick-icon{
+  width:42px;
+  height:42px;
+  border-radius:13px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:21px;
+  margin-bottom:10px;
+}
+
+.group-icon{
+  background:#e7f8ef;
+}
+
+.exam-icon{
+  background:#eef3ff;
+}
+
+.quick-card h3{
+  margin:0 0 4px;
+  font-size:15px;
+}
+
+.quick-card p{
+  margin:0;
+  color:var(--muted);
+  font-size:11px;
+}
+
+.quick-card span{
+  display:block;
+  margin-top:10px;
+  color:var(--green);
+  font-size:12px;
+  font-weight:bold;
+}
+
+/* ================= SEMESTER ================= */
+
+.section-title{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin:22px 0 12px;
+}
+
+.section-title h2{
+  margin:0;
+  font-size:18px;
+  color:var(--dark);
+}
+
+.semester-select{
+  width:100%;
+  padding:12px;
+  border-radius:12px;
+  border:1px solid #d9e7e1;
+  background:white;
+  font-size:14px;
+  outline:none;
+  margin-bottom:14px;
+}
+
+/* ================= SUBJECT GRID ================= */
+
+.subject-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+}
+
+.subject-card{
+  background:white;
+  border:1px solid #e1ebe6;
+  border-radius:16px;
+  padding:14px;
+  box-shadow:var(--shadow);
+}
+
+.subject-icon{
+  font-size:25px;
+  margin-bottom:7px;
+}
+
+.subject-card h3{
+  margin:0 0 5px;
+  font-size:14px;
+  line-height:1.35;
+  color:#17483d;
+}
+
+.subject-card p{
+  margin:0 0 12px;
+  font-size:11px;
+  color:var(--muted);
+}
+
+/* ================= PREVIEW DOWNLOAD SAME LINE ================= */
+
+.action-row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:7px;
+  margin-top:10px;
+}
+
+.action-btn{
+  border:none;
+  border-radius:9px;
+  padding:10px 5px;
+  font-size:11px;
+  font-weight:700;
+  color:white;
+  cursor:pointer;
+}
+
+.preview-btn{
+  background:var(--green);
+}
+
+.download-btn{
+  background:var(--blue);
+}
+
+.action-btn:active{
+  transform:scale(.96);
+}
+
+.password-area{
+  margin-top:9px;
+  display:none;
+}
+
+.password-area input{
+  width:100%;
+  padding:9px;
+  border:1px solid #d7e4df;
+  border-radius:8px;
+  font-size:12px;
+  outline:none;
+}
+
+.password-area button{
+  width:100%;
+  margin-top:6px;
+  border:none;
+  padding:8px;
+  border-radius:8px;
+  background:#12352d;
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
+  font-size:12px;
+}
+
+.result{
+  min-height:16px;
+  margin-top:7px;
+  font-size:11px;
+  font-weight:bold;
+}
+
+.success{
+  color:#087f5b;
+}
+
+.error{
+  color:var(--danger);
+}
+
+.locked{
+  opacity:.55;
+}
+
+.lock-message{
+  color:var(--danger);
+  font-size:11px;
+  font-weight:bold;
+  margin-top:7px;
+}
+
+/* ================= PREVIEW ================= */
+
+.preview-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.92);
+  z-index:5000;
+  display:none;
+}
+
+.preview-frame{
+  width:100%;
+  height:100%;
+  position:relative;
+}
+
+.preview-frame iframe{
+  width:100%;
+  height:100%;
+  border:0;
+  background:white;
+}
+
+.close-preview{
+  position:absolute;
+  top:12px;
+  left:12px;
+  z-index:5100;
+  border:0;
+  background:#c62828;
+  color:white;
+  padding:10px 14px;
+  border-radius:9px;
+  font-weight:bold;
+}
+
+/* ================= PAYMENT ================= */
+
+.payment-card{
+  background:white;
+  border-radius:18px;
+  padding:18px;
+  margin-top:25px;
+  box-shadow:var(--shadow);
+  border:1px solid #e3eee9;
+}
+
+.payment-card h2{
+  color:var(--green);
+  font-size:18px;
+  margin:0 0 10px;
+}
+
+.payment-card ol{
+  margin:0;
+  padding-left:20px;
+  font-size:13px;
+  line-height:1.7;
+}
+
+.upi-box{
+  display:flex;
+  gap:7px;
+  margin-top:13px;
+}
+
+.upi-box input{
+  flex:1;
+  min-width:0;
+  padding:10px;
+  border:1px solid #d6e4de;
+  border-radius:8px;
+  text-align:center;
+  font-size:13px;
+}
+
+.copy-btn{
+  border:0;
+  border-radius:8px;
+  padding:0 13px;
+  background:var(--green);
+  color:white;
+  font-weight:bold;
+}
+
+.pay-apps{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:7px;
+  margin-top:12px;
+}
+
+.pay-apps a{
+  text-decoration:none;
+  color:white;
+  padding:10px;
+  text-align:center;
+  border-radius:8px;
+  font-size:12px;
+  font-weight:bold;
+}
+
+.phonepe{background:#5b3cc4;}
+.gpay{background:#4285f4;}
+.paytm{background:#002970;}
+.amazon{background:#ff9900;}
+
+.hint{
+  text-align:center;
+  font-size:10px;
+  color:#777;
+  margin-top:8px;
+}
+
+/* ================= HELP ================= */
+
+.help-title{
+  text-align:center;
+  background:#e9f7f1;
+  color:#17483d;
+  border-radius:12px;
+  padding:12px;
+  font-size:13px;
+  margin-top:18px;
+}
+
+.help-btn{
+  display:block;
+  margin:12px auto;
+  border:0;
+  background:#25d366;
+  color:white;
+  padding:11px 20px;
+  border-radius:10px;
+  font-weight:bold;
+}
+
+/* ================= FORM ================= */
+
+.overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.5);
+  display:none;
+  align-items:flex-start;
+  justify-content:center;
+  padding-top:20px;
+  z-index:6000;
+}
+
+.form-card{
+  width:92%;
+  max-width:400px;
+  max-height:92vh;
+  overflow-y:auto;
+  background:white;
+  border-radius:16px;
+  padding:18px;
+  box-shadow:0 10px 35px rgba(0,0,0,.25);
+}
+
+.close-form{
+  float:right;
+  border:0;
+  background:none;
+  font-size:18px;
+}
+
+.form-card h2{
+  margin-top:5px;
+  color:var(--green);
+  font-size:18px;
+}
+
+.form-card label{
+  display:block;
+  font-size:12px;
+  font-weight:bold;
+  margin-top:10px;
+}
+
+.form-card input,
+.form-card select,
+.form-card textarea{
+  width:100%;
+  padding:10px;
+  margin-top:5px;
+  border:1px solid #d6e3de;
+  border-radius:8px;
+  outline:none;
+  font-size:13px;
+}
+
+.form-card textarea{
+  min-height:80px;
+  resize:vertical;
+}
+
+.error-msg{
+  display:none;
+  color:red;
+  font-size:10px;
+  margin-top:3px;
+}
+
+.send-btn{
+  width:100%;
+  border:0;
+  padding:12px;
+  margin-top:14px;
+  background:#25d366;
+  color:white;
+  border-radius:9px;
+  font-weight:bold;
+}
+
+#messageBox{
+  display:none;
+}
+
+.loading{
+  display:none;
+  text-align:center;
+  color:var(--green);
+  font-size:12px;
+  margin-top:8px;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+  text-align:center;
+  color:#789088;
+  font-size:11px;
+  margin-top:28px;
+}
+
+/* ================= DESKTOP ================= */
+
+@media(min-width:700px){
+
+  .header-inner{
+    padding:15px 20px;
+  }
+
+  .search{
+    max-width:600px;
+  }
+
+  .quick-grid{
+    grid-template-columns:repeat(2,280px);
+  }
+
+  .subject-grid{
+    grid-template-columns:repeat(3,1fr);
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+  <div class="header-inner">
+
+    <div class="brand">
+      <div class="logo">🌿</div>
+      <div>MSc Botany Notes</div>
+    </div>
+
+    <div class="search">
+      <input
+        id="searchBox"
+        type="search"
+        placeholder="🔍 Search subject जैसे Genetics..."
+      >
+      <span class="search-icon">⌕</span>
+    </div>
+
+  </div>
+</header>
+
+
+<main>
+
+<!-- ================= WELCOME ================= -->
+
+<section class="welcome">
+  <h1>📚 MSc Botany Notes</h1>
+  <p>All Semesters Notes • Preview • Download • Previous Papers</p>
+</section>
+
+
+<!-- ================= QUICK LINKS ================= -->
+
+<section class="quick-grid">
+
+  <a href="groupjoin.html" class="quick-card">
+
+    <div class="quick-icon group-icon">👥</div>
+
+    <h3>Group Join</h3>
+
+    <p>Study group से जुड़ें</p>
+
+    <span>Join Now →</span>
+
+  </a>
+
+
+  <a href="oldexampaper.html" class="quick-card">
+
+    <div class="quick-icon exam-icon">📝</div>
+
+    <h3>Old Exam Papers</h3>
+
+    <p>Previous year papers</p>
+
+    <span>View Papers →</span>
+
+  </a>
+
+</section>
+
+
+<!-- ================= SEMESTER ================= -->
+
+<div class="section-title">
+  <h2>🎓 Semester Notes</h2>
+</div>
+
+<select id="semesterSelect" class="semester-select">
+  <option value="sem1">Semester 1</option>
+  <option value="sem2">Semester 2</option>
+  <option value="sem3">Semester 3</option>
+  <option value="sem4">Semester 4</option>
+</select>
+
+
+<!-- ================= SUBJECTS ================= -->
+
+<div id="subjectGrid" class="subject-grid"></div>
+
+
+<!-- ================= PAYMENT ================= -->
+
+<section class="payment-card">
+
+  <h2>💰 Payment निर्देश</h2>
+
+  <ol>
+    <li>नीचे दिए UPI को Copy करें।</li>
+    <li>PhonePe / GPay / Paytm से payment करें।</li>
+    <li>Preview ₹25 और Download ₹70 है।</li>
+    <li>Payment के बाद Help Form से password request करें।</li>
+  </ol>
+
+  <div class="upi-box">
+
+    <input
+      id="upi1"
+      value="msccreate7@okhdfcbank"
+      readonly
+    >
+
+    <button class="copy-btn" onclick="copyUPI()">
+      Copy
+    </button>
+
+  </div>
+
+
+  <div class="pay-apps">
+
+    <a href="#" class="phonepe" onclick="openApp('com.phonepe.app');return false;">
+      📱 PhonePe
+    </a>
+
+    <a href="#" class="gpay" onclick="openApp('com.google.android.apps.nbu.paisa.user');return false;">
+      💳 Google Pay
+    </a>
+
+    <a href="#" class="paytm" onclick="openApp('net.one97.paytm');return false;">
+      💰 Paytm
+    </a>
+
+    <a href="#" class="amazon" onclick="openApp('in.amazon.mShop.android.shopping');return false;">
+      🛒 Amazon Pay
+    </a>
+
+  </div>
+
+  <div class="hint">
+    App खोलने की कोशिश होगी; device/app support के अनुसार व्यवहार बदल सकता है।
+  </div>
+
+</section>
+
+
+<!-- ================= HELP ================= -->
+
+<div class="help-title">
+  📩 Payment के बाद Password या किसी समस्या के लिए
+</div>
+
+<button class="help-btn" onclick="openHelp()">
+  📞 Contact / Help
+</button>
+
+
+<footer>
+  © 2026 MSc Botany Notes • All Rights Reserved
+</footer>
+
+</main>
+
+
+<!-- ================= PREVIEW OVERLAY ================= -->
+
+<div id="previewOverlay" class="preview-overlay">
+
+  <div class="preview-frame">
+
+    <button class="close-preview" onclick="closePreview()">
+      ⬅ Close
+    </button>
+
+    <iframe id="previewIframe" src=""></iframe>
+
+  </div>
+
+</div>
+
+
+<!-- ================= HELP FORM ================= -->
+
+<div id="formOverlay" class="overlay">
+
+  <div class="form-card">
+
+    <button class="close-form" onclick="closeHelp()">✖</button>
+
+    <h2>📝 सहायता / Password Form</h2>
+
+
+    <label>नाम *</label>
+    <input id="name" type="text" placeholder="अपना नाम लिखें">
+    <div id="error-name" class="error-msg">❌ नाम भरें</div>
+
+
+    <label>ईमेल *</label>
+    <input id="email" type="email" placeholder="ईमेल लिखें">
+    <div id="error-email" class="error-msg">❌ सही ईमेल भरें</div>
+
+
+    <label>मोबाइल नंबर *</label>
+    <input id="mobile" type="tel" placeholder="10 अंकों का मोबाइल नंबर">
+    <div id="error-mobile" class="error-msg">❌ मोबाइल नंबर गलत है</div>
+
+
+    <label>Semester *</label>
+
+    <select id="formSemester" onchange="loadFormSubjects()">
+
+      <option value="">-- चुनें --</option>
+      <option value="1">1st Semester</option>
+      <option value="2">2nd Semester</option>
+      <option value="3">3rd Semester</option>
+      <option value="4">4th Semester</option>
+
+    </select>
+
+    <div id="error-formSemester" class="error-msg">
+      ❌ Semester चुनें
+    </div>
+
+
+    <label>विषय *</label>
+
+    <select id="formSubject">
+      <option value="">-- पहले Semester चुनें --</option>
+    </select>
+
+    <div id="error-formSubject" class="error-msg">
+      ❌ विषय चुनें
+    </div>
+
+
+    <label>Payment Type *</label>
+
+    <select id="paymentType">
+
+      <option value="">-- चुनें --</option>
+
+      <option value="25₹ - Preview Notes">
+        25₹ - Preview Notes
+      </option>
+
+      <option value="70₹ - Download Notes">
+        70₹ - Download Notes
+      </option>
+
+    </select>
+
+    <div id="error-paymentType" class="error-msg">
+      ❌ Payment Type चुनें
+    </div>
+
+
+    <label>Message Type *</label>
+
+    <select id="messageType" onchange="toggleMessage()">
+
+      <option value="">-- चुनें --</option>
+
+      <option value="Password Send Me">
+        Password Send Me
+      </option>
+
+      <option value="समस्या लिखें">
+        समस्या लिखें
+      </option>
+
+    </select>
+
+    <div id="error-messageType" class="error-msg">
+      ❌ एक विकल्प चुनें
+    </div>
+
+
+    <div id="messageBox">
+
+      <label>अपनी समस्या *</label>
+
+      <textarea
+        id="message"
+        placeholder="अपनी समस्या यहाँ लिखें..."
+      ></textarea>
+
+      <div id="error-message" class="error-msg">
+        ❌ समस्या लिखें
+      </div>
+
+    </div>
+
+
+    <label>Payment Screenshot *</label>
+
+    <input
+      id="payment"
+      type="file"
+      accept="image/*"
+    >
+
+    <div id="error-payment" class="error-msg">
+      ❌ Screenshot चुनें
+    </div>
+
+
+    <button class="send-btn" onclick="sendWhatsApp()">
+      📤 Send via WhatsApp
+    </button>
+
+    <div id="loading" class="loading">
+      ⏳ WhatsApp खोल रहा है...
+    </div>
+
+  </div>
+
+</div>
+
+
+<script>
+
+/* =====================================================
+   SUBJECT DATA
+===================================================== */
+
+const subjects = {
+
+  sem1: [
+
+    {
+      id:"cyto",
+      icon:"🔬",
+      title:"Cytology",
+      description:"Cell structure & function",
+      previewPassword:"1234",
+      downloadPassword:"5678",
+      previewFile:"notes/cytology-preview.pdf",
+      downloadFile:"notes/cytology.pdf"
+    },
+
+    {
+      id:"gen",
+      icon:"🧬",
+      title:"Genetics",
+      description:"Genetics & heredity",
+      previewPassword:"1234",
+      downloadPassword:"5678",
+      previewFile:"notes/genetics-preview.pdf",
+      downloadFile:"notes/genetics.pdf"
+    },
+
+    {
+      id:"myco",
+      icon:"🍄",
+      title:"Mycology, Microbiology & Phycology",
+      description:"Fungi, microbes & algae",
+      previewPassword:"1234",
+      downloadPassword:"5678",
+      previewFile:"notes/mycology-preview.pdf",
+      downloadFile:"notes/mycology.pdf"
+    },
+
+    {
+      id:"bryo",
+      icon:"🌿",
+      title:"Bryophyta, Gymnosperms & Pteridophyta",
+      description:"Plant diversity",
+      previewPassword:"1234",
+      downloadPassword:"5678",
+      previewFile:"notes/bryophyta-preview.pdf",
+      downloadFile:"notes/bryophyta.pdf"
+    }
+
+  ],
+
+
+  sem2:[
+
+    {
+      id:"taxo",
+      icon:"🌿",
+      title:"Taxonomy & Diversity of Plants",
+      description:"Plant taxonomy",
+      previewPassword:"1234",
+      downloadPassword:"5678",
+      previewFile:"notes/taxonomy-preview.pdf",
+      downloadFile:"notes/taxonomy.pdf"
+    },
+
+    {
+      id:"mol",
+      icon:"🧬",
+      title:"Molecular Biology",
+      description:"DNA, RNA & proteins",
+      previewPassword:"1234",
+      downloadPassword:"5678",
+      previewFile:"notes/molecular-preview.pdf",
+      downloadFile:"notes/molecular.pdf"
+    },
+
+    {
+      id:"phys",
+      icon:"🌱",
+      title:"Plant Physiology",
+      description:"Plant functions",
+      previewPassword:"1234",
+      downloadPassword:"5678",
+      previewFile:"notes/physiology-preview.pdf",
+      downloadFile:"notes/physiology.pdf"
+    },
+
+    {
+      id:"metab",
+      icon:"🌿",
+      title:"Plant Metabolism",
+      description:"Plant biochemical processes",
+      previewPassword:"1234",
+      downloadPassword:"5678",
+      previewFile:"notes/metabolism-preview.pdf",
+      downloadFile:"notes/metabolism.pdf"
+    }
+
+  ],
+
+
+  sem3:[
+
+    {
+      id:"dev",
+      icon:"🌿",
+      title:"Plant Development & Resources",
+      description:"Plant development",
+      previewPassword:"1234",
+      downloadPassword:"5678",
+      previewFile:"notes/development-preview.pdf",
+      downloadFile:"notes/development.pdf"
+    },
+
+    {
+      id:"eco",
+      icon:"🌱",
+      title:"Ecosystem & Vegetation Ecology",
+      description:"Ecology",
+      previewPassword:"1234",
+      downloadPassword:"5678",
+      previewFile:"notes/ecology-preview.pdf",
+      downloadFile:"notes/ecology.pdf"
+    },
+
+    {
+      id:"bio",
+      icon:"🧬",
+      title:"Biotechnology & Genetic Engineering",
+      description:"Biotechnology",
+      previewPassword:"1234",
+      downloadPassword:"5678",
+      previewFile:"notes/biotech-preview.pdf",
+      downloadFile:"notes/biotech.pdf"
+    },
+
+    {
+      id:"path",
+      icon:"🌿",
+      title:"Plant Pathology",
+      description:"Plant diseases",
+      previewPassword:"1234",
+      downloadPassword:"5678",
+      previewFile:"notes/pathology-preview.pdf",
+      downloadFile:"notes/pathology.pdf"
+    }
+
+  ],
+
+
+  sem4:[
+
+    {
+      id:"repro",
+      icon:"🌿",
+      title:"Plant Reproduction & Utilisation of Resources",
+      description:"Plant reproduction",
+      previewPassword:"1234",
+      downloadPassword:"5678",
+      previewFile:"notes/reproduction-preview.pdf",
+      downloadFile:"notes/reproduction.pdf"
+    },
+
+    {
+      id:"eco4",
+      icon:"🌱",
+      title:"Plant Ecology, Pollution & Biodiversity Conservation",
+      description:"Ecology & conservation",
+      previewPassword:"1234",
+      downloadPassword:"5678",
+      previewFile:"notes/ecology4-preview.pdf",
+      downloadFile:"notes/ecology4.pdf"
+    },
+
+    {
+      id:"cell",
+      icon:"🧬",
+      title:"Plant Cell, Tissue & Organ Culture",
+      description:"Tissue culture",
+      previewPassword:"1234",
+      downloadPassword:"5678",
+      previewFile:"notes/tissue-culture-preview.pdf",
+      downloadFile:"notes/tissue-culture.pdf"
+    },
+
+    {
+      id:"path4",
+      icon:"🌿",
+      title:"Molecular Plant Pathology",
+      description:"Molecular plant diseases",
+      previewPassword:"1234",
+      downloadPassword:"5678",
+      previewFile:"notes/molecular-pathology-preview.pdf",
+      downloadFile:"notes/molecular-pathology.pdf"
+    }
+
+  ]
+
+};
+
+
+/* =====================================================
+   LOCK SYSTEM
+   3 WRONG ATTEMPTS = 6 HOURS
+===================================================== */
+
+const MAX_TRIES = 3;
+const LOCK_TIME = 6 * 60 * 60 * 1000;
+
+
+/* Get lock data */
+
+function getLock(id,type){
+
+  const key = "msc_lock_"+id+"_"+type;
+
+  const data = localStorage.getItem(key);
+
+  if(!data) return {
+    attempts:0,
+    lockedUntil:0
+  };
+
+  try{
+    return JSON.parse(data);
+  }catch{
+    return {
+      attempts:0,
+      lockedUntil:0
+    };
+  }
+
+}
+
+
+/* Save lock */
+
+function saveLock(id,type,data){
+
+  const key = "msc_lock_"+id+"_"+type;
+
+  localStorage.setItem(key,JSON.stringify(data));
+
+}
+
+
+/* Check locked */
+
+function isLocked(id,type){
+
+  const data = getLock(id,type);
+
+  if(data.lockedUntil > Date.now()){
+    return true;
+  }
+
+  if(data.lockedUntil > 0){
+
+    saveLock(id,type,{
+      attempts:0,
+      lockedUntil:0
+    });
+
+  }
+
+  return false;
+
+}
+
+
+/* Remaining lock time */
+
+function remainingLock(id,type){
+
+  const data = getLock(id,type);
+
+  if(!data.lockedUntil) return "";
+
+  let seconds = Math.ceil(
+    (data.lockedUntil-Date.now())/1000
+  );
+
+  if(seconds <= 0) return "";
+
+  let h = Math.floor(seconds/3600);
+
+  let m = Math.floor(
+    (seconds%3600)/60
+  );
+
+  let s = seconds%60;
+
+  return h+"h "+m+"m "+s+"s";
+
+}
+
+
+/* =====================================================
+   RENDER SUBJECTS
+===================================================== */
+
+function renderSubjects(){
+
+  const sem =
+    document.getElementById("semesterSelect").value;
+
+  const grid =
+    document.getElementById("subjectGrid");
+
+  grid.innerHTML="";
+
+  subjects[sem].forEach(item=>{
+
+    const previewLocked =
+      isLocked(item.id,"preview");
+
+    const downloadLocked =
+      isLocked(item.id,"download");
+
+
+    const card =
+    document.createElement("article");
+
+    card.className =
+      "subject-card";
+
+    card.dataset.title =
+      item.title.toLowerCase();
+
+
+    card.innerHTML = `
+
+      <div class="subject-icon">
+        ${item.icon}
+      </div>
+
+      <h3>${item.title}</h3>
+
+      <p>${item.description}</p>
+
+
+      <div class="action-row">
+
+        <button
+          class="action-btn preview-btn"
+          onclick="showPassword('${item.id}','preview')"
+          ${previewLocked ? "disabled":""}
+        >
+          👁️ Preview
+        </button>
+
+
+        <button
+          class="action-btn download-btn"
+          onclick="showPassword('${item.id}','download')"
+          ${downloadLocked ? "disabled":""}
+        >
+          ⬇️ Download
+        </button>
+
+      </div>
+
+
+      <div
+        id="${item.id}-preview-area"
+        class="password-area"
+      >
+
+        <input
+          id="${item.id}-preview-input"
+          type="password"
+          placeholder="Preview password"
+        >
+
+        <button
+          onclick="checkPassword('${item.id}','preview')"
+        >
+          🔓 Unlock Preview
+        </button>
+
+      </div>
+
+
+      <div
+        id="${item.id}-download-area"
+        class="password-area"
+      >
+
+        <input
+          id="${item.id}-download-input"
+          type="password"
+          placeholder="Download password"
+        >
+
+        <button
+          onclick="checkPassword('${item.id}','download')"
+        >
+          🔐 Unlock & Download
+        </button>
+
+      </div>
+
+
+      <div
+        id="${item.id}-result"
+        class="result"
+      ></div>
+
+      ${
+        previewLocked
+        ?
+        `<div class="lock-message">
+          🔒 Preview locked for ${remainingLock(item.id,"preview")}
+        </div>`
+        :
+        ""
+      }
+
+      ${
+        downloadLocked
+        ?
+        `<div class="lock-message">
+          🔒 Download locked for ${remainingLock(item.id,"download")}
+        </div>`
+        :
+        ""
+      }
+
+    `;
+
+    grid.appendChild(card);
+
+  });
+
+}
+
+
+/* =====================================================
+   SHOW PASSWORD BOX
+===================================================== */
+
+function showPassword(id,type){
+
+  if(isLocked(id,type)){
+
+    const result =
+      document.getElementById(id+"-result");
+
+    result.className="result error";
+
+    result.textContent =
+      "🔒 Locked: "+remainingLock(id,type);
+
+    return;
+  }
+
+
+  const area =
+    document.getElementById(id+"-"+type+"-area");
+
+  area.style.display =
+    area.style.display==="block"
+    ?
+    "none"
+    :
+    "block";
+
+}
+
+
+/* =====================================================
+   CHECK PASSWORD
+===================================================== */
+
+function checkPassword(id,type){
+
+  const all =
+    Object.values(subjects).flat();
+
+  const item =
+    all.find(x=>x.id===id);
+
+  if(!item) return;
+
+
+  if(isLocked(id,type)){
+
+    showResult(
+      id,
+      "🔒 यह option 6 घंटे के लिए locked है।",
+      "error"
+    );
+
+    return;
+  }
+
+
+  const input =
+    document.getElementById(
+      id+"-"+type+"-input"
+    );
+
+  const entered =
+    input.value.trim();
+
+
+  const correct =
+    type==="preview"
+    ?
+    item.previewPassword
+    :
+    item.downloadPassword;
+
+
+  if(entered === correct){
+
+    saveLock(id,type,{
+      attempts:0,
+      lockedUntil:0
+    });
+
+
+    if(type==="preview"){
+
+      showResult(
+        id,
+        "✅ Password सही है। Preview खुल रहा है...",
+        "success"
+      );
+
+      openPreview(item.previewFile);
+
+    }else{
+
+      showResult(
+        id,
+        "✅ Password सही है। Download शुरू हो रहा है...",
+        "success"
+      );
+
+      downloadFile(item.downloadFile);
+
+    }
+
+    input.value="";
+
+    return;
+  }
+
+
+  /* WRONG PASSWORD */
+
+  const data =
+    getLock(id,type);
+
+  data.attempts++;
+
+  if(data.attempts >= MAX_TRIES){
+
+    data.lockedUntil =
+      Date.now()+LOCK_TIME;
+
+    saveLock(id,type,data);
+
+    showResult(
+      id,
+      "🔒 3 गलत प्रयास। यह option 6 घंटे के लिए locked है।",
+      "error"
+    );
+
+    setTimeout(renderSubjects,300);
+
+  }else{
+
+    saveLock(id,type,data);
+
+    const left =
+      MAX_TRIES-data.attempts;
+
+    showResult(
+      id,
+      "❌ Password गलत है। "+left+" प्रयास बाकी।",
+      "error"
+    );
+
+  }
+
+}
+
+
+/* =====================================================
+   RESULT
+===================================================== */
+
+function showResult(id,text,type){
+
+  const el =
+    document.getElementById(id+"-result");
+
+  if(!el) return;
+
+  el.className =
+    "result "+type;
+
+  el.textContent=text;
+
+}
+
+
+/* =====================================================
+   PREVIEW
+===================================================== */
+
+function openPreview(file){
+
+  document.getElementById(
+    "previewIframe"
+  ).src=file;
+
+  document.getElementById(
+    "previewOverlay"
+  ).style.display="block";
+
+  document.body.style.overflow="hidden";
+
+}
+
+
+function closePreview(){
+
+  document.getElementById(
+    "previewIframe"
+  ).src="";
+
+  document.getElementById(
+    "previewOverlay"
+  ).style.display="none";
+
+  document.body.style.overflow="";
+
+}
+
+
+/* =====================================================
+   DOWNLOAD
+===================================================== */
+
+function downloadFile(file){
+
+  const a =
+    document.createElement("a");
+
+  a.href=file;
+
+  a.download="";
+
+  document.body.appendChild(a);
+
+  a.click();
+
+  a.remove();
+
+}
+
+
+/* =====================================================
+   SEMESTER
+===================================================== */
+
+document.getElementById(
+  "semesterSelect"
+).addEventListener("change",renderSubjects);
+
+
+/* =====================================================
+   SEARCH
+===================================================== */
+
+document.getElementById(
+  "searchBox"
+).addEventListener(
+  "input",
+  function(){
+
+    const value =
+      this.value.toLowerCase().trim();
+
+    document
+      .querySelectorAll(".subject-card")
+      .forEach(card=>{
+
+        const title =
+          card.dataset.title || "";
+
+        card.style.display =
+          title.includes(value)
+          ?
+          ""
+          :
+          "none";
+
+      });
+
+  }
+);
+
+
+/* =====================================================
+   PAYMENT
+===================================================== */
+
+async function copyUPI(){
+
+  const value =
+    document.getElementById("upi1").value;
+
+  try{
+
+    await navigator.clipboard.writeText(value);
+
+    alert("✅ UPI Copied");
+
+  }catch{
+
+    alert("UPI manually copy करें।");
+
+  }
+
+}
+
+
+function openApp(pkg){
+
+  window.location =
+    "intent://#Intent;package="+
+    pkg+
+    ";end";
+
+}
+
+
+/* =====================================================
+   HELP FORM
+===================================================== */
+
+const WHATSAPP_NUMBER =
+  "916267637741";
+
+
+function openHelp(){
+
+  document.getElementById(
+    "formOverlay"
+  ).style.display="flex";
+
+}
+
+
+function closeHelp(){
+
+  document.getElementById(
+    "formOverlay"
+  ).style.display="none";
+
+}
+
+
+function loadFormSubjects(){
+
+  const sem =
+    document.getElementById(
+      "formSemester"
+    ).value;
+
+  const select =
+    document.getElementById(
+      "formSubject"
+    );
+
+  select.innerHTML =
+    '<option value="">-- चुनें --</option>';
+
+
+  if(!sem) return;
+
+
+  const list =
+    subjects["sem"+sem];
+
+
+  list.forEach(item=>{
+
+    const option =
+      document.createElement("option");
+
+    option.value=item.title;
+
+    option.textContent=item.title;
+
+    select.appendChild(option);
+
+  });
+
+}
+
+
+function toggleMessage(){
+
+  const type =
+    document.getElementById(
+      "messageType"
+    ).value;
+
+  document.getElementById(
+    "messageBox"
+  ).style.display =
+    type==="समस्या लिखें"
+    ?
+    "block"
+    :
+    "none";
+
+}
+
+
+function validate(id,type){
+
+  const el =
+    document.getElementById(id);
+
+  const value =
+    el.value.trim();
+
+  let ok=true;
+
+
+  if(type==="email"){
+
+    ok =
+      /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+      .test(value);
+
+  }
+
+  else if(type==="mobile"){
+
+    ok =
+      /^[6-9]\d{9}$/
+      .test(value);
+
+  }
+
+  else{
+
+    ok=value!=="";
+
+  }
+
+
+  const error =
+    document.getElementById(
+      "error-"+id
+    );
+
+  if(error){
+
+    error.style.display =
+      ok ? "none" : "block";
+
+  }
+
+  return ok;
+
+}
+
+
+/* =====================================================
+   WHATSAPP
+===================================================== */
+
+function sendWhatsApp(){
+
+  let valid=true;
+
+
+  if(!validate("name","text"))
+    valid=false;
+
+  if(!validate("email","email"))
+    valid=false;
+
+  if(!validate("mobile","mobile"))
+    valid=false;
+
+  if(!validate("formSemester","text"))
+    valid=false;
+
+  if(!validate("formSubject","text"))
+    valid=false;
+
+  if(!validate("paymentType","text"))
+    valid=false;
+
+  if(!validate("messageType","text"))
+    valid=false;
+
+
+  const file =
+    document.getElementById(
+      "payment"
+    );
+
+  if(!file.files.length){
+
+    document.getElementById(
+      "error-payment"
+    ).style.display="block";
+
+    valid=false;
+
+  }else{
+
+    document.getElementById(
+      "error-payment"
+    ).style.display="none";
+
+  }
+
+
+  const messageType =
+    document.getElementById(
+      "messageType"
+    ).value;
+
+
+  if(
+    messageType==="समस्या लिखें" &&
+    !validate("message","text")
+  ){
+
+    valid=false;
+
+  }
+
+
+  if(!valid){
+
+    alert(
+      "❌ कृपया सभी जानकारी सही भरें।"
+    );
+
+    return;
+
+  }
+
+
+  const now=new Date();
+
+
+  const date =
+    now.toLocaleDateString("hi-IN");
+
+
+  const time =
+    now.toLocaleTimeString(
+      "hi-IN",
+      {
+        hour:"2-digit",
+        minute:"2-digit"
+      }
+    );
+
+
+  let text =
+`💬 *MSc Botany Notes - Help Request*
+
+👤 *नाम:* ${document.getElementById("name").value}
+
+📧 *ईमेल:* ${document.getElementById("email").value}
+
+📱 *मोबाइल:* ${document.getElementById("mobile").value}
+
+🎓 *Semester:* ${document.getElementById("formSemester").value}
+
+📘 *Subject:* ${document.getElementById("formSubject").value}
+
+💰 *Payment:* ${document.getElementById("paymentType").value}
+
+💬 *Message Type:* ${messageType}
+`;
+
+
+  if(messageType==="समस्या लिखें"){
+
+    text +=
+`\n📝 *समस्या:*
+${document.getElementById("message").value}
+`;
+
+  }else{
+
+    text +=
+`\n🔐 *Password Request:*
+कृपया password भेजें।
+`;
+
+  }
+
+
+  text +=
+`\n📅 *Date:* ${date}
+⏰ *Time:* ${time}
+
+📎 Payment Screenshot WhatsApp में attach किया जाएगा।`;
+
+
+  document.getElementById(
+    "loading"
+  ).style.display="block";
+
+
+  setTimeout(()=>{
+
+    const url =
+      "https://wa.me/"+
+      WHATSAPP_NUMBER+
+      "?text="+
+      encodeURIComponent(text);
+
+
+    window.open(
+      url,
+      "_blank"
+    );
+
+
+    document.getElementById(
+      "loading"
+    ).style.display="none";
+
+  },800);
+
+}
+
+
+/* =====================================================
+   INITIAL LOAD
+===================================================== */
+
+renderSubjects();
+
+
+/* =====================================================
+   CLOSE PREVIEW WITH ESC
+===================================================== */
+
+document.addEventListener(
+  "keydown",
+  function(e){
+
+    if(e.key==="Escape")
+      closePreview();
+
+  }
+);
+
+</script>
+
+</body>
+</html>
